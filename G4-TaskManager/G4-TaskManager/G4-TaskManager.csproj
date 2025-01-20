@@ -9,4 +9,70 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Iconos\agregar-usuario.png" />
+    <None Remove="Iconos\ajustes.png" />
+    <None Remove="Iconos\borrar-usuario.png" />
+    <None Remove="Iconos\buscar-usuario.png" />
+    <None Remove="Iconos\cancelar.png" />
+    <None Remove="Iconos\candado.png" />
+    <None Remove="Iconos\confirmar.png" />
+    <None Remove="Iconos\editar-usuario.png" />
+    <None Remove="Iconos\entrar.png" />
+    <None Remove="Iconos\filtrar.png" />
+    <None Remove="Iconos\guardar.png" />
+    <None Remove="Iconos\historial.png" />
+    <None Remove="Iconos\home.png" />
+    <None Remove="Iconos\login.png" />
+    <None Remove="Iconos\salir.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Iconos\agregar-usuario.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Iconos\ajustes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Iconos\borrar-usuario.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Iconos\buscar-usuario.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Iconos\cancelar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Iconos\candado.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Iconos\confirmar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Iconos\editar-usuario.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Iconos\entrar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Iconos\filtrar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Iconos\guardar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Iconos\historial.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Iconos\home.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Iconos\login.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Iconos\salir.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>

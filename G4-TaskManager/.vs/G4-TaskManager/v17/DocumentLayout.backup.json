@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-taskmanager\\g4-taskmanager\\g4-taskmanager\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|solutionrelative:g4-taskmanager\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-taskmanager\\g4-taskmanager\\g4-taskmanager\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|solutionrelative:g4-taskmanager\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -27,6 +31,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "G4-TaskManager\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\MainWindow.xaml",
+              "RelativeToolTip": "G4-TaskManager\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-20T21:03:52.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "G4-TaskManager\\MainWindow.xaml.cs",

@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\",
+  "WorkspaceRootPath": "C:\\Users\\adria\\source\\repos\\G4-TaskManager\\G4-TaskManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-taskmanager\\g4-taskmanager\\g4-taskmanager\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|c:\\users\\adria\\source\\repos\\g4-taskmanager\\g4-taskmanager\\g4-taskmanager\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|solutionrelative:g4-taskmanager\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-taskmanager\\g4-taskmanager\\g4-taskmanager\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|c:\\users\\adria\\source\\repos\\g4-taskmanager\\g4-taskmanager\\g4-taskmanager\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|solutionrelative:g4-taskmanager\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,19 +22,19 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\adria\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\MainWindow.xaml",
               "RelativeDocumentMoniker": "G4-TaskManager\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\adria\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\MainWindow.xaml",
               "RelativeToolTip": "G4-TaskManager\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-01-20T21:03:52.411Z",
@@ -44,14 +44,13 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "G4-TaskManager\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\adria\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\MainWindow.xaml.cs",
               "RelativeToolTip": "G4-TaskManager\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T21:03:49.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-20T21:03:49.593Z"
             }
           ]
         }
