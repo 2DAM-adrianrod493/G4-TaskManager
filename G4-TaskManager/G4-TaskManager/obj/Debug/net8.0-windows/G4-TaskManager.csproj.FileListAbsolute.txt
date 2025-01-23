@@ -1,0 +1,8 @@
+C:\Users\2DAM-adrianrod493\source\repos\G4-TaskManager\G4-TaskManager\G4-TaskManager\obj\Debug\net8.0-windows\Views\LoginView.baml
+C:\Users\2DAM-adrianrod493\source\repos\G4-TaskManager\G4-TaskManager\G4-TaskManager\obj\Debug\net8.0-windows\Views\AdminView.g.cs
+C:\Users\2DAM-adrianrod493\source\repos\G4-TaskManager\G4-TaskManager\G4-TaskManager\obj\Debug\net8.0-windows\Views\EmpleadoView.g.cs
+C:\Users\2DAM-adrianrod493\source\repos\G4-TaskManager\G4-TaskManager\G4-TaskManager\obj\Debug\net8.0-windows\Views\LoginView.g.cs
+C:\Users\2DAM-adrianrod493\source\repos\G4-TaskManager\G4-TaskManager\G4-TaskManager\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\2DAM-adrianrod493\source\repos\G4-TaskManager\G4-TaskManager\G4-TaskManager\obj\Debug\net8.0-windows\G4-TaskManager_MarkupCompile.cache
+C:\Users\2DAM-adrianrod493\source\repos\G4-TaskManager\G4-TaskManager\G4-TaskManager\obj\Debug\net8.0-windows\G4-TaskManager_MarkupCompile.lref
+C:\Users\2DAM-adrianrod493\source\repos\G4-TaskManager\G4-TaskManager\G4-TaskManager\obj\Debug\net8.0-windows\Resources\StyleResources.baml
