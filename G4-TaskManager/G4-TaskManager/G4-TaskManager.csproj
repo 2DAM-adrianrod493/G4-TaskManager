@@ -25,6 +25,7 @@
     <None Remove="Resources\Iconos\historial.png" />
     <None Remove="Resources\Iconos\home.png" />
     <None Remove="Resources\Iconos\login.png" />
+    <None Remove="Resources\Iconos\logo.png" />
     <None Remove="Resources\Iconos\salir.png" />
     <None Remove="Resources\Login.jpg" />
   </ItemGroup>
@@ -73,6 +74,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Iconos\login.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Iconos\logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Iconos\salir.png">
