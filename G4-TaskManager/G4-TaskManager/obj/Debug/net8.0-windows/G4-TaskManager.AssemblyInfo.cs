@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("G4-TaskManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b19cbe43598e8cc3c00224bdd1d38704e088f79b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cde549306f183939419ccf08625ee954c5cbfcb9")]
 [assembly: System.Reflection.AssemblyProductAttribute("G4-TaskManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("G4-TaskManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
