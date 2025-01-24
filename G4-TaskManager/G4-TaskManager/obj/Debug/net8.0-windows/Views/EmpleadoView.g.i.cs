@@ -53,7 +53,7 @@ namespace G4_TaskManager.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/G4-TaskManager;V1.0.0.0;component/views/empleadoview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/G4-TaskManager;component/views/empleadoview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\EmpleadoView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
