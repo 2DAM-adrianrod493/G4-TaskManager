@@ -40,24 +40,50 @@
     <Style TargetType="TextBox" x:Key="EstilosTextBox">
         <Setter Property="Height" Value="30"/>
         <Setter Property="FontSize" Value="12"/>
-        <Setter Property="Background" Value="#FFFFFF"/>
         <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="BorderBrush" Value="Transparent"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="Padding" Value="5"/>
         <Setter Property="Margin" Value="0,5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Grid>
+                        <Border CornerRadius="10"
+                                Background="White"
+                                BorderBrush="#CCCCCC"
+                                BorderThickness="1">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="2" BlurRadius="5" Opacity="0.5"/>
+                            </Border.Effect>
+                        </Border>
+                        <ScrollViewer x:Name="PART_ContentHost" Margin="5"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 
     <!-- Estilo PasswordBox -->
     <Style TargetType="PasswordBox" x:Key="EstilosPasswordBox">
         <Setter Property="Height" Value="30"/>
         <Setter Property="FontSize" Value="12"/>
-        <Setter Property="Background" Value="#FFFFFF"/>
         <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="BorderBrush" Value="Transparent"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="Padding" Value="5"/>
         <Setter Property="Margin" Value="0,5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="PasswordBox">
+                    <Grid>
+                        <Border CornerRadius="10"
+                                Background="White"
+                                BorderBrush="#CCCCCC"
+                                BorderThickness="1">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="2" BlurRadius="5" Opacity="0.5"/>
+                            </Border.Effect>
+                        </Border>
+                        <ScrollViewer x:Name="PART_ContentHost" Margin="5"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 
     <!-- Estilos Botones -->
@@ -70,6 +96,23 @@
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Margin" Value="0,10,0,0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Border CornerRadius="10"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="0">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="3" BlurRadius="8" Opacity="0.6"/>
+                            </Border.Effect>
+                        </Border>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 
 </ResourceDictionary>
