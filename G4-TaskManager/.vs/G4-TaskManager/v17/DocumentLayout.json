@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-taskmanager\\g4-taskmanager\\g4-taskmanager\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|solutionrelative:g4-taskmanager\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-taskmanager\\g4-taskmanager\\g4-taskmanager\\resources\\styleresources.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|solutionrelative:g4-taskmanager\\resources\\styleresources.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,39 +34,6 @@
               "RelativeToolTip": "G4-TaskManager\\Views\\LoginView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-01-23T18:21:13.204Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "b670424a-97bd-4d45-b0ff-30239ad52462",
-        "Display": 0,
-        "X": 1133,
-        "Y": 412,
-        "Width": 1082,
-        "Height": 962,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StyleResources.xaml",
-              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\Resources\\StyleResources.xaml",
-              "RelativeDocumentMoniker": "G4-TaskManager\\Resources\\StyleResources.xaml",
-              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\Resources\\StyleResources.xaml",
-              "RelativeToolTip": "G4-TaskManager\\Resources\\StyleResources.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-23T20:18:21.03Z",
               "EditorCaption": ""
             }
           ]
