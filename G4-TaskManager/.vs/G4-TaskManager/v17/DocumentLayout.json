@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,7 +37,7 @@
               "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\Views\\LoginView.xaml",
               "RelativeToolTip": "G4-TaskManager\\Views\\LoginView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-24T15:16:05.276Z",
+              "WhenOpened": "2025-01-27T19:54:40.312Z",
               "EditorCaption": ""
             }
           ]
@@ -48,12 +48,12 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "f2209e36-e09b-4521-9c4b-b83f7e8c41aa",
+        "Id": "5b24ee47-7578-4c28-9cb8-e4891d5b4545",
         "Display": 0,
-        "X": 1365,
-        "Y": 332,
-        "Width": 729,
-        "Height": 953,
+        "X": -363,
+        "Y": 177,
+        "Width": 735,
+        "Height": 851,
         "WindowState": 0
       },
       "DocumentGroups": [
@@ -70,7 +70,7 @@
               "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\Resources\\StyleResources.xaml",
               "RelativeToolTip": "G4-TaskManager\\Resources\\StyleResources.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-24T18:31:21.732Z",
+              "WhenOpened": "2025-01-27T19:54:51.11Z",
               "EditorCaption": ""
             }
           ]

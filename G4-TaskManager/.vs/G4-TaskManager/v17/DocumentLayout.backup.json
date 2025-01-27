@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-taskmanager\\g4-taskmanager\\g4-taskmanager\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|solutionrelative:g4-taskmanager\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-taskmanager\\g4-taskmanager\\g4-taskmanager\\views\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|solutionrelative:g4-taskmanager\\views\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-taskmanager\\g4-taskmanager\\g4-taskmanager\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|solutionrelative:g4-taskmanager\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-taskmanager\\g4-taskmanager\\g4-taskmanager\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|solutionrelative:g4-taskmanager\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-taskmanager\\g4-taskmanager\\g4-taskmanager\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|solutionrelative:g4-taskmanager\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-taskmanager\\g4-taskmanager\\g4-taskmanager\\g4-taskmanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|solutionrelative:g4-taskmanager\\g4-taskmanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-taskmanager\\g4-taskmanager\\g4-taskmanager\\resources\\styleresources.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED7299EB-A7C8-44A8-B0C8-D33B538522E2}|G4-TaskManager\\G4-TaskManager.csproj|solutionrelative:g4-taskmanager\\resources\\styleresources.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,45 +30,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\App.xaml.cs",
-              "RelativeDocumentMoniker": "G4-TaskManager\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\App.xaml.cs",
-              "RelativeToolTip": "G4-TaskManager\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T15:16:51.429Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\Views\\LoginView.xaml.cs",
-              "RelativeDocumentMoniker": "G4-TaskManager\\Views\\LoginView.xaml.cs",
-              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\Views\\LoginView.xaml.cs",
-              "RelativeToolTip": "G4-TaskManager\\Views\\LoginView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T15:16:08.415Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\App.xaml",
-              "RelativeDocumentMoniker": "G4-TaskManager\\App.xaml",
-              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\App.xaml",
-              "RelativeToolTip": "G4-TaskManager\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-24T15:16:07.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "LoginView.xaml",
               "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\Views\\LoginView.xaml",
               "RelativeDocumentMoniker": "G4-TaskManager\\Views\\LoginView.xaml",
@@ -93,31 +39,38 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-01-24T15:16:05.276Z",
               "EditorCaption": ""
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "f2209e36-e09b-4521-9c4b-b83f7e8c41aa",
+        "Display": 0,
+        "X": 1365,
+        "Y": 332,
+        "Width": 729,
+        "Height": 953,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\ViewModels\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "G4-TaskManager\\ViewModels\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\ViewModels\\LoginViewModel.cs",
-              "RelativeToolTip": "G4-TaskManager\\ViewModels\\LoginViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T15:15:19.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "G4-TaskManager",
-              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager.csproj",
-              "RelativeDocumentMoniker": "G4-TaskManager\\G4-TaskManager.csproj",
-              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager.csproj",
-              "RelativeToolTip": "G4-TaskManager\\G4-TaskManager.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-24T15:15:13.446Z",
+              "DocumentIndex": 1,
+              "Title": "StyleResources.xaml",
+              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\Resources\\StyleResources.xaml",
+              "RelativeDocumentMoniker": "G4-TaskManager\\Resources\\StyleResources.xaml",
+              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-TaskManager\\G4-TaskManager\\G4-TaskManager\\Resources\\StyleResources.xaml",
+              "RelativeToolTip": "G4-TaskManager\\Resources\\StyleResources.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-24T18:31:21.732Z",
               "EditorCaption": ""
             }
           ]

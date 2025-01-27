@@ -17,8 +17,16 @@
         <!-- Logo y Título -->
         <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
-                <Image Source="/Resources/Iconos/logo.png" Width="50" Height="50" />
-                <TextBlock Style="{StaticResource EstiloTextoTitulo}" Text="Login" FontSize="24" VerticalAlignment="Center" Margin="20,0,0,0" />
+                <Image Source="/Resources/Iconos/logo.png" Width="50" Height="50" >
+                    <Image.Effect>
+                        <DropShadowEffect BlurRadius="60"/>
+                    </Image.Effect>
+                </Image>
+                <TextBlock Style="{StaticResource EstiloTextoTitulo}" Text="Login" FontSize="24" VerticalAlignment="Center" Margin="20,0,0,0">
+                    <TextBlock.Effect>
+                        <DropShadowEffect BlurRadius="25"/>
+                    </TextBlock.Effect>
+                </TextBlock>
             </StackPanel>
         </Grid>
 
@@ -46,11 +54,19 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- Usuario -->
-                <TextBlock Grid.Row="2" Text="Usuario / ID" Style="{StaticResource EstilosSubtitulos}"/>
+                <TextBlock Grid.Row="2" Text="Usuario / ID" Style="{StaticResource EstilosSubtitulos}">
+                    <TextBlock.Effect>
+                        <DropShadowEffect BlurRadius="18"/>
+                    </TextBlock.Effect>
+                </TextBlock>
                 <TextBox x:Name="UsuarioTextBox" Grid.Row="3" Style="{StaticResource EstilosTextBox}"/>
 
                 <!-- Contraseña -->
-                <TextBlock Grid.Row="5" Text="Contraseña" Style="{StaticResource EstilosSubtitulos}"/>
+                <TextBlock Grid.Row="5" Text="Contraseña" Style="{StaticResource EstilosSubtitulos}">
+                    <TextBlock.Effect>
+                        <DropShadowEffect BlurRadius="18"/>
+                    </TextBlock.Effect>
+                </TextBlock>
                 <PasswordBox x:Name="ContraseñaPasswordBox" Grid.Row="6" Style="{StaticResource EstilosPasswordBox}"/>
 
                 <!-- Botón -->
