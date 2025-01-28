@@ -18,6 +18,20 @@
         <Setter Property="Margin" Value="250,100,250,100"/>
     </Style>
 
+    <!-- Estilos Imágenes -->
+    <Style TargetType="Image" x:Key="EstiloImagen">
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,10,0,10"/>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="7" Direction="-30" Opacity="0.3"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
     <!-- Estilos Títulos -->
     <Style TargetType="TextBlock" x:Key="EstiloTextoTitulo">
         <Setter Property="FontSize" Value="20"/>
@@ -25,6 +39,11 @@
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="Margin" Value="0,10,0,10"/>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="7" Direction="-30" Opacity="0.4"/>
+            </Setter.Value>
+        </Setter>
     </Style>
 
     <!-- Estilos Subtítulos -->
@@ -34,27 +53,27 @@
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Margin" Value="0,5,0,5"/>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="7" Direction="-30" Opacity="0.6"/>
+            </Setter.Value>
+        </Setter>
     </Style>
 
     <!-- Estilos TextBox -->
     <Style TargetType="TextBox" x:Key="EstilosTextBox">
         <Setter Property="Height" Value="30"/>
         <Setter Property="FontSize" Value="12"/>
-        <Setter Property="Foreground" Value="Black"/>
         <Setter Property="Margin" Value="0,5"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TextBox">
                     <Grid>
-                        <Border CornerRadius="10"
-                                Background="White"
-                                BorderBrush="#CCCCCC"
-                                BorderThickness="1">
+                        <Border CornerRadius="10" Background="White" BorderBrush="#CCCCCC" BorderThickness="1">
                             <Border.Effect>
-                                <DropShadowEffect ShadowDepth="2" BlurRadius="5" Opacity="0.5"/>
+                                <DropShadowEffect BlurRadius="20" ShadowDepth="7" Direction="-30" Opacity="0.3"/>
                             </Border.Effect>
                         </Border>
-                        <ScrollViewer x:Name="PART_ContentHost" Margin="5"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -65,21 +84,16 @@
     <Style TargetType="PasswordBox" x:Key="EstilosPasswordBox">
         <Setter Property="Height" Value="30"/>
         <Setter Property="FontSize" Value="12"/>
-        <Setter Property="Foreground" Value="Black"/>
         <Setter Property="Margin" Value="0,5"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="PasswordBox">
                     <Grid>
-                        <Border CornerRadius="10"
-                                Background="White"
-                                BorderBrush="#CCCCCC"
-                                BorderThickness="1">
+                        <Border CornerRadius="10" Background="White" BorderBrush="#CCCCCC" BorderThickness="1">
                             <Border.Effect>
-                                <DropShadowEffect ShadowDepth="2" BlurRadius="5" Opacity="0.5"/>
+                                <DropShadowEffect BlurRadius="20" ShadowDepth="7" Direction="-30" Opacity="0.3"/>
                             </Border.Effect>
                         </Border>
-                        <ScrollViewer x:Name="PART_ContentHost" Margin="5"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -100,12 +114,9 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Border CornerRadius="10"
-                                Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="0">
+                        <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
                             <Border.Effect>
-                                <DropShadowEffect ShadowDepth="3" BlurRadius="8" Opacity="0.6"/>
+                                <DropShadowEffect BlurRadius="20" ShadowDepth="7" Direction="-30" Opacity="0.3"/>
                             </Border.Effect>
                         </Border>
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
