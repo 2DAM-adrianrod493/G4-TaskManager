@@ -6,10 +6,15 @@
         xmlns:local="clr-namespace:G4_EmployeeRegister.Views"
         mc:Ignorable="d"
         Title="LoginView" Height="450" Width="800"
-        Style="{StaticResource WindowStyle}"
         ResizeMode="NoResize">
-    
+
+    <!-- Fondo -->
+    <Window.Background>
+        <ImageBrush ImageSource="../Resources/Fondos/loginfondo.jpg" Stretch="Fill"/>
+    </Window.Background>
+
     <Grid VerticalAlignment="Center">
+
         <!-- Filas -->
         <Grid.RowDefinitions>
 
@@ -59,7 +64,7 @@
                 
                 <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto">
                     <Button Content="Admin" Style="{StaticResource EstilosButton}" Width="115" Click="ClickAdmin"/>
-                    <Separator Width="30" />
+                    <Separator Width="30" Visibility="Hidden"/>
                     <Button Content="Usuario" Style="{StaticResource EstilosButton}" Width="115" Click="ClickUsuario"/>
                 </StackPanel>
             </Grid>

@@ -21,3 +21,7 @@ C:\Users\2DAM-adrianrod493\source\repos\G4-EmployeeRegister\G4-EmployeeRegisterS
 C:\Users\2DAM-adrianrod493\source\repos\G4-EmployeeRegister\G4-EmployeeRegisterSol\G4-EmployeeRegister\obj\Debug\net8.0-windows\G4-EmployeeRegister.pdb
 C:\Users\2DAM-adrianrod493\source\repos\G4-EmployeeRegister\G4-EmployeeRegisterSol\G4-EmployeeRegister\obj\Debug\net8.0-windows\G4-EmployeeRegister.genruntimeconfig.cache
 C:\Users\2DAM-adrianrod493\source\repos\G4-EmployeeRegister\G4-EmployeeRegisterSol\G4-EmployeeRegister\obj\Debug\net8.0-windows\ref\G4-EmployeeRegister.dll
+C:\Users\2DAM-adrianrod493\source\repos\G4-EmployeeRegister\G4-EmployeeRegisterSol\G4-EmployeeRegister\obj\Debug\net8.0-windows\Views\AdminView.g.cs
+C:\Users\2DAM-adrianrod493\source\repos\G4-EmployeeRegister\G4-EmployeeRegisterSol\G4-EmployeeRegister\obj\Debug\net8.0-windows\Views\UserView.g.cs
+C:\Users\2DAM-adrianrod493\source\repos\G4-EmployeeRegister\G4-EmployeeRegisterSol\G4-EmployeeRegister\obj\Debug\net8.0-windows\Views\AdminView.baml
+C:\Users\2DAM-adrianrod493\source\repos\G4-EmployeeRegister\G4-EmployeeRegisterSol\G4-EmployeeRegister\obj\Debug\net8.0-windows\Views\UserView.baml

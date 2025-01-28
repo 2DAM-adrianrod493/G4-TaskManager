@@ -10,7 +10,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\Fondos\login.jpg" />
+    <None Remove="Resources\Fondos\adminfondo.jpg" />
+    <None Remove="Resources\Fondos\loginfondo.jpg" />
+    <None Remove="Resources\Fondos\usuariofondo.jpg" />
     <None Remove="Resources\Iconos\agregar-usuario.png" />
     <None Remove="Resources\Iconos\ajustes.png" />
     <None Remove="Resources\Iconos\borrar-usuario.png" />
@@ -36,7 +38,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\Fondos\login.jpg">
+    <Resource Include="Resources\Fondos\adminfondo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fondos\loginfondo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fondos\usuariofondo.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Iconos\agregar-usuario.png">

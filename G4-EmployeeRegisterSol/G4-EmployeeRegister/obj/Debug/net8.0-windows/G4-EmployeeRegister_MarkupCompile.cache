@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\2DAM-adrianrod493\source\repos\G4-EmployeeRegister\G4-EmployeeRegisterSol\G4-EmployeeRegister\App.xaml
-2-138094018
+4358911537
 
-41547949178
+6-632654436
 198-556154604
-Resources\StyleResources.xaml;Views\LoginView.xaml;
+Resources\StyleResources.xaml;Views\AdminView.xaml;Views\LoginView.xaml;Views\UserView.xaml;
 
 False
 
