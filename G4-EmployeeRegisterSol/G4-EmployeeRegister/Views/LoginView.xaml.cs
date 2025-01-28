@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace G4_EmployeeRegister.Views
@@ -18,13 +17,11 @@ namespace G4_EmployeeRegister.Views
     /// <summary>
     /// Lógica de interacción para LoginView.xaml
     /// </summary>
-    public partial class LoginView : Page
+    public partial class LoginView : Window
     {
         public LoginView()
         {
             InitializeComponent();
         }
-
-        
     }
 }
