@@ -23,5 +23,15 @@ namespace G4_EmployeeRegister.Views
         {
             InitializeComponent();
         }
+
+        private void ClickAdmin(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ClickUsuario(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

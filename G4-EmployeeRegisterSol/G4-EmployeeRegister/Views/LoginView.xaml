@@ -56,7 +56,12 @@
                 <PasswordBox x:Name="ContraseñaPasswordBox" Grid.Row="6" Style="{StaticResource EstilosPasswordBox}"/>
 
                 <!-- Botón Iniciar Sesión -->
-                <Button Grid.Row="8" Content="Iniciar Sesión" Style="{StaticResource EstilosButton}"/>
+                
+                <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto">
+                    <Button Content="Admin" Style="{StaticResource EstilosButton}" Width="115" Click="ClickAdmin"/>
+                    <Separator Width="30" />
+                    <Button Content="Usuario" Style="{StaticResource EstilosButton}" Width="115" Click="ClickUsuario"/>
+                </StackPanel>
             </Grid>
         </Border>
     </Grid>
