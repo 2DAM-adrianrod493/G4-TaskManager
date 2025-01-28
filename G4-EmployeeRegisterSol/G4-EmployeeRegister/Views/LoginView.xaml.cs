@@ -24,5 +24,7 @@ namespace G4_EmployeeRegister.Views
         {
             InitializeComponent();
         }
+
+        
     }
 }
