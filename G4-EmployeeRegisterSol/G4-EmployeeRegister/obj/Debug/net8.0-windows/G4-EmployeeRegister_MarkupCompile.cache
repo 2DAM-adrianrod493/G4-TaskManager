@@ -1,5 +1,5 @@
 ﻿G4-EmployeeRegister
-1.0.0.0
+
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\2DAM-adrianrod493\source\repos\G4-EmployeeRegister\G4-EmployeeRegisterSol\G4-EmployeeRegister\App.xaml
 31268951323
 
-724081049
+5664902969
 198-556154604
 MainWindow.xaml;Resources\StyleResources.xaml;Views\LoginView.xaml;
 
-False
+True
 
