@@ -1,4 +1,4 @@
-﻿<Page x:Class="G4_EmployeeRegister.Views.UserView"
+﻿<Window x:Class="G4_EmployeeRegister.Views.UserView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,73 +8,74 @@
       Title="UserView" Height="450" Width="800">
 
     <!-- Fondo -->
-    <Page.Background>
-        <ImageBrush ImageSource="../Resources/Fondos/usuariofondo.jpg" Stretch="Fill"/>
-    </Page.Background>
+    <Window.Background>
+        <ImageBrush ImageSource="../Resources/Fondos/fondo.jpg" Stretch="Fill" Opacity="0.5"/>
+    </Window.Background>
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="130"/>
-            <RowDefinition Height="65"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!-- Header -->
-        <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid Grid.Row="0" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="450"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <!-- Logo -->
-            <Image Source="/Resources/Iconos/logo.png" Width="40" Style="{StaticResource EstiloImagen}" Grid.Column="0" VerticalAlignment="Center"/>
+            <Image Source="/Resources/Iconos/logo.png" Width="40" Style="{StaticResource EstiloImagen}" Grid.Column="0" Margin="15,0,15,0"/>
 
             <!-- Nombre Usuario -->
-            <TextBlock Text="Adrián Rodríguez Rodríguez" Style="{StaticResource EstiloTextoTitulo}" Grid.Column="1" VerticalAlignment="Center"/>
+            <TextBlock Text="Adrián Rodríguez Rodríguez" Style="{StaticResource EstiloTextoTitulo}" Grid.Column="1" VerticalAlignment="Center" Margin="15,0,15,0"/>
 
         </Grid>
 
         <!-- Botones -->
-        <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid Grid.Row="1" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="70"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Content="Iniciar Jornada" Style="{StaticResource EstilosButton}" Grid.Column="0" Command="{Binding IniciarJornadaCommand}" Width="220" Height="45"/>
+            <Button Content="Iniciar Jornada" Style="{StaticResource EstilosButton}" Grid.Column="0" Command="{Binding IniciarJornadaCommand}" Width="220" Height="45" Margin="15,0,15,0"/>
 
-            <Button Content="Finalizar Jornada" Style="{StaticResource EstilosButton}" Grid.Column="2" Command="{Binding FinalizarJornadaCommand}" Width="200" Height="45"/>
+            <Button Content="Finalizar Jornada" Style="{StaticResource EstilosButton}" Grid.Column="2" Command="{Binding FinalizarJornadaCommand}" Width="220" Height="45" Margin="15,0,15,0"/>
         </Grid>
 
         <!-- Historial -->
-        <Border Grid.Row="2" HorizontalAlignment="Center" Padding="20">
-            <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <StackPanel>
+        <StackPanel Grid.Row="2">
 
-                    <TextBlock Height="20"/>
+            <DataGrid x:Name="HistorialUsuario"
+                      AutoGenerateColumns="False"
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch"
+                      ColumnWidth="*"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      CanUserDeleteRows="False"
+                      Style="{StaticResource EstilosDataGrid}">
+                
+                <!-- Alinear Contenido Celdas al Centro -->
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                    </Style>
+                </DataGrid.CellStyle>
 
-                    <Grid Margin="0,10,0,10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="400"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <!-- Fecha, Entrada y Salida -->
-                        <TextBlock Text="Fecha" Style="{StaticResource EstilosSubtitulos}" Grid.Column="0" HorizontalAlignment="Center"/>
-                        <TextBlock Text="Entrada" Style="{StaticResource EstilosSubtitulos}" Grid.Column="1" HorizontalAlignment="Center"/>
-                        <TextBlock Text="Salida" Style="{StaticResource EstilosSubtitulos}" Grid.Column="2" HorizontalAlignment="Center"/>
-                    </Grid>
-
-                    <!-- Tabla -->
-                    <ItemsControl ItemsSource="{Binding Historial}">
-
-                    </ItemsControl>
-                </StackPanel>
-            </ScrollViewer>
-        </Border>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" />
+                    <DataGridTextColumn Header="Entrada" Binding="{Binding Entrada}" />
+                    <DataGridTextColumn Header="Salida" Binding="{Binding Salida}" />
+                </DataGrid.Columns>
+                
+            </DataGrid>
+            
+        </StackPanel>
+        
     </Grid>
-</Page>
+</Window>

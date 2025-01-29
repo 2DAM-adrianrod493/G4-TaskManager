@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace G4_EmployeeRegister.Views
 {
-    /// <summary>
-    /// Lógica de interacción para LoginView.xaml
-    /// </summary>
     public partial class LoginView : Window
     {
         public LoginView()
@@ -26,12 +23,15 @@ namespace G4_EmployeeRegister.Views
 
         private void ClickAdmin(object sender, RoutedEventArgs e)
         {
-            AdminView.Content = new UserView();
+            AdminView adminView = new AdminView();
+            adminView.ShowDialog();
         }
 
         private void ClickUsuario(object sender, RoutedEventArgs e)
         {
-            UserView.Content = new UserView();
+            UserView userView = new UserView();
+            userView.ShowDialog();
         }
+
     }
 }

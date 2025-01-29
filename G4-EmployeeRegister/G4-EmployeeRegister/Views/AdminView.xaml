@@ -1,19 +1,167 @@
-﻿<Page x:Class="G4_EmployeeRegister.Views.AdminView"
+﻿<Window x:Class="G4_EmployeeRegister.Views.UserView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:G4_EmployeeRegister.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="AdminView" Height="450" Width="800">
+      Title="UserView" Height="450" Width="800">
 
     <!-- Fondo -->
-    <Page.Background>
-        <ImageBrush ImageSource="../Resources/Fondos/adminfondo.jpg" Stretch="Fill"/>
-    </Page.Background>
+    <Window.Background>
+        <ImageBrush ImageSource="../Resources/Fondos/fondo.jpg" Stretch="Fill" Opacity="0.5"/>
+    </Window.Background>
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Parte Izquierda -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+            
+            <!-- Header -->
+            <Grid Grid.Column="0" Grid.Row="0" VerticalAlignment="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Logo -->
+                <Image Source="/Resources/Iconos/logo.png"
+                       Grid.Column="0"
+                       Width="40"
+                       HorizontalAlignment="Center"
+                       Style="{StaticResource EstiloImagen}"/>
+
+                <!-- NombreUsuario -->
+                <TextBlock Text="Adrián Rodríguez Rodríguez"
+                           Grid.Column="1" 
+                           VerticalAlignment="Center"
+                           Style="{StaticResource EstiloTextoTitulo}"/>
+
+                <!-- LogoSalir -->
+                <Image Source="/Resources/Iconos/salir.png"
+                       Grid.Column="2"
+                       Width="38"
+                       HorizontalAlignment="Center"
+                       Style="{StaticResource EstiloImagen}"/>
+
+            </Grid>
+
+            <!-- Buscador -->
+            <Grid Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- LogoBuscar -->
+                <Image Source="/Resources/Iconos/buscar-usuario.png"
+                       Grid.Column="0"
+                       Width="35"
+                       HorizontalAlignment="Center"
+                       Style="{StaticResource EstiloImagen}"/>
+
+                <!-- NombreUsuario -->
+                <TextBox x:Name="BuscarPorNombreID"
+                         Grid.Column="1"
+                         HorizontalAlignment="Center"
+                         Height="40" Width="320" Opacity="0.2"
+                         Style="{StaticResource EstilosTextBox}"/>
+
+                <!-- LogoFiltrar -->
+                <Image Source="/Resources/Iconos/filtrar.png"
+                       Grid.Column="2"
+                       Width="30"
+                       HorizontalAlignment="Center"
+                       Style="{StaticResource EstiloImagen}"/>
+
+            </Grid>
+
+            <!-- Lista Usuarios -->
+            <Grid Grid.Column="0" Grid.Row="2" VerticalAlignment="Bottom">
+                <StackPanel Grid.Row="2">
+                    <DataGrid x:Name="HistorialUsuario"
+                              AutoGenerateColumns="False"
+                              HorizontalAlignment="Stretch"
+                              VerticalAlignment="Stretch"
+                              ColumnWidth="*"
+                              IsReadOnly="True"
+                              CanUserAddRows="False"
+                              CanUserDeleteRows="False"
+                              Style="{StaticResource EstilosDataGrid}">
+
+                        <!-- Alinear Contenido Celdas al Centro -->
+                        <DataGrid.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                <Setter Property="VerticalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGrid.CellStyle>
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Fecha"  Binding="{Binding Fecha}" />
+                            <DataGridTextColumn Header="Entrada" Binding="{Binding Entrada}" />
+                            <DataGridTextColumn Header="Salida" Binding="{Binding Salida}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <!-- Parte Derecha -->
+        <Grid Grid.Column="1">
+            <!-- Formulario -->
+            <Border  Style="{StaticResource EstilosBordesFormulario}" 
+                     HorizontalAlignment="Center" VerticalAlignment="Top" 
+                     Width="200" Height="400" Margin="0,0,0,0">
+                <Grid>
+                    <!-- Filas -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Nombre Usuario -->
+                    <TextBlock Grid.Row="0" Text="Usuario" Style="{StaticResource EstilosSubtitulos}"/>
+                    <TextBox x:Name="NombreTextBox" Grid.Row="1" Style="{StaticResource EstilosTextBox}"/>
+
+                    <!-- Puesto -->
+                    <TextBlock Grid.Row="2" Text="Puesto" Style="{StaticResource EstilosSubtitulos}"/>
+                    <TextBox x:Name="PuestoTextBox" Grid.Row="3" Style="{StaticResource EstilosTextBox}"/>
+
+                    <!-- Estado -->
+                    <TextBlock Grid.Row="4" Text="Estado" Style="{StaticResource EstilosSubtitulos}"/>
+                    <TextBox x:Name="EstadoTextBox" Grid.Row="5" Style="{StaticResource EstilosTextBox}"/>
+
+                    <!-- Botones -->
+                    <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto">
+                        <Button Content="Añadir" Style="{StaticResource EstilosButton}" Width="70" Click="ClickAñadir" Margin="0,0,10,0"/>
+
+                        <Button Content="Editar" Style="{StaticResource EstilosButton}" Width="70" Click="ClickEditar" Margin="0,0,10,0"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
     </Grid>
-</Page>
+</Window>

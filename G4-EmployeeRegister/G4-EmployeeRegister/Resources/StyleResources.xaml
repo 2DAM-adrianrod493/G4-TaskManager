@@ -116,4 +116,30 @@
         </Setter>
     </Style>
 
+    <!-- Estilos DataGrid -->
+    <Style TargetType="DataGrid" x:Key="EstilosDataGrid">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="#44376C"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Margin" Value="0,10,0,0"/>
+        <Setter Property="Margin" Value="0,10,0,0"/>
+        <!--
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="DataGrid">
+                    <Grid>
+                        <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
+                            <Border.Effect>
+                                <DropShadowEffect BlurRadius="20" ShadowDepth="7" Direction="-30" Opacity="0.3"/>
+                            </Border.Effect>
+                        </Border>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter> -->
+    </Style>
+    
 </ResourceDictionary>

@@ -10,15 +10,11 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace G4_EmployeeRegister.Views
 {
-    /// <summary>
-    /// Lógica de interacción para UserView.xaml
-    /// </summary>
-    public partial class UserView : Page
+    public partial class UserView : Window
     {
         public UserView()
         {

@@ -10,17 +10,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\Fondos\adminfondo.jpg" />
-    <None Remove="Resources\Fondos\loginfondo.jpg" />
-    <None Remove="Resources\Fondos\usuariofondo.jpg" />
+    <None Remove="Resources\Fondos\fondo.jpg" />
     <None Remove="Resources\Iconos\agregar-usuario.png" />
     <None Remove="Resources\Iconos\ajustes.png" />
+    <None Remove="Resources\Iconos\añadir-usuario.png" />
     <None Remove="Resources\Iconos\borrar-usuario.png" />
     <None Remove="Resources\Iconos\buscar-usuario.png" />
     <None Remove="Resources\Iconos\cancelar.png" />
     <None Remove="Resources\Iconos\candado.png" />
     <None Remove="Resources\Iconos\confirmar.png" />
     <None Remove="Resources\Iconos\editar-usuario.png" />
+    <None Remove="Resources\Iconos\eliminar-usuario.png" />
     <None Remove="Resources\Iconos\entrar.png" />
     <None Remove="Resources\Iconos\filtrar.png" />
     <None Remove="Resources\Iconos\guardar.png" />
@@ -32,25 +32,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Services\" />
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Resources\Fondos\adminfondo.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Fondos\loginfondo.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Fondos\usuariofondo.jpg">
+    <Resource Include="Resources\Fondos\fondo.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Iconos\agregar-usuario.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Iconos\ajustes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Iconos\añadir-usuario.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Iconos\borrar-usuario.png">
@@ -69,6 +60,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Iconos\editar-usuario.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Iconos\eliminar-usuario.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Iconos\entrar.png">
