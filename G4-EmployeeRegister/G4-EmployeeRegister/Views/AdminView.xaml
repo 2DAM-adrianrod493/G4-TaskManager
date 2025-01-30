@@ -14,24 +14,15 @@
     </Window.Background>
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
 
-        <!-- Parte Izquierda -->
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="4*"/>
-            </Grid.RowDefinitions>
-            
             <!-- Header -->
-            <Grid Grid.Column="0" Grid.Row="0" VerticalAlignment="Top">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+        <Grid Grid.Column="0" Grid.Row="0" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="4*"/>
@@ -66,10 +57,7 @@
             </Grid>
 
             <!-- Buscador -->
-            <Grid Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+        <Grid Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="4*"/>
@@ -92,7 +80,7 @@
                 <TextBox x:Name="BuscarPorNombreID"
                          Grid.Column="1"
                          HorizontalAlignment="Center"
-                         Height="40" Width="320" Opacity="0.2"
+                         Height="40" Width="400" Opacity="0.2"
                          Style="{StaticResource EstilosTextBox}"/>
 
                 <!-- Botón Filtrar -->
@@ -109,10 +97,21 @@
 
             </Grid>
 
+            <!-- Botones -->
+        <Grid Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Grid.Row="2" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Button Content="Añadir" Style="{StaticResource EstilosButton}" Width="200" Height="35" Click="ClickAñadir"/>
+                    <Separator Width="20" Visibility="Hidden"/>
+                    <Button Content="Editar" Style="{StaticResource EstilosButton}" Width="200" Height="35" Click="ClickEditar"/>
+                    <Separator Width="20" Visibility="Hidden"/>
+                    <Button Content="Eliminar" Style="{StaticResource EstilosButton}" Width="200" Height="35" Click="ClickEliminar"/>
+            </StackPanel>
+        </Grid>
+
             <!-- Lista Usuarios -->
-            <Grid Grid.Column="0" Grid.Row="2" VerticalAlignment="Top" Margin="0,15,0,0">
-                <StackPanel Grid.Row="2">
-                    <DataGrid x:Name="HistorialUsuario"
+        <Grid Grid.Row="3" VerticalAlignment="Top" Margin="15,20,15,0">
+            <StackPanel Grid.Row="2">
+                <DataGrid x:Name="HistorialUsuario"
                               AutoGenerateColumns="False"
                               HorizontalAlignment="Stretch"
                               VerticalAlignment="Stretch"
@@ -122,98 +121,22 @@
                               CanUserDeleteRows="False"
                               Style="{StaticResource EstilosDataGrid}">
 
-                        <!-- Alinear Contenido Celdas al Centro -->
-                        <DataGrid.CellStyle>
-                            <Style TargetType="DataGridCell">
-                                <Setter Property="HorizontalContentAlignment" Value="Center" />
-                                <Setter Property="VerticalContentAlignment" Value="Center" />
-                            </Style>
-                        </DataGrid.CellStyle>
+                    <!-- Estilos -->
+                    <DataGrid.CellStyle Style="{StaticResource EstilosDataGridCell}">
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                        </Style>
+                    </DataGrid.CellStyle>
 
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="ID"  Binding="{Binding ID}" />
-                            <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
-                            <DataGridTextColumn Header="Puesto" Binding="{Binding Puesto}" />
-                            <DataGridTextColumn Header="Estado" Binding="{Binding Estado}" />
-                        </DataGrid.Columns>
-                    </DataGrid>
-                </StackPanel>
-            </Grid>
-        </Grid>
-
-        <!-- Parte Derecha -->
-        <Grid Grid.Column="1">
-            <!-- Formulario -->
-            <Border Style="{StaticResource EstilosBordesFormulario}" 
-                    Margin="0,0,0,0">
-                <Grid>
-                    <!-- Filas -->
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-
-                    <StackPanel Grid.Row="0">
-                        <!-- Username -->
-                        <TextBlock Text="Username" Height="Auto" Style="{StaticResource EstilosSubtitulos}"/>
-                        <TextBox x:Name="UsernameTextBox" Height="18" Style="{StaticResource EstilosTextBox}" Margin="0,0,0,0"/>
-                    </StackPanel>
-
-                    <StackPanel Grid.Row="1">
-                        <!-- Nombre Usuario -->
-                        <TextBlock Text="Nombre" Height="Auto" Style="{StaticResource EstilosSubtitulos}"/>
-                        <TextBox x:Name="NombreTextBox" Height="18" Style="{StaticResource EstilosTextBox}" Margin="0,0,0,0"/>
-                    </StackPanel>
-
-                    <StackPanel Grid.Row="2">
-                        <!-- Apellidos Usuario -->
-                        <TextBlock Text="Apellidos" Height="Auto" Style="{StaticResource EstilosSubtitulos}"/>
-                        <TextBox x:Name="ApellidosTextBox" Height="18" Style="{StaticResource EstilosTextBox}" Margin="0,0,0,0"/>
-                    </StackPanel>
-
-                    <StackPanel Grid.Row="3">
-                        <!-- Email Usuario -->
-                        <TextBlock Text="Email" Height="Auto" Style="{StaticResource EstilosSubtitulos}"/>
-                        <TextBox x:Name="EmailTextBox" Height="18" Style="{StaticResource EstilosTextBox}" Margin="0,0,0,0"/>
-                    </StackPanel>
-
-                    <StackPanel Grid.Row="4">
-                        <!-- Contraseña Usuario -->
-                        <TextBlock Text="Contraseña" Height="Auto" Style="{StaticResource EstilosSubtitulos}"/>
-                        <TextBox x:Name="ContraseñaTextBox" Height="18" Style="{StaticResource EstilosTextBox}" Margin="0,0,0,0"/>
-                    </StackPanel>
-
-                    <StackPanel Grid.Row="5">
-                        <!-- Rol Usuario -->
-                        <TextBlock Text="Rol" Height="Auto" Style="{StaticResource EstilosSubtitulos}"/>
-                        <TextBox x:Name="RolTextBox"  Height="18" Style="{StaticResource EstilosTextBox}" Margin="0,0,0,0"/>
-                    </StackPanel>
-
-                    <StackPanel Grid.Row="6">
-                        <!-- Foto Usuario -->
-                        <TextBlock Text="Foto" Height="Auto" Style="{StaticResource EstilosSubtitulos}"/>
-                        <Button Content="Seleccionar Imagen" Click="SeleccionarImagen_Click" Margin="0,0,0,0" Width="Auto" Height="Auto" VerticalAlignment="Bottom"/>
-                    </StackPanel>
-    
-                    <!-- Botones -->
-                    <StackPanel Grid.Row="7" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <Button Content="Añadir" Style="{StaticResource EstilosButton}" Width="60" Height="30" Click="ClickAñadir"/>
-                        <Separator Width="20" Visibility="Hidden"/>
-                        <Button Content="Editar" Style="{StaticResource EstilosButton}" Width="60" Height="30" Click="ClickEditar"/>
-                    </StackPanel>
-                    
-                    <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Eliminar" Style="{StaticResource EstilosButton}" Width="60" Height="30" Click="ClickAñadir"/>
-                    </StackPanel>
-                </Grid>
-            </Border>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID"  Binding="{Binding ID}" />
+                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
+                        <DataGridTextColumn Header="Rol" Binding="{Binding Rol}" />
+                        <DataGridTextColumn Header="Fichaje" Binding="{Binding Fichaje}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

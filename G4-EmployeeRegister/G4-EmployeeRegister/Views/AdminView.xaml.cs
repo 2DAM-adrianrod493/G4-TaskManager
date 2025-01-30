@@ -8,6 +8,7 @@ namespace G4_EmployeeRegister.Views
         public AdminView()
         {
             InitializeComponent();
+            this.DataContext = new ViewModels.AdminViewModel();
         }
 
         private void BotonSalir_Click(object sender, RoutedEventArgs e)
@@ -16,7 +17,6 @@ namespace G4_EmployeeRegister.Views
             var loginView = new LoginView();
             loginView.Show();
         }
-
 
         private void BotonBuscar_Click(object sender, RoutedEventArgs e)
         {

@@ -19,7 +19,7 @@ namespace G4_EmployeeRegister.Models
         private string? _departamento;
 
         // Constructor
-        public UsuarioModel(int idUsuario, string nombre, string apellidos, string email, string username, string contraseña, string foto, string rol, string? departamento)
+        public UsuarioModel(int idUsuario, string nombre, string apellidos, string email, string username, string contraseña, string foto, string rol, string departamento)
         {
             IdUsuario = idUsuario;
             Nombre = nombre;

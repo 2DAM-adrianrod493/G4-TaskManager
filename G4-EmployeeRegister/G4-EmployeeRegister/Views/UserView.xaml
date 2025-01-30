@@ -62,24 +62,26 @@
         <!-- Botones -->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="6*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <Button Content="Iniciar Jornada"
                     Style="{StaticResource EstilosButton}"
-                    Grid.Column="0"
+                    Grid.Column="1"
                     Command="{Binding IniciarJornadaCommand}"
                     Width="Auto"
-                    Margin="10,0,10,0"/>
+                    Margin="15,0,10,0"/>
 
             <Button Content="Finalizar Jornada"
                     Style="{StaticResource EstilosButton}"
-                    Grid.Column="2"
+                    Grid.Column="3"
                     Command="{Binding FinalizarJornadaCommand}"
                     Width="Auto"
-                    Margin="10,0,10,0"/>
+                    Margin="10,0,15,0"/>
         </Grid>
 
         <!-- Historial -->

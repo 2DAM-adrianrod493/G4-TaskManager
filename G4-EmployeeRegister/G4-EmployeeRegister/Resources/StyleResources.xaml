@@ -55,17 +55,19 @@
         <Setter Property="Height" Value="30"/>
         <Setter Property="FontSize" Value="16"/>
         <Setter Property="Margin" Value="0,5"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="#CCCCCC"/>
+        <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TextBox">
-                    <Grid>
-                        <Border CornerRadius="10" Background="White" BorderBrush="#CCCCCC" BorderThickness="1">
-                            <Border.Effect>
-                                <DropShadowEffect BlurRadius="20" ShadowDepth="7" Direction="-30" Opacity="0.3"/>
-                            </Border.Effect>
-                            <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent" BorderBrush="Transparent"/>
-                        </Border>
-                    </Grid>
+                    <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="20" ShadowDepth="7" Direction="-30" Opacity="0.3"/>
+                        </Border.Effect>
+                        <ScrollViewer x:Name="PART_ContentHost" />
+                        <!--<TextBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent" BorderBrush="Transparent"/>-->
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -84,7 +86,7 @@
                             <Border.Effect>
                                 <DropShadowEffect BlurRadius="20" ShadowDepth="7" Direction="-30" Opacity="0.3"/>
                             </Border.Effect>
-                            <PasswordBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent" BorderBrush="Transparent"/>
+                            <ScrollViewer x:Name="PART_ContentHost" />
                         </Border>
                     </Grid>
                 </ControlTemplate>
@@ -132,14 +134,12 @@
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="Background">
             <Setter.Value>
-                <SolidColorBrush Color="#44376C"
-                                 Opacity="0.2"/>
+                <SolidColorBrush Color="#44376C" Opacity="0.2"/>
             </Setter.Value>
         </Setter>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="BorderBrush" Value="#44376C"/>
         <Setter Property="ColumnHeaderHeight" Value="30"/>
-
         <!-- Texto -->
         <Setter Property="ColumnHeaderStyle">
             <Setter.Value>
@@ -161,6 +161,18 @@
                 </Style>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <!-- Estilos DataGridCell -->
+    <Style TargetType="DataGridCell" x:Key="EstilosDataGridCell">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <SolidColorBrush Color="#44376C" Opacity="0.2"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="#44376C"/>
     </Style>
     
 </ResourceDictionary>
