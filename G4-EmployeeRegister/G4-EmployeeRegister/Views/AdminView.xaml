@@ -108,7 +108,7 @@
             </StackPanel>
         </Grid>
 
-            <!-- Lista Usuarios -->
+        <!-- Lista Usuarios -->
         <Grid Grid.Row="3" VerticalAlignment="Top" Margin="15,20,15,0">
             <StackPanel Grid.Row="2">
                 <DataGrid x:Name="HistorialUsuario"
@@ -122,7 +122,7 @@
                               Style="{StaticResource EstilosDataGrid}">
 
                     <!-- Estilos -->
-                    <DataGrid.CellStyle Style="{StaticResource EstilosDataGridCell}">
+                    <DataGrid.CellStyle>
                         <Style TargetType="DataGridCell">
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
                             <Setter Property="VerticalContentAlignment" Value="Center" />
