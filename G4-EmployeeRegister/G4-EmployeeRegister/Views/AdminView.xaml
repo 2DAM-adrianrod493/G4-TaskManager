@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:G4_EmployeeRegister.Views"
       mc:Ignorable="d" 
-      Title="AdminView" Height="450" Width="800"
+      Title="AdminView" Height="500" Width="800"
       ResizeMode="NoResize">
 
     <!-- Fondo -->
@@ -144,9 +144,8 @@
         <!-- Parte Derecha -->
         <Grid Grid.Column="1">
             <!-- Formulario -->
-            <Border  Style="{StaticResource EstilosBordesFormulario}" 
-                     HorizontalAlignment="Center" VerticalAlignment="Stretch" 
-                     Width="200" Margin="0,0,0,0">
+            <Border Style="{StaticResource EstilosBordesFormulario}" 
+                    Margin="0,0,0,0">
                 <Grid>
                     <!-- Filas -->
                     <Grid.RowDefinitions>
@@ -158,28 +157,60 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <!-- Nombre Usuario -->
-                    <TextBlock Grid.Row="0" Text="Usuario" Style="{StaticResource EstilosSubtitulos}"/>
-                    <TextBox x:Name="NombreTextBox" Grid.Row="1" Style="{StaticResource EstilosTextBox}"/>
-
-                    <!-- Puesto -->
-                    <TextBlock Grid.Row="2" Text="Puesto" Style="{StaticResource EstilosSubtitulos}"/>
-                    <TextBox x:Name="PuestoTextBox" Grid.Row="3" Style="{StaticResource EstilosTextBox}"/>
-
-                    <!-- Estado -->
-                    <TextBlock Grid.Row="4" Text="Estado" Style="{StaticResource EstilosSubtitulos}"/>
-                    <TextBox x:Name="EstadoTextBox" Grid.Row="5" Style="{StaticResource EstilosTextBox}"/>
-
-                    <!-- Botones -->
-                    <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto">
-                        <Button Content="Añadir" Style="{StaticResource EstilosButton}" Width="70" Click="ClickAñadir" Margin="0,0,10,0"/>
-
-                        <Button Content="Editar" Style="{StaticResource EstilosButton}" Width="70" Click="ClickEditar" Margin="0,0,10,0"/>
+                    <StackPanel Grid.Row="0">
+                        <!-- Username -->
+                        <TextBlock Text="Username" Height="Auto" Style="{StaticResource EstilosSubtitulos}"/>
+                        <TextBox x:Name="UsernameTextBox" Height="18" Style="{StaticResource EstilosTextBox}" Margin="0,0,0,0"/>
                     </StackPanel>
-                    <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto">
-                        <Button Content="Eliminar" Style="{StaticResource EstilosButton}" Width="70" Click="ClickAñadir" Margin="0,10,0,0"/>
+
+                    <StackPanel Grid.Row="1">
+                        <!-- Nombre Usuario -->
+                        <TextBlock Text="Nombre" Height="Auto" Style="{StaticResource EstilosSubtitulos}"/>
+                        <TextBox x:Name="NombreTextBox" Height="18" Style="{StaticResource EstilosTextBox}" Margin="0,0,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2">
+                        <!-- Apellidos Usuario -->
+                        <TextBlock Text="Apellidos" Height="Auto" Style="{StaticResource EstilosSubtitulos}"/>
+                        <TextBox x:Name="ApellidosTextBox" Height="18" Style="{StaticResource EstilosTextBox}" Margin="0,0,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="3">
+                        <!-- Email Usuario -->
+                        <TextBlock Text="Email" Height="Auto" Style="{StaticResource EstilosSubtitulos}"/>
+                        <TextBox x:Name="EmailTextBox" Height="18" Style="{StaticResource EstilosTextBox}" Margin="0,0,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="4">
+                        <!-- Contraseña Usuario -->
+                        <TextBlock Text="Contraseña" Height="Auto" Style="{StaticResource EstilosSubtitulos}"/>
+                        <TextBox x:Name="ContraseñaTextBox" Height="18" Style="{StaticResource EstilosTextBox}" Margin="0,0,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="5">
+                        <!-- Rol Usuario -->
+                        <TextBlock Text="Rol" Height="Auto" Style="{StaticResource EstilosSubtitulos}"/>
+                        <TextBox x:Name="RolTextBox"  Height="18" Style="{StaticResource EstilosTextBox}" Margin="0,0,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="6">
+                        <!-- Foto Usuario -->
+                        <TextBlock Text="Foto" Height="Auto" Style="{StaticResource EstilosSubtitulos}"/>
+                        <Button Content="Seleccionar Imagen" Click="SeleccionarImagen_Click" Margin="0,0,0,0" Width="Auto" Height="Auto" VerticalAlignment="Bottom"/>
+                    </StackPanel>
+    
+                    <!-- Botones -->
+                    <StackPanel Grid.Row="7" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button Content="Añadir" Style="{StaticResource EstilosButton}" Width="60" Height="30" Click="ClickAñadir"/>
+                        <Separator Width="20" Visibility="Hidden"/>
+                        <Button Content="Editar" Style="{StaticResource EstilosButton}" Width="60" Height="30" Click="ClickEditar"/>
+                    </StackPanel>
+                    
+                    <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Eliminar" Style="{StaticResource EstilosButton}" Width="60" Height="30" Click="ClickAñadir"/>
                     </StackPanel>
                 </Grid>
             </Border>
