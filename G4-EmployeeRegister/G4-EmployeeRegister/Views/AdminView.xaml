@@ -109,13 +109,14 @@
         </Grid>
 
         <!-- Lista Usuarios -->
-        <Grid Grid.Row="3" VerticalAlignment="Top" Margin="15,20,15,0">
+        <Grid Grid.Row="3" Width="Auto" >
             <StackPanel Grid.Row="2">
                 <DataGrid x:Name="HistorialUsuario"
                               AutoGenerateColumns="False"
                               HorizontalAlignment="Stretch"
                               VerticalAlignment="Stretch"
                               ColumnWidth="*"
+                          ItemsSource="{Binding Usuarios}"
                               IsReadOnly="True"
                               CanUserAddRows="False"
                               CanUserDeleteRows="False"
@@ -130,10 +131,10 @@
                     </DataGrid.CellStyle>
 
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="ID"  Binding="{Binding ID}" />
+                        <DataGridTextColumn Header="ID"  Binding="{Binding IdUsuario}" />
                         <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
                         <DataGridTextColumn Header="Rol" Binding="{Binding Rol}" />
-                        <DataGridTextColumn Header="Fichaje" Binding="{Binding Fichaje}" />
+                        <DataGridTextColumn Header="Fichaje" Binding="{Binding Fichaje.FechaHora}" />
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>

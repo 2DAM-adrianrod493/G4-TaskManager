@@ -7,13 +7,9 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
-using System.Windows;
 
 namespace G4_EmployeeRegister.ViewModels
 {
-
-
     class AdminViewModel : INotifyPropertyChanged
     {
         private readonly Services.UsuarioService _usuariosService;
@@ -58,53 +54,9 @@ namespace G4_EmployeeRegister.ViewModels
         }
         #endregion
 
-        #region PÁGINA EDICIÓN
-        private Page _editPage;
-        public Page EditPage
-        {
-            get => _editPage;
-            set
-            {
-                _editPage = value;
-                OnPropertyChanged(nameof(EditPage));
-            }
-        }
-        #endregion
-
-        #region CONTROL VISIBILIDAD
-        private Visibility _editFrameVisibility = Visibility.Hidden;
-        public Visibility EditFrameVisibility
-        {
-            get => _editFrameVisibility;
-            set
-            {
-                _editFrameVisibility = value;
-                OnPropertyChanged(nameof(EditFrameVisibility));
-            }
-        }
-
-        private Visibility _productFrameVisibility = Visibility.Visible;
-        public Visibility ProductFrameVisibility
-        {
-            get => _productFrameVisibility;
-            set
-            {
-                _productFrameVisibility = value;
-                OnPropertyChanged(nameof(ProductFrameVisibility));
-            }
-        }
-        #endregion
-
-        #region COMANDOS
-        public RelayCommand AddUserCommand { get; }
-        public RelayCommand DeleteCommand { get; }
-        public RelayCommand EditCommand { get; }
-        public RelayCommand VolverAtrasCommand { get; }
-        #endregion
-
         private void LoadUsers()
         {
-            Usuarios = new UsuarioService().GetAllUsuarios();
+            Usuarios = _usuariosService.GetAllUsuarios();
         }
 
         #region EVENTOS DE NOTIFICACIÓN
@@ -114,5 +66,11 @@ namespace G4_EmployeeRegister.ViewModels
         }
         #endregion
 
+        public AdminViewModel()
+        {
+            _usuariosService = new UsuarioService();
+            Usuarios = new ObservableCollection<UsuarioModel>();
+            LoadUsers();
+        }
     }
 }
