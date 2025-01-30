@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("G4-EmployeeRegister")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7cb01f59cef571848423d7455c49885cf3d57979")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2872665e0c130a769e9857639285df22dc3be21")]
 [assembly: System.Reflection.AssemblyProductAttribute("G4-EmployeeRegister")]
 [assembly: System.Reflection.AssemblyTitleAttribute("G4-EmployeeRegister")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

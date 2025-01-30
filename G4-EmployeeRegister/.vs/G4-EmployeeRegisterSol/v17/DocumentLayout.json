@@ -3,6 +3,42 @@
   "WorkspaceRootPath": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\editpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\editpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\adminview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\adminview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\editpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\editpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\services\\fichajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\services\\fichajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\viewmodels\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\viewmodels\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,80 +47,24 @@
       "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\adminview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\adminview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\adminview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\adminview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\services\\fichajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\services\\fichajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\userview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\userview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\models\\fichajemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\models\\fichajemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\pages\\editpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\pages\\editpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\pages\\editpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\pages\\editpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\userview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\userview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\resources\\styleresources.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\resources\\styleresources.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\adminview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\adminview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\pages\\editpage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\pages\\editpage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\loginview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\loginview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\2dam-adrianrod493\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\ViewModels\\LoginViewModel.cs",
@@ -119,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\ViewModels\\RelayCommand.cs",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\ViewModels\\RelayCommand.cs",
@@ -132,20 +112,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "AdminViewModel.cs",
               "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\ViewModels\\AdminViewModel.cs",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\ViewModels\\AdminViewModel.cs",
               "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\ViewModels\\AdminViewModel.cs",
               "RelativeToolTip": "G4-EmployeeRegister\\ViewModels\\AdminViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-30T19:13:58.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "UserView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\UserView.xaml.cs",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\Views\\UserView.xaml.cs",
@@ -157,15 +137,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
               "Title": "UsuarioService.cs",
               "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Services\\UsuarioService.cs",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\Services\\UsuarioService.cs",
               "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Services\\UsuarioService.cs",
               "RelativeToolTip": "G4-EmployeeRegister\\Services\\UsuarioService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAADwvzYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T19:12:17.357Z"
+              "WhenOpened": "2025-01-30T19:12:17.357Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -182,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "FichajeModel.cs",
               "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Models\\FichajeModel.cs",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\Models\\FichajeModel.cs",
@@ -194,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "UsuarioModel.cs",
               "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Models\\UsuarioModel.cs",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\Models\\UsuarioModel.cs",
@@ -202,12 +183,11 @@
               "RelativeToolTip": "G4-EmployeeRegister\\Models\\UsuarioModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T19:10:53.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-30T19:10:53.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 7,
               "Title": "UserViewModel.cs",
               "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\ViewModels\\UserViewModel.cs",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\ViewModels\\UserViewModel.cs",
@@ -215,35 +195,38 @@
               "RelativeToolTip": "G4-EmployeeRegister\\ViewModels\\UserViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T19:10:51.637Z"
+              "WhenOpened": "2025-01-30T19:10:51.637Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 11,
               "Title": "LoginView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\LoginView.xaml.cs",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\Views\\LoginView.xaml.cs",
               "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\LoginView.xaml.cs",
               "RelativeToolTip": "G4-EmployeeRegister\\Views\\LoginView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T18:59:04.453Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "EditPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Pages\\EditPage.xaml.cs",
-              "RelativeDocumentMoniker": "G4-EmployeeRegister\\Pages\\EditPage.xaml.cs",
-              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Pages\\EditPage.xaml.cs",
-              "RelativeToolTip": "G4-EmployeeRegister\\Pages\\EditPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T18:57:35.44Z"
+              "WhenOpened": "2025-01-30T18:59:04.453Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "EditPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\EditPage.xaml.cs",
+              "RelativeDocumentMoniker": "G4-EmployeeRegister\\Views\\EditPage.xaml.cs",
+              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\EditPage.xaml.cs",
+              "RelativeToolTip": "G4-EmployeeRegister\\Views\\EditPage.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T18:57:35.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "AdminView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\AdminView.xaml.cs",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\Views\\AdminView.xaml.cs",
@@ -256,18 +239,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "EditPage.xaml",
-              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Pages\\EditPage.xaml",
-              "RelativeDocumentMoniker": "G4-EmployeeRegister\\Pages\\EditPage.xaml",
-              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Pages\\EditPage.xaml",
-              "RelativeToolTip": "G4-EmployeeRegister\\Pages\\EditPage.xaml",
+              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\EditPage.xaml",
+              "RelativeDocumentMoniker": "G4-EmployeeRegister\\Views\\EditPage.xaml",
+              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\EditPage.xaml",
+              "RelativeToolTip": "G4-EmployeeRegister\\Views\\EditPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-30T18:26:10.328Z"
+              "WhenOpened": "2025-01-30T18:26:10.328Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 1,
               "Title": "UserView.xaml",
               "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\UserView.xaml",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\Views\\UserView.xaml",
@@ -279,18 +263,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 3,
               "Title": "LoginView.xaml",
               "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\LoginView.xaml",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\Views\\LoginView.xaml",
               "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\LoginView.xaml",
               "RelativeToolTip": "G4-EmployeeRegister\\Views\\LoginView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-30T16:04:55.101Z"
+              "WhenOpened": "2025-01-30T16:04:55.101Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "AdminView.xaml",
               "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\AdminView.xaml",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\Views\\AdminView.xaml",
@@ -298,88 +283,6 @@
               "RelativeToolTip": "G4-EmployeeRegister\\Views\\AdminView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-01-30T16:04:51.388Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "1784de93-9033-44f5-aebd-6e1de817947b",
-        "Display": 0,
-        "X": 1361,
-        "Y": 277,
-        "Width": 800,
-        "Height": 600,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserView.xaml",
-              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\UserView.xaml",
-              "RelativeDocumentMoniker": "G4-EmployeeRegister\\Views\\UserView.xaml",
-              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\UserView.xaml",
-              "RelativeToolTip": "G4-EmployeeRegister\\Views\\UserView.xaml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAEwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-30T16:04:59.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "LoginView.xaml",
-              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\LoginView.xaml",
-              "RelativeDocumentMoniker": "G4-EmployeeRegister\\Views\\LoginView.xaml",
-              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\LoginView.xaml",
-              "RelativeToolTip": "G4-EmployeeRegister\\Views\\LoginView.xaml",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAmwB4AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-30T16:05:04.823Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AdminView.xaml",
-              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\AdminView.xaml",
-              "RelativeDocumentMoniker": "G4-EmployeeRegister\\Views\\AdminView.xaml",
-              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\AdminView.xaml",
-              "RelativeToolTip": "G4-EmployeeRegister\\Views\\AdminView.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-30T16:05:12.116Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "EditPage.xaml",
-              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Pages\\EditPage.xaml",
-              "RelativeDocumentMoniker": "G4-EmployeeRegister\\Pages\\EditPage.xaml",
-              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Pages\\EditPage.xaml",
-              "RelativeToolTip": "G4-EmployeeRegister\\Pages\\EditPage.xaml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAEwAAACJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-30T18:27:36.881Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "StyleResources.xaml",
-              "DocumentMoniker": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Resources\\StyleResources.xaml",
-              "RelativeDocumentMoniker": "G4-EmployeeRegister\\Resources\\StyleResources.xaml",
-              "ToolTip": "C:\\Users\\2DAM-adrianrod493\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Resources\\StyleResources.xaml",
-              "RelativeToolTip": "G4-EmployeeRegister\\Resources\\StyleResources.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-30T16:23:26.072Z",
               "EditorCaption": ""
             }
           ]

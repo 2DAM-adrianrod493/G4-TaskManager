@@ -8,11 +8,11 @@ namespace G4_EmployeeRegister.Views
         public LoginView()
         {
             InitializeComponent();
-            this.Closing += LoginView_Closing;
+            this.Closing += LoginViewCerrar;
         }
 
         // Cerrar App
-        private void LoginView_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void LoginViewCerrar(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Application.Current.Shutdown();
         }

@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Pages\EditPage.xaml.cs">
+    <Compile Update="Views\EditPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\AdminView.xaml.cs">
@@ -21,7 +21,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Pages\EditPage.xaml">
+    <Page Update="Views\EditPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\StyleResources.xaml">
