@@ -1,16 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace G4_EmployeeRegister.Views
 {
@@ -19,19 +8,28 @@ namespace G4_EmployeeRegister.Views
         public LoginView()
         {
             InitializeComponent();
+            this.Closing += LoginView_Closing;
+        }
+
+        // Cerrar App
+        private void LoginView_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
 
         private void ClickAdmin(object sender, RoutedEventArgs e)
         {
-            AdminView adminView = new AdminView();
-            adminView.ShowDialog();
+            var adminView = new AdminView();
+            adminView.Show();
+            this.Hide();
         }
 
         private void ClickUsuario(object sender, RoutedEventArgs e)
         {
-            UserView userView = new UserView();
-            userView.ShowDialog();
+            var userView = new UserView();
+            userView.Show();
+            this.Hide();
         }
-
     }
+
 }

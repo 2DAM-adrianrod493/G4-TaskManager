@@ -5,7 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:G4_EmployeeRegister.Views"
       mc:Ignorable="d" 
-      Title="UserView" Height="450" Width="800">
+      Title="UserView" Height="450" Width="800"
+      ResizeMode="NoResize">
 
     <!-- Fondo -->
     <Window.Background>
@@ -14,42 +15,76 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="80"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
 
         <!-- Header -->
-        <Grid Grid.Row="0" HorizontalAlignment="Center">
+        <Grid Grid.Column="0" Grid.Row="0" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <!-- Logo -->
-            <Image Source="/Resources/Iconos/logo.png" Width="40" Style="{StaticResource EstiloImagen}" Grid.Column="0" Margin="15,0,15,0"/>
+            <Image Source="/Resources/Iconos/logo.png"
+                    Grid.Column="0"
+                    Width="40"
+                    HorizontalAlignment="Center"
+                    Style="{StaticResource EstiloImagen}"/>
 
             <!-- Nombre Usuario -->
-            <TextBlock Text="Adrián Rodríguez Rodríguez" Style="{StaticResource EstiloTextoTitulo}" Grid.Column="1" VerticalAlignment="Center" Margin="15,0,15,0"/>
+            <TextBlock Text="Adrián Rodríguez Rodríguez"
+                       Grid.Column="1" 
+                       VerticalAlignment="Center"
+                       Style="{StaticResource EstiloTextoTitulo}"/>
+
+            <!-- Botón Salir -->
+            <Button x:Name="BotonSalir"
+                    Grid.Column="2"
+                    HorizontalAlignment="Center"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Click="BotonSalir_Click">
+                <Image Source="/Resources/Iconos/salir.png"
+                       Width="38"
+                       Style="{StaticResource EstiloImagen}"/>
+            </Button>
 
         </Grid>
 
+
         <!-- Botones -->
-        <Grid Grid.Row="1" HorizontalAlignment="Center">
+        <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="6*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Content="Iniciar Jornada" Style="{StaticResource EstilosButton}" Grid.Column="0" Command="{Binding IniciarJornadaCommand}" Width="220" Height="45" Margin="15,0,15,0"/>
+            <Button Content="Iniciar Jornada"
+                    Style="{StaticResource EstilosButton}"
+                    Grid.Column="0"
+                    Command="{Binding IniciarJornadaCommand}"
+                    Width="Auto"
+                    Margin="10,0,10,0"/>
 
-            <Button Content="Finalizar Jornada" Style="{StaticResource EstilosButton}" Grid.Column="2" Command="{Binding FinalizarJornadaCommand}" Width="220" Height="45" Margin="15,0,15,0"/>
+            <Button Content="Finalizar Jornada"
+                    Style="{StaticResource EstilosButton}"
+                    Grid.Column="2"
+                    Command="{Binding FinalizarJornadaCommand}"
+                    Width="Auto"
+                    Margin="10,0,10,0"/>
         </Grid>
 
         <!-- Historial -->
-        <StackPanel Grid.Row="2">
-
-            <DataGrid x:Name="HistorialUsuario"
+        <StackPanel Grid.Row="2" Margin="0,20,0,0">
+            <DataGrid 
                       AutoGenerateColumns="False"
                       HorizontalAlignment="Stretch"
                       VerticalAlignment="Stretch"
@@ -58,7 +93,7 @@
                       CanUserAddRows="False"
                       CanUserDeleteRows="False"
                       Style="{StaticResource EstilosDataGrid}">
-                
+
                 <!-- Alinear Contenido Celdas al Centro -->
                 <DataGrid.CellStyle>
                     <Style TargetType="DataGridCell">
@@ -72,10 +107,9 @@
                     <DataGridTextColumn Header="Entrada" Binding="{Binding Entrada}" />
                     <DataGridTextColumn Header="Salida" Binding="{Binding Salida}" />
                 </DataGrid.Columns>
-                
+
             </DataGrid>
-            
         </StackPanel>
-        
+
     </Grid>
 </Window>

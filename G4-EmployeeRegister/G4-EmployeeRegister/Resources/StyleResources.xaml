@@ -53,7 +53,7 @@
     <!-- Estilos TextBox -->
     <Style TargetType="TextBox" x:Key="EstilosTextBox">
         <Setter Property="Height" Value="30"/>
-        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontSize" Value="16"/>
         <Setter Property="Margin" Value="0,5"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -63,6 +63,7 @@
                             <Border.Effect>
                                 <DropShadowEffect BlurRadius="20" ShadowDepth="7" Direction="-30" Opacity="0.3"/>
                             </Border.Effect>
+                            <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent" BorderBrush="Transparent"/>
                         </Border>
                     </Grid>
                 </ControlTemplate>
@@ -73,7 +74,7 @@
     <!-- Estilos PasswordBox -->
     <Style TargetType="PasswordBox" x:Key="EstilosPasswordBox">
         <Setter Property="Height" Value="30"/>
-        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontSize" Value="16"/>
         <Setter Property="Margin" Value="0,5"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -83,6 +84,7 @@
                             <Border.Effect>
                                 <DropShadowEffect BlurRadius="20" ShadowDepth="7" Direction="-30" Opacity="0.3"/>
                             </Border.Effect>
+                            <PasswordBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent" BorderBrush="Transparent"/>
                         </Border>
                     </Grid>
                 </ControlTemplate>
@@ -109,37 +111,56 @@
                                 <DropShadowEffect BlurRadius="20" ShadowDepth="7" Direction="-30" Opacity="0.3"/>
                             </Border.Effect>
                         </Border>
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <ContentPresenter.Effect>
+                                <DropShadowEffect Color="Black"
+                                              BlurRadius="20"
+                                              ShadowDepth="7"
+                                              Direction="-30"
+                                              Opacity="0.4"/>
+                            </ContentPresenter.Effect>
+                        </ContentPresenter>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
 
+
     <!-- Estilos DataGrid -->
     <Style TargetType="DataGrid" x:Key="EstilosDataGrid">
         <Setter Property="FontSize" Value="14"/>
-        <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="Background" Value="White"/>
-        <Setter Property="Foreground" Value="#44376C"/>
-        <Setter Property="Cursor" Value="Hand"/>
-        <Setter Property="Margin" Value="0,10,0,0"/>
-        <Setter Property="Margin" Value="0,10,0,0"/>
-        <!--
-        <Setter Property="Template">
+        <Setter Property="Background">
             <Setter.Value>
-                <ControlTemplate TargetType="DataGrid">
-                    <Grid>
-                        <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
-                            <Border.Effect>
-                                <DropShadowEffect BlurRadius="20" ShadowDepth="7" Direction="-30" Opacity="0.3"/>
-                            </Border.Effect>
-                        </Border>
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Grid>
-                </ControlTemplate>
+                <SolidColorBrush Color="#44376C"
+                                 Opacity="0.2"/>
             </Setter.Value>
-        </Setter> -->
+        </Setter>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="#44376C"/>
+        <Setter Property="ColumnHeaderHeight" Value="30"/>
+
+        <!-- Texto -->
+        <Setter Property="ColumnHeaderStyle">
+            <Setter.Value>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="BorderBrush" Value="#44376C"/>
+                    <Setter Property="BorderThickness" Value="0.8"/>
+                    <!-- Sombra -->
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect Color="Black"
+                                              BlurRadius="10"
+                                              ShadowDepth="5"
+                                              Opacity="0.6"/>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
     </Style>
     
 </ResourceDictionary>
