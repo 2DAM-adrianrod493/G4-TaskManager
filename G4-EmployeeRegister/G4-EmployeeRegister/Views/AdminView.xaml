@@ -21,123 +21,116 @@
             <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
 
-            <!-- Header -->
+        <!-- Header -->
         <Grid Grid.Column="0" Grid.Row="0" VerticalAlignment="Top">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="4*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-                <!-- Logo -->
-                <Image Source="/Resources/Iconos/logo.png"
+            <!-- Logo -->
+            <Image Source="/Resources/Iconos/logo.png"
                        Grid.Column="0"
                        Width="40"
                        HorizontalAlignment="Center"
                        Style="{StaticResource EstiloImagen}"/>
 
-                <!-- Nombre Usuario -->
-                <TextBlock Text="Adrián Rodríguez Rodríguez"
+            <!-- Nombre Usuario -->
+            <TextBlock Text="Adrián Rodríguez Rodríguez"
                            Grid.Column="1" 
                            VerticalAlignment="Center"
                            Style="{StaticResource EstiloTextoTitulo}"/>
 
-                <!-- Botón Salir -->
-                <Button x:Name="BotonSalir"
+            <!-- Botón Salir -->
+            <Button x:Name="BotonSalir"
                         Grid.Column="2"
                         HorizontalAlignment="Center"
                         Background="Transparent"
                         BorderThickness="0"
                         Click="BotonSalir_Click">
-                    <Image Source="/Resources/Iconos/salir.png"
+                <Image Source="/Resources/Iconos/salir.png"
                            Width="38"
                            Style="{StaticResource EstiloImagen}"/>
-                </Button>
+            </Button>
 
-            </Grid>
+        </Grid>
 
-            <!-- Buscador -->
+        <!-- Buscador -->
         <Grid Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="4*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-                <!-- Botón Buscar -->
-                <Button x:Name="BotonBuscar"
+            <!-- Botón Buscar -->
+            <Button x:Name="BotonBuscar"
                         Grid.Column="0"
                         HorizontalAlignment="Center"
                         Background="Transparent"
                         BorderThickness="0"
                         Click="BotonBuscar_Click">
-                    <Image Source="/Resources/Iconos/buscar-usuario.png"
+                <Image Source="/Resources/Iconos/buscar-usuario.png"
                            Width="35"
                            Style="{StaticResource EstiloImagen}"/>
-                </Button>
+            </Button>
 
-                <!-- Buscador -->
-                <TextBox x:Name="BuscarPorNombreID"
+            <!-- Buscador -->
+            <TextBox x:Name="BuscarPorNombreID"
                          Grid.Column="1"
                          HorizontalAlignment="Center"
                          Height="40" Width="400" Opacity="0.2"
                          Style="{StaticResource EstilosTextBox}"/>
 
-                <!-- Botón Filtrar -->
-                <Button x:Name="BotonFiltrar"
+            <!-- Botón Filtrar -->
+            <Button x:Name="BotonFiltrar"
                         Grid.Column="2"
                         HorizontalAlignment="Center"
                         Background="Transparent"
                         BorderThickness="0"
                         Click="BotonFiltrar_Click">
-                    <Image Source="/Resources/Iconos/filtrar.png"
+                <Image Source="/Resources/Iconos/filtrar.png"
                            Width="30"
                            Style="{StaticResource EstiloImagen}"/>
-                </Button>
+            </Button>
 
-            </Grid>
+        </Grid>
 
-            <!-- Botones -->
+        <!-- Botones -->
         <Grid Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Grid.Row="2" HorizontalAlignment="Center" Orientation="Horizontal">
-                    <Button Content="Añadir" Style="{StaticResource EstilosButton}" Width="200" Height="35" Click="ClickAñadir"/>
-                    <Separator Width="20" Visibility="Hidden"/>
-                    <Button Content="Editar" Style="{StaticResource EstilosButton}" Width="200" Height="35" Click="ClickEditar"/>
-                    <Separator Width="20" Visibility="Hidden"/>
-                    <Button Content="Eliminar" Style="{StaticResource EstilosButton}" Width="200" Height="35" Click="ClickEliminar"/>
+                <Button Content="Añadir" Style="{StaticResource EstilosButton}" Width="200" Height="35" Click="ClickAñadir"/>
+                <Separator Width="20" Visibility="Hidden"/>
+                <Button Content="Editar" Style="{StaticResource EstilosButton}" Width="200" Height="35" Click="ClickEditar"/>
+                <Separator Width="20" Visibility="Hidden"/>
+                <Button Content="Eliminar" Style="{StaticResource EstilosButton}" Width="200" Height="35" Click="ClickEliminar"/>
             </StackPanel>
         </Grid>
 
         <!-- Lista Usuarios -->
-        <Grid Grid.Row="3" Width="Auto" >
-            <StackPanel Grid.Row="2">
-                <DataGrid x:Name="HistorialUsuario"
-                              AutoGenerateColumns="False"
-                              HorizontalAlignment="Stretch"
-                              VerticalAlignment="Stretch"
-                              ColumnWidth="*"
-                          ItemsSource="{Binding Usuarios}"
-                              IsReadOnly="True"
-                              CanUserAddRows="False"
-                              CanUserDeleteRows="False"
-                              Style="{StaticResource EstilosDataGrid}">
-
-                    <!-- Estilos -->
-                    <DataGrid.CellStyle>
-                        <Style TargetType="DataGridCell">
-                            <Setter Property="HorizontalContentAlignment" Value="Center" />
-                            <Setter Property="VerticalContentAlignment" Value="Center" />
-                        </Style>
-                    </DataGrid.CellStyle>
-
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="ID"  Binding="{Binding IdUsuario}" />
-                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
-                        <DataGridTextColumn Header="Rol" Binding="{Binding Rol}" />
-                        <DataGridTextColumn Header="Fichaje" Binding="{Binding Fichaje.FechaHora}" />
-                    </DataGrid.Columns>
-                </DataGrid>
-            </StackPanel>
+        <Grid Grid.Row="3" Width="Auto" Margin="0,10,0,0">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <StackPanel Grid.Row="2">
+                    <DataGrid x:Name="HistorialUsuario"
+                      AutoGenerateColumns="False"
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch"
+                      ColumnWidth="*"
+                      ItemsSource="{Binding Usuarios}"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      CanUserDeleteRows="False"
+                      Style="{StaticResource EstilosDataGrid}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding IdUsuario}" />
+                            <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
+                            <DataGridTextColumn Header="Rol" Binding="{Binding Rol}" />
+                            <DataGridTextColumn Header="Historial Fichajes"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </ScrollViewer>
         </Grid>
     </Grid>
 </Window>

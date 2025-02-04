@@ -61,7 +61,7 @@ namespace G4_EmployeeRegister.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/G4-EmployeeRegister;component/views/userview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/G4-EmployeeRegister;V1.0.0.0;component/views/userview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\UserView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
