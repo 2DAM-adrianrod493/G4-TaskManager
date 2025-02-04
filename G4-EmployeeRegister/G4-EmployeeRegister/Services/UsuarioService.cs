@@ -17,9 +17,22 @@ namespace G4_EmployeeRegister.Services
            FichajeModel f1 = new FichajeModel(1,1,DateTime.Now,"hola","hecha");
             _usuarioList = new ObservableCollection<UsuarioModel>();
 
-            _usuarioList.Add(
-                new UsuarioModel(1, "Adrián", "Rodríguez Rodríguez", "adrianrodry55@gmail.com", "rodry", "adri555", "adri.jpg", "Empleado", "Informática", f1));
+            _usuarioList.Add(new UsuarioModel(1, "Adrián", "Rodríguez Rodríguez", "adrianrodry55@gmail.com", "rodry", "adri555", "adri.jpg", "Empleado", "Informática", f1));
             _usuarioList.Add(new UsuarioModel(2, "Irene Naya", "Sánchez Bolívar", "laura.gomez@mail.com", "laurag", "naya555", "naya.jpg", "Empleado", "Logística", f1));
+            _usuarioList.Add(new UsuarioModel(3, "Carlos Pérez", "González", "carlos.perez@mail.com", "carlosp", "perez123", "carlos.jpg", "Empleado", "Ventas", f1));
+            _usuarioList.Add(new UsuarioModel(4, "Ana Ruiz", "Martínez", "ana.ruiz@mail.com", "anar", "ruiz456", "ana.jpg", "Empleado", "Marketing", f1));
+            _usuarioList.Add(new UsuarioModel(5, "David López", "Fernández", "david.lopez@mail.com", "davidl", "lopez789", "david.jpg", "Empleado", "Recursos Humanos", f1));
+            _usuarioList.Add(new UsuarioModel(6, "María González", "Rodríguez", "maria.gonzalez@mail.com", "mariag", "gonzalez321", "maria.jpg", "Empleado", "Finanzas", f1));
+            _usuarioList.Add(new UsuarioModel(7, "Juan Torres", "Sánchez", "juan.torres@mail.com", "juant", "torres654", "juan.jpg", "Empleado", "Tecnología", f1));
+            _usuarioList.Add(new UsuarioModel(8, "Lucía Martín", "Pérez", "lucia.martin@mail.com", "luciam", "martin987", "lucia.jpg", "Empleado", "Atención al Cliente", f1));
+            _usuarioList.Add(new UsuarioModel(9, "Pedro Gómez", "López", "pedro.gomez@mail.com", "pedrog", "gomez123", "pedro.jpg", "Empleado", "Logística", f1));
+            _usuarioList.Add(new UsuarioModel(10, "Sandra Díaz", "Vázquez", "sandra.diaz@mail.com", "sandrad", "diaz456", "sandra.jpg", "Empleado", "Marketing", f1));
+            _usuarioList.Add(new UsuarioModel(11, "Raúl Martín", "Jiménez", "raul.martin@mail.com", "raulm", "martin789", "raul.jpg", "Empleado", "Recursos Humanos", f1));
+            _usuarioList.Add(new UsuarioModel(12, "Esther Rodríguez", "Sánchez", "esther.rodriguez@mail.com", "estherr", "rodriguez321", "esther.jpg", "Empleado", "Ventas", f1));
+            _usuarioList.Add(new UsuarioModel(13, "Víctor Torres", "Pérez", "victor.torres@mail.com", "victort", "torres654", "victor.jpg", "Empleado", "Tecnología", f1));
+            _usuarioList.Add(new UsuarioModel(14, "Elena Fernández", "González", "elena.fernandez@mail.com", "elenaf", "fernandez987", "elena.jpg", "Empleado", "Atención al Cliente", f1));
+            _usuarioList.Add(new UsuarioModel(15, "Tomás Sánchez", "Martínez", "tomas.sanchez@mail.com", "tomass", "sanchez123", "tomas.jpg", "Empleado", "Informática", f1));
+            _usuarioList.Add(new UsuarioModel(16, "Marta López", "Vázquez", "marta.lopez@mail.com", "martal", "lopez456", "marta.jpg", "Empleado", "Finanzas", f1));
 
             return _usuarioList;
         }
