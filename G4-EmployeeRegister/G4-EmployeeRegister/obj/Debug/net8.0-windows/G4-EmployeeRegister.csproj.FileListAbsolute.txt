@@ -91,3 +91,6 @@ C:\Users\adria\source\repos\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeR
 C:\Users\adria\source\repos\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\obj\Debug\net8.0-windows\G4-EmployeeRegister.pdb
 C:\Users\adria\source\repos\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\obj\Debug\net8.0-windows\G4-EmployeeRegister.genruntimeconfig.cache
 C:\Users\adria\source\repos\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\obj\Debug\net8.0-windows\ref\G4-EmployeeRegister.dll
+C:\Users\2DAM-adrianrod493\source\repos\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\obj\Debug\net8.0-windows\UserControls\UsersControlador.g.cs
+C:\Users\2DAM-adrianrod493\source\repos\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\2DAM-adrianrod493\source\repos\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\obj\Debug\net8.0-windows\UserControls\UsersControlador.baml
