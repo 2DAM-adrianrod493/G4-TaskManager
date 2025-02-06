@@ -1,0 +1,87 @@
+﻿<Page x:Class="G4_EmployeeRegister.Views.VerFichajesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:G4_EmployeeRegister.Views"
+      mc:Ignorable="d" 
+      xmlns:uc="clr-namespace:G4_EmployeeRegister.UserControls"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="VerFichajesPage">
+
+    <!-- Fondo -->
+    <Page.Background>
+        <ImageBrush ImageSource="../Resources/Fondos/fondo.jpg" Stretch="Fill" Opacity="0.5"/>
+    </Page.Background>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!-- Header -->
+                <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <uc:UsersControlador/>
+                </StackPanel>
+
+                <!-- Botón Salir -->
+                <Button x:Name="BotonSalir"
+                Grid.Column="2"
+                HorizontalAlignment="Center"
+                Background="Transparent"
+                BorderThickness="0">
+                    <Image Source="/Resources/Iconos/salir.png"
+                   Width="38"
+                   Style="{StaticResource EstiloImagen}"/>
+                </Button>   
+        </Grid>
+        
+        <!-- Nombre Usuario -->
+        <Grid Grid.Row="1">
+            <TextBlock Text="Adrián Rodríguez Rodríguez"
+                        Grid.Column="1" 
+                        Grid.Row="1"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource EstiloTextoTitulo}"/>
+        </Grid>
+        
+        <!-- Tabla Fichajes -->
+        <StackPanel Grid.Row="2">
+            <Grid>
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <StackPanel>
+                        <DataGrid x:Name="HistorialFichaje"
+                          AutoGenerateColumns="False"
+                          HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch"
+                          ColumnWidth="*"
+                          IsReadOnly="True"
+                          ItemsSource="{Binding Fichajes}"
+                          CanUserAddRows="False"
+                          CanUserDeleteRows="False"
+                          Style="{StaticResource EstilosDataGrid}">
+
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Foto" Binding="{Binding Foto}" />
+                                <DataGridTextColumn Header="FechaHora" Binding="{Binding FechaHora}" />
+                                <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" />
+                                <DataGridTextColumn Header="Observaciones" Binding="{Binding Observaciones}" />
+                            </DataGrid.Columns>
+
+                        </DataGrid>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </StackPanel>
+    </Grid>
+
+</Page>

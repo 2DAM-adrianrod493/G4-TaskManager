@@ -17,7 +17,9 @@ namespace G4_EmployeeRegister.Services
             _fichajeList = new ObservableCollection<FichajeModel>();
 
             _fichajeList.Add(new FichajeModel(1, 1, DateTime.Now, "Entrada", "Todo Correcto"));
-            _fichajeList.Add(new FichajeModel(2, 2, DateTime.Now, "Salida", "Todo Correcto"));
+            _fichajeList.Add(new FichajeModel(2, 1, DateTime.Now, "Salida", "Todo Correcto"));
+            _fichajeList.Add(new FichajeModel(3, 2, DateTime.Now, "Entrada", "Todo Correcto"));
+            _fichajeList.Add(new FichajeModel(4, 2, DateTime.Now, "Salida", "Todo Correcto"));
 
             return _fichajeList;
         }

@@ -18,25 +18,5 @@ namespace G4_EmployeeRegister.Views
             loginView.Show();
         }
 
-        private void BotonBuscar_Click(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void BotonFiltrar_Click(object sender, RoutedEventArgs e)
-        {
-        }
-
-        // Formulario
-        private void ClickAñadir(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void ClickEditar(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void ClickEliminar(object sender, RoutedEventArgs e)
-        {
-        }
     }
 }

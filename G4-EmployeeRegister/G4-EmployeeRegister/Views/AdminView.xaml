@@ -37,7 +37,7 @@
                        Style="{StaticResource EstiloImagen}"/>
 
             <!-- Nombre Usuario -->
-            <TextBlock Text="Adrián Rodríguez Rodríguez"
+            <TextBlock Text="{Binding Nombre}"
                            Grid.Column="1" 
                            VerticalAlignment="Center"
                            Style="{StaticResource EstiloTextoTitulo}"/>
