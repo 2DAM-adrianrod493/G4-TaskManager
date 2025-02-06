@@ -25,21 +25,6 @@ namespace G4_EmployeeRegister.Pages
             InitializeComponent();
         }
 
-        // Formulario
-        private void ClickAñadir(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void ClickEditar(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void ClickEliminar(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void SeleccionarImagen_Click(object sender, RoutedEventArgs e)
-        {
-        }
+       
     }
 }
