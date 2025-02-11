@@ -53,7 +53,7 @@ namespace G4_EmployeeRegister.UserControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/G4-EmployeeRegister;V1.0.0.0;component/usercontrols/userscontrolador.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/G4-EmployeeRegister;component/usercontrols/userscontrolador.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\UserControls\UsersControlador.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

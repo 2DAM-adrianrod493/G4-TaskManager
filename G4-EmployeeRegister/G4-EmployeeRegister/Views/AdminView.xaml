@@ -48,7 +48,7 @@
                         HorizontalAlignment="Center"
                         Background="Transparent"
                         BorderThickness="0"
-                        Click="BotonSalir_Click">
+                       Command="{Binding Salir}">
                 <Image Source="/Resources/Iconos/salir.png"
                            Width="38"
                            Style="{StaticResource EstiloImagen}"/>
@@ -70,7 +70,7 @@
                         HorizontalAlignment="Center"
                         Background="Transparent"
                         BorderThickness="0"
-                        Click="BotonBuscar_Click">
+                       >
                 <Image Source="/Resources/Iconos/buscar-usuario.png"
                            Width="35"
                            Style="{StaticResource EstiloImagen}"/>
@@ -89,7 +89,7 @@
                         HorizontalAlignment="Center"
                         Background="Transparent"
                         BorderThickness="0"
-                        Click="BotonFiltrar_Click">
+                        >
                 <Image Source="/Resources/Iconos/filtrar.png"
                            Width="30"
                            Style="{StaticResource EstiloImagen}"/>
@@ -100,11 +100,11 @@
         <!-- Botones -->
         <Grid Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Grid.Row="2" HorizontalAlignment="Center" Orientation="Horizontal">
-                <Button Content="Añadir" Style="{StaticResource EstilosButton}" Width="200" Height="35" Click="ClickAñadir"/>
+                <Button Content="Añadir" Style="{StaticResource EstilosButton}" Width="200" Height="35" Command="{Binding AddUser}"/>
                 <Separator Width="20" Visibility="Hidden"/>
-                <Button Content="Editar" Style="{StaticResource EstilosButton}" Width="200" Height="35" Click="ClickEditar"/>
+                <Button Content="Editar" Style="{StaticResource EstilosButton}" Width="200" Height="35" Command="{Binding EditUser}"/>
                 <Separator Width="20" Visibility="Hidden"/>
-                <Button Content="Eliminar" Style="{StaticResource EstilosButton}" Width="200" Height="35" Click="ClickEliminar"/>
+                <Button Content="Eliminar" Style="{StaticResource EstilosButton}" Width="200" Height="35" Command="{Binding DeleteUser}"/>
             </StackPanel>
         </Grid>
 
@@ -124,7 +124,7 @@
                       Style="{StaticResource EstilosDataGrid}">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding IdUsuario}" />
-                            <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
+                            <DataGridTextColumn Header="Nombre" Binding="{Binding NombreCompleto}" />
                             <DataGridTextColumn Header="Rol" Binding="{Binding Rol}" />
                             <DataGridTextColumn Header="Historial Fichajes"/>
                         </DataGrid.Columns>

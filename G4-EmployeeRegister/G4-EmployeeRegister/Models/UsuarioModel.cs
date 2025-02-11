@@ -20,7 +20,9 @@ namespace G4_EmployeeRegister.Models
         private FichajeModel _fichaje;
 
         // Constructor
-        public UsuarioModel(int idUsuario, string nombre, string apellidos, string email, string username, string contraseña, string foto, string rol, string departamento, FichajeModel fichaje)
+        public UsuarioModel(int idUsuario, string nombre,string apellidos, 
+            string email, string username, string contraseña, string foto,
+            string rol, string departamento, FichajeModel fichaje)
         {
             IdUsuario = idUsuario;
             Nombre = nombre;
@@ -45,6 +47,10 @@ namespace G4_EmployeeRegister.Models
                     OnPropertyChanged(nameof(IdUsuario));
                 }
             }
+        }
+        public string NombreCompleto
+        {
+            get => Nombre+" "+ Apellidos;
         }
 
         public string Nombre

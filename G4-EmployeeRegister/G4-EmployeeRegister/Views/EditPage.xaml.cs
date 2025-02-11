@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace G4_EmployeeRegister.Pages
+namespace G4_EmployeeRegister.Views
 {
     /// <summary>
     /// Lógica de interacción para EditPage.xaml
@@ -24,7 +24,5 @@ namespace G4_EmployeeRegister.Pages
         {
             InitializeComponent();
         }
-
-       
     }
 }

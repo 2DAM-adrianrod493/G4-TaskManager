@@ -32,9 +32,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <uc:UsersControlador/>
-            </StackPanel>
+            
 
             <!-- Botón Salir -->
             <Button x:Name="BotonSalir"
