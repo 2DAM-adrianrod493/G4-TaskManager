@@ -54,17 +54,19 @@
 
                 <!-- Usuario -->
                 <TextBlock Grid.Row="1" Text="Usuario / Admin / ID" Style="{StaticResource EstilosSubtitulos}"/>
-                <TextBox x:Name="UsuarioTextBox" Grid.Row="2" Style="{StaticResource EstilosTextBox}"/>
+                <TextBox x:Name="UsuarioTextBox" Grid.Row="2" Text="{Binding Username}"
+                         Style="{StaticResource EstilosTextBox}"/>
 
                 <!-- Contraseña -->
-                <TextBlock Grid.Row="4" Text="Contraseña" Style="{StaticResource EstilosSubtitulos}"/>
-                <PasswordBox x:Name="ContraseñaPasswordBox" Grid.Row="5" Style="{StaticResource EstilosPasswordBox}"/>
+                <TextBlock Grid.Row="4" Text="Contraseña" 
+                           Style="{StaticResource EstilosSubtitulos}"/>
+                <PasswordBox x:Name="ContraseñaPasswordBox"  Grid.Row="5" 
+                             Style="{StaticResource EstilosPasswordBox}" PasswordChanged="PB_PasswordChanged"/>
 
                 <!-- Botón Iniciar Sesión -->
                 <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto">
-                    <Button Content="Admin" Style="{StaticResource EstilosButton}" Width="140" Click="ClickAdmin"/>
-                    <Separator Width="30" Visibility="Hidden"/>
-                    <Button Content="Usuario" Style="{StaticResource EstilosButton}" Width="140" Click="ClickUsuario"/>
+
+                    <Button Content="Log in" Style="{StaticResource EstilosButton}" Width="140" Command="{Binding LoginCommand}" />
                 </StackPanel>
             </Grid>
         </Border>

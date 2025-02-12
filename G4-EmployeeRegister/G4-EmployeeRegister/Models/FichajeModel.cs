@@ -20,6 +20,7 @@ namespace G4_EmployeeRegister.Models
             Observaciones = observaciones;
         }
 
+        #region Getter y Setters
         public int IdFichaje
         {
             get => _idFichaje;
@@ -84,6 +85,7 @@ namespace G4_EmployeeRegister.Models
                 }
             }
         }
+        #endregion
 
         // Evento para Notificar Cambios en las Propiedades.
         public event PropertyChangedEventHandler? PropertyChanged;

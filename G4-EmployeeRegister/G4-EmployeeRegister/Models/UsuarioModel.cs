@@ -13,15 +13,15 @@ namespace G4_EmployeeRegister.Models
         private string _apellidos;
         private string _email;
         private string _username;
-        private string _contraseña;
-        private string _foto;
+        private string _contrasenia;
+        private BitmapImage _foto;
         private string _rol;
         private string? _departamento;
         private FichajeModel _fichaje;
 
         // Constructor
         public UsuarioModel(int idUsuario, string nombre,string apellidos, 
-            string email, string username, string contraseña, string foto,
+            string email, string username, string contrasenia, BitmapImage foto,
             string rol, string departamento, FichajeModel fichaje)
         {
             IdUsuario = idUsuario;
@@ -29,7 +29,7 @@ namespace G4_EmployeeRegister.Models
             Apellidos = apellidos;
             Email = email;
             Username = username;
-            Contraseña = contraseña;
+            Contrasenia = contrasenia;
             Foto = foto;
             Rol = rol;
             Departamento = departamento;
@@ -105,20 +105,20 @@ namespace G4_EmployeeRegister.Models
             }
         }
 
-        public string Contraseña
+        public string Contrasenia
         {
-            get => _contraseña;
+            get => _contrasenia;
             set
             {
-                if (_contraseña != value)
+                if (_contrasenia != value)
                 {
-                    _contraseña = value;
-                    OnPropertyChanged(nameof(Contraseña));
+                    _contrasenia = value;
+                    OnPropertyChanged(nameof(Contrasenia));
                 }
             }
         }
 
-        public string Foto
+        public BitmapImage Foto
         {
             get => _foto;
             set

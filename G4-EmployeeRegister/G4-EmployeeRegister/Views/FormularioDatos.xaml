@@ -38,7 +38,7 @@
                     <TextBlock Text="Username" Style="{StaticResource EstilosSubtitulos}"/>
                 </StackPanel>
                 <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
-                    <TextBox x:Name="UsernameTextBox" Style="{StaticResource EstilosTextBox}" Margin="0,10,0,10"/>
+                    <TextBox x:Name="UsernameTextBox" Style="{StaticResource EstilosTextBox}" Text="{Binding Username}"/>
                 </StackPanel>
 
                 <!-- Nombre Usuario -->
@@ -46,7 +46,7 @@
                     <TextBlock Text="Nombre" Style="{StaticResource EstilosSubtitulos}"/>
                 </StackPanel>
                 <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="0,10,0,10">
-                    <TextBox x:Name="NombreTextBox" Style="{StaticResource EstilosTextBox}"/>
+                    <TextBox x:Name="NombreTextBox" Style="{StaticResource EstilosTextBox}" Text="{Binding Nombre}"/>
                 </StackPanel>
 
                 <!-- Apellidos Usuario -->
@@ -54,7 +54,7 @@
                     <TextBlock Text="Apellidos" Style="{StaticResource EstilosSubtitulos}"/>
                 </StackPanel>
                 <StackPanel Grid.Row="2" Grid.Column="1"  VerticalAlignment="Center">
-                    <TextBox x:Name="ApellidosTextBox" Style="{StaticResource EstilosTextBox}" Margin="0,10,0,10"/>
+                    <TextBox x:Name="ApellidosTextBox" Style="{StaticResource EstilosTextBox}" Text="{Binding Apellidos}"/>
                 </StackPanel>
 
                 <!-- Email Usuario -->
@@ -62,7 +62,7 @@
                     <TextBlock Text="Email" Style="{StaticResource EstilosSubtitulos}"/>
                 </StackPanel>
                 <StackPanel Grid.Row="3" Grid.Column="1" VerticalAlignment="Center">
-                    <TextBox x:Name="EmailTextBox" Style="{StaticResource EstilosTextBox}" Margin="0,10,0,10"/>
+                    <TextBox x:Name="EmailTextBox" Style="{StaticResource EstilosTextBox}" Text="{Binding Email}"/>
                 </StackPanel>
 
                 <!-- Contraseña Usuario -->
@@ -70,7 +70,7 @@
                     <TextBlock Text="Contraseña" Style="{StaticResource EstilosSubtitulos}"/>
                 </StackPanel>
                 <StackPanel Grid.Row="4" Grid.Column="1" VerticalAlignment="Center">
-                    <TextBox x:Name="ContraseñaTextBox" Style="{StaticResource EstilosTextBox}" Margin="0,10,0,10"/>
+                    <TextBox x:Name="ContraseñaTextBox" Style="{StaticResource EstilosTextBox}" Text="{Binding Contrasenia}"/>
                 </StackPanel>
 
                 <!-- Rol Usuario -->
@@ -86,7 +86,7 @@
                     <TextBlock Text="Foto" Style="{StaticResource EstilosSubtitulos}"/>
                 </StackPanel>
                 <StackPanel Grid.Row="6" Grid.Column="1">
-                    <Button Content="Seleccionar Imagen"  Style="{StaticResource EstilosButton}" VerticalAlignment="Center" Height="30" Margin="0,10,0,10"/>
+                    <Button Content="Seleccionar Imagen"  Style="{StaticResource EstilosButton}" VerticalAlignment="Center" Height="30"/>
                 </StackPanel>
 
                 <!-- Botones -->

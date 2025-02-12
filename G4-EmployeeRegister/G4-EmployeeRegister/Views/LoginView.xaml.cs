@@ -1,34 +1,30 @@
-﻿using System;
+﻿using G4_EmployeeRegister.ViewModels;
+using System;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace G4_EmployeeRegister.Views
 {
     public partial class LoginView : Window
     {
+        private LoginViewModel _loginViewModel;
         public LoginView()
         {
             InitializeComponent();
-            this.Closing += LoginViewCerrar;
+            _loginViewModel = new LoginViewModel(this);
+            this.DataContext = _loginViewModel;
+
         }
 
-        // Cerrar App
-        private void LoginViewCerrar(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
+        /*
+        ¿Por qué esto es necesario?
+        - PasswordBox no permite binding directo por seguridad.
+        - Usamos un evento PasswordChanged para actualizar la propiedad Password en el ViewModel.
+         */
 
-        private void ClickAdmin(object sender, RoutedEventArgs e)
+        private void PB_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            var adminView = new AdminView();
-            adminView.Show();
-            this.Hide();
-        }
-
-        private void ClickUsuario(object sender, RoutedEventArgs e)
-        {
-            var userView = new UserView();
-            userView.Show();
-            this.Hide();
+            _loginViewModel.Password = ((PasswordBox)sender).Password;
         }
     }
 
