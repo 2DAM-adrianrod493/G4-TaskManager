@@ -1,5 +1,6 @@
 ﻿using G4_EmployeeRegister.Models;
 using G4_EmployeeRegister.Services;
+using G4_EmployeeRegister.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -22,7 +23,7 @@ namespace G4_EmployeeRegister.ViewModels
       
 
         #region PROPIEDADES DE USUARIOS
-        // Propiedad
+        // Propiedades
         private int _idUsuario;
         private string _nombre;
         private string _apellidos;
@@ -44,9 +45,6 @@ namespace G4_EmployeeRegister.ViewModels
         public string Rol { get => _rol; set => _rol = value; }
         public string? Departamento { get => _departamento; set => _departamento = value; }
         public FichajeModel Fichaje { get => _fichaje; set => _fichaje = value; }
-
-
-
         #endregion
 
         private void LoadUsers()
@@ -61,33 +59,34 @@ namespace G4_EmployeeRegister.ViewModels
         }
         #endregion
 
-        #region Comandos
+        #region COMANDOS
         // Comandos para manejo de ususarios
-        public RelayCommand AddUser { get; }
-        public RelayCommand EditUser { get; }
-        public RelayCommand DeleteUser { get; }
-        
-
+        public RelayCommand AddUserCommand { get; }
+        public RelayCommand EditUserCommand { get; }
+        public RelayCommand DeleteUserCommand { get; }
+        public RelayCommand VolverAtrasCommand { get; }
         #endregion
+
         public AdminViewModel()
         {
             _usuariosService = new UsuarioService();
             Usuarios = new ObservableCollection<UsuarioModel>();
 
-
-
-
-            AddUser = new RelayCommand(
+            AddUserCommand = new RelayCommand(
                 _ => AddUsuario(),
                 _ => (Usuarios.Count() != 0)
 
                 );
-            EditUser = new RelayCommand(_ => EditUsuario(),
+            EditUserCommand = new RelayCommand(_ => EditUsuario(),
                 _ => (Usuarios.Count() != 0));
 
-            DeleteUser = new RelayCommand(_ => DeleteUsuario(),
+            DeleteUserCommand = new RelayCommand(_ => DeleteUsuario(),
                 _ => (Usuarios.Count() != 0));
 
+            VolverAtrasCommand = new RelayCommand(
+                  _ => VolverAtras(),
+                  _ => EditPage != null
+              );
 
             LoadUsers();
         }
@@ -99,14 +98,23 @@ namespace G4_EmployeeRegister.ViewModels
 
         private void EditUsuario()
         {
-            
+            UsuarioModel usuario = (UsuarioModel)objusuario;
+            UsuarioViewModel 
         }
 
         public void AddUsuario()
         {
             int id = Usuarios.Count()+1;
             UsuarioModel usuario = new UsuarioModel(id, Nombre, Apellidos,Email,Username,Contrasenia,Foto,Rol,Departamento);
+            FichajeModel fichaje = _usuariosService.findFichaje(Fichaje);
+            
             Usuarios.Add(usuario);
         }
+        private void VolverAtras()
+        {
+
+        }
+
+
     }
 }
