@@ -21,6 +21,7 @@ namespace G4_EmployeeRegister.ViewModels
             _fichajeServices = new FichajeService();
             Fichajes = new ObservableCollection<FichajeModel>();
             LoadUsers(usuario);
+            
         }
 
         #region PROPIEDADES DE USUARIOS
@@ -38,6 +39,8 @@ namespace G4_EmployeeRegister.ViewModels
 
         public int IdUsuario { get => _idUsuario; set => _idUsuario = value; }
         public string Nombre { get => _nombre; set => _nombre = value; }
+        public string NombreCompleto { get => _nombre + " " + Apellidos; set => _nombre = value; }
+
         public string Apellidos { get => _apellidos; set => _apellidos = value; }
         public string Email { get => _email; set => _email = value; }
         public string Username { get => _username; set => _username = value; }
@@ -56,6 +59,8 @@ namespace G4_EmployeeRegister.ViewModels
             var allFichajes = _fichajeServices.GetAllFichajes(usuario);
             var filteredFichajes = allFichajes.Where(f => f.IdUsuario == usuario.IdUsuario);
             Fichajes = new ObservableCollection<FichajeModel>(filteredFichajes);
+            Apellidos = usuario.Apellidos;
+            NombreCompleto = usuario.Nombre;
         }
 
         #region Métodos de Notificación (INotifyPropertyChanged)

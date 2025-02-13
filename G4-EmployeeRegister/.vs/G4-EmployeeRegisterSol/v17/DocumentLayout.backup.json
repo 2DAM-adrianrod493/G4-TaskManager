@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\binin\\OneDrive\\Documents\\2DAM\\DEINT\\G4-EmployeeRegister\\G4-EmployeeRegister\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\binin\\onedrive\\documents\\2dam\\deint\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\binin\\onedrive\\documents\\2dam\\deint\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\binin\\onedrive\\documents\\2dam\\deint\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -11,24 +19,16 @@
       "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\userview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\binin\\onedrive\\documents\\2dam\\deint\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\viewmodels\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\viewmodels\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\binin\\onedrive\\documents\\2dam\\deint\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\binin\\onedrive\\documents\\2dam\\deint\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\binin\\onedrive\\documents\\2dam\\deint\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\binin\\onedrive\\documents\\2dam\\deint\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\binin\\onedrive\\documents\\2dam\\deint\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\viewmodels\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\viewmodels\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\binin\\onedrive\\documents\\2dam\\deint\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 185,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,33 +94,31 @@
               "RelativeToolTip": "G4-EmployeeRegister\\Views\\LoginView.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T02:50:39.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T02:50:39.547Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "LoginService.cs",
               "DocumentMoniker": "C:\\Users\\binin\\OneDrive\\Documents\\2DAM\\DEINT\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Services\\LoginService.cs",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\Services\\LoginService.cs",
               "ToolTip": "C:\\Users\\binin\\OneDrive\\Documents\\2DAM\\DEINT\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Services\\LoginService.cs",
               "RelativeToolTip": "G4-EmployeeRegister\\Services\\LoginService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAIwCUAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwCUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T02:25:24.321Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "LoginView.xaml",
               "DocumentMoniker": "C:\\Users\\binin\\OneDrive\\Documents\\2DAM\\DEINT\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\LoginView.xaml",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\Views\\LoginView.xaml",
               "ToolTip": "C:\\Users\\binin\\OneDrive\\Documents\\2DAM\\DEINT\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\LoginView.xaml",
               "RelativeToolTip": "G4-EmployeeRegister\\Views\\LoginView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-12T02:24:10.32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T02:24:10.32Z"
             },
             {
               "$type": "Document",
@@ -165,18 +163,30 @@
               "RelativeToolTip": "G4-EmployeeRegister\\Models\\UsuarioModel.cs",
               "ViewState": "AgIAAJUAAAAAAAAAAAAiwJ0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T19:45:06.542Z",
+              "WhenOpened": "2025-02-06T19:45:06.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\binin\\OneDrive\\Documents\\2DAM\\DEINT\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\ViewModels\\AdminViewModel.cs",
+              "RelativeDocumentMoniker": "G4-EmployeeRegister\\ViewModels\\AdminViewModel.cs",
+              "ToolTip": "C:\\Users\\binin\\OneDrive\\Documents\\2DAM\\DEINT\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\ViewModels\\AdminViewModel.cs",
+              "RelativeToolTip": "G4-EmployeeRegister\\ViewModels\\AdminViewModel.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwBoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T19:47:49.652Z",
               "EditorCaption": ""
             }
           ]
         },
         {
           "DockedWidth": 215,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "UserView.xaml",
               "DocumentMoniker": "C:\\Users\\binin\\OneDrive\\Documents\\2DAM\\DEINT\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\UserView.xaml",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\Views\\UserView.xaml",
@@ -188,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "UserView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\binin\\OneDrive\\Documents\\2DAM\\DEINT\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\UserView.xaml.cs",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\Views\\UserView.xaml.cs",
@@ -201,19 +211,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AdminViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\binin\\OneDrive\\Documents\\2DAM\\DEINT\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\ViewModels\\AdminViewModel.cs",
-              "RelativeDocumentMoniker": "G4-EmployeeRegister\\ViewModels\\AdminViewModel.cs",
-              "ToolTip": "C:\\Users\\binin\\OneDrive\\Documents\\2DAM\\DEINT\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\ViewModels\\AdminViewModel.cs",
-              "RelativeToolTip": "G4-EmployeeRegister\\ViewModels\\AdminViewModel.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAkwGsAAAB6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T19:47:49.652Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
               "Title": "FichajeService.cs",
               "DocumentMoniker": "C:\\Users\\binin\\OneDrive\\Documents\\2DAM\\DEINT\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Services\\FichajeService.cs",
@@ -222,8 +219,7 @@
               "RelativeToolTip": "G4-EmployeeRegister\\Services\\FichajeService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T19:51:18.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T19:51:18.216Z"
             },
             {
               "$type": "Document",
@@ -235,31 +231,30 @@
               "RelativeToolTip": "G4-EmployeeRegister\\Models\\FichajeModel.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T19:49:07.437Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T19:49:07.437Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "UserViewModel.cs",
               "DocumentMoniker": "C:\\Users\\binin\\OneDrive\\Documents\\2DAM\\DEINT\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\ViewModels\\UserViewModel.cs",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\ViewModels\\UserViewModel.cs",
               "ToolTip": "C:\\Users\\binin\\OneDrive\\Documents\\2DAM\\DEINT\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\ViewModels\\UserViewModel.cs",
               "RelativeToolTip": "G4-EmployeeRegister\\ViewModels\\UserViewModel.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAQwDkAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowD0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T19:07:14.27Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\binin\\OneDrive\\Documents\\2DAM\\DEINT\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "G4-EmployeeRegister\\ViewModels\\LoginViewModel.cs",
               "ToolTip": "C:\\Users\\binin\\OneDrive\\Documents\\2DAM\\DEINT\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\ViewModels\\LoginViewModel.cs",
               "RelativeToolTip": "G4-EmployeeRegister\\ViewModels\\LoginViewModel.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAADwv1AAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T02:24:14.816Z",
               "EditorCaption": ""
@@ -274,8 +269,7 @@
               "RelativeToolTip": "G4-EmployeeRegister\\Services\\UsuarioService.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAkwC0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T01:49:18.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T01:49:18.76Z"
             }
           ]
         }
