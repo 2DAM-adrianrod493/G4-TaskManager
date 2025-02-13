@@ -40,8 +40,8 @@ namespace G4_EmployeeRegister.Services
                             {
                                 string passHash = reader["Contrasenia"].ToString();
 
-                                //if (BCrypt.Net.BCrypt.Verify(passIntro, passHash))
-                                if (passIntro=="1234")
+                                if (BCrypt.Net.BCrypt.Verify(passIntro, passHash))
+                               
                                 {
                                     int idUsuario = Convert.ToInt32(reader["IdUsuario"]);
                                     string nombre = reader["Nombre"].ToString();
@@ -74,9 +74,9 @@ namespace G4_EmployeeRegister.Services
                                     //}
 
                                     // Se inicializa FichajeModel en null por ahora
-                                    FichajeModel fichaje = null;
+                                   
 
-                                    usuario = new UsuarioModel(idUsuario, nombre, apellidos, email, username, contrasenia, null, rol, departamento, fichaje);
+                                    usuario = new UsuarioModel(idUsuario, nombre, apellidos, email, username, contrasenia, null, rol, departamento);
                                 }
                             }
                         }

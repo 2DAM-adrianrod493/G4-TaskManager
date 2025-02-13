@@ -16,11 +16,11 @@ namespace G4_EmployeeRegister.ViewModels
         private readonly Services.FichajeService _fichajeServices;
         public ObservableCollection<FichajeModel> Fichajes { get; set; }
 
-        public UserViewModel()
+        public UserViewModel(UsuarioModel usuario)
         {
             _fichajeServices = new FichajeService();
             Fichajes = new ObservableCollection<FichajeModel>();
-            LoadUsers();
+            LoadUsers(usuario);
         }
 
         #region PROPIEDADES DE USUARIOS
@@ -51,10 +51,10 @@ namespace G4_EmployeeRegister.ViewModels
 
         #endregion
 
-        private void LoadUsers()
+        private void LoadUsers(UsuarioModel usuario)
         {
-            var allFichajes = _fichajeServices.GetAllFichajes();
-            var filteredFichajes = allFichajes.Where(f => f.IdUsuario == 1);
+            var allFichajes = _fichajeServices.GetAllFichajes(usuario);
+            var filteredFichajes = allFichajes.Where(f => f.IdUsuario == usuario.IdUsuario);
             Fichajes = new ObservableCollection<FichajeModel>(filteredFichajes);
         }
 

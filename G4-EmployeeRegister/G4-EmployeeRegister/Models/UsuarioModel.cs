@@ -22,7 +22,7 @@ namespace G4_EmployeeRegister.Models
         // Constructor
         public UsuarioModel(int idUsuario, string nombre,string apellidos, 
             string email, string username, string contrasenia, BitmapImage foto,
-            string rol, string departamento, FichajeModel fichaje)
+            string rol, string departamento)
         {
             IdUsuario = idUsuario;
             Nombre = nombre;
@@ -33,7 +33,6 @@ namespace G4_EmployeeRegister.Models
             Foto = foto;
             Rol = rol;
             Departamento = departamento;
-            Fichaje = fichaje;
         }
 
         public int IdUsuario
@@ -157,7 +156,6 @@ namespace G4_EmployeeRegister.Models
             }
         }
 
-        public FichajeModel Fichaje { get => _fichaje; set => _fichaje = value; }
 
         // Evento para Notificar Cambios en las Propiedades.
         public event PropertyChangedEventHandler? PropertyChanged;

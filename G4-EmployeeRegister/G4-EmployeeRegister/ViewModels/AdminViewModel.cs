@@ -105,7 +105,7 @@ namespace G4_EmployeeRegister.ViewModels
         public void AddUsuario()
         {
             int id = Usuarios.Count()+1;
-            UsuarioModel usuario = new UsuarioModel(id, Nombre, Apellidos,Email,Username,Contrasenia,Foto,Rol,Departamento,Fichaje);
+            UsuarioModel usuario = new UsuarioModel(id, Nombre, Apellidos,Email,Username,Contrasenia,Foto,Rol,Departamento);
             Usuarios.Add(usuario);
         }
     }

@@ -91,7 +91,7 @@ namespace G4_EmployeeRegister.ViewModels
                 else if (usuario.Rol == "Usuario")
                 {
                     // Abrir la vista de usuario
-                    G4_EmployeeRegister.Views.UserView userView = new UserView();
+                    G4_EmployeeRegister.Views.UserView userView = new UserView(usuario);
                     userView.Show();
                 }
                 else

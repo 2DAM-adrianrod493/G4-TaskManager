@@ -44,7 +44,7 @@ namespace G4_EmployeeRegister.Services
                             string departamento = reader["Departamento"].ToString();
 
                             usuario = new UsuarioModel(idUsuario, nombre, apellidos, email, username,
-                                contrasenia, null, rol, departamento, null);
+                                contrasenia, null, rol, departamento);
                             _usuarioList.Add(usuario);
                         }
 

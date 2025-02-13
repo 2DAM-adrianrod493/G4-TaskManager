@@ -47,7 +47,7 @@
             </Button>
 
         </Grid>
-        <TextBlock Text="Adrián Rodríguez Rodríguez"
+        <TextBlock Text="{Binding Nombre}"
             Grid.Column="1" 
             Grid.Row="1"
             VerticalAlignment="Center"
