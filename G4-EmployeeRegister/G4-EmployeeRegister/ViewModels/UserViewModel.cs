@@ -56,11 +56,28 @@ namespace G4_EmployeeRegister.ViewModels
 
         private void LoadUsers(UsuarioModel usuario)
         {
+            
+            foreach(FichajeModel f in Fichajes)
+            {
+
+            }
+
+            //hecho por mi para que se ve que he entendido que hace
             var allFichajes = _fichajeServices.GetAllFichajes(usuario);
-            var filteredFichajes = allFichajes.Where(f => f.IdUsuario == usuario.IdUsuario);
+            var filteredFichajes = new List<FichajeModel>();
+
+            foreach (var f in allFichajes)
+            {
+                if (f.IdUsuario == usuario.IdUsuario)
+                {
+                    filteredFichajes.Add(f);
+                }
+            }
+
             Fichajes = new ObservableCollection<FichajeModel>(filteredFichajes);
             Apellidos = usuario.Apellidos;
             NombreCompleto = usuario.Nombre;
+
         }
 
         #region Métodos de Notificación (INotifyPropertyChanged)

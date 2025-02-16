@@ -1,136 +1,125 @@
 ﻿<Window x:Class="G4_EmployeeRegister.Views.AdminView"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:G4_EmployeeRegister.Views"
-      mc:Ignorable="d" 
-      Title="AdminView" Height="500" Width="800"
-      ResizeMode="NoResize">
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:G4_EmployeeRegister.Views"
+        mc:Ignorable="d"
+        Title="AdminView" Height="500" Width="900"
+        ResizeMode="NoResize"
+        >
 
     <!-- Fondo -->
     <Window.Background>
         <ImageBrush ImageSource="../Resources/Fondos/fondo.jpg" Stretch="Fill" Opacity="0.5"/>
     </Window.Background>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="4*"/>
-        </Grid.RowDefinitions>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3.5*"/>
+            <!-- Lista y botones CRUD -->
+            <ColumnDefinition Width="1.7*"/>
+            <!-- Formulario -->
+        </Grid.ColumnDefinitions>
 
-        <!-- Header -->
-        <Grid Grid.Column="0" Grid.Row="0" VerticalAlignment="Top">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="4*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-            <!-- Logo -->
-            <Image Source="/Resources/Iconos/logo.png"
-                       Grid.Column="0"
-                       Width="40"
-                       HorizontalAlignment="Center"
-                       Style="{StaticResource EstiloImagen}"/>
-
-            <!-- Nombre Usuario -->
-            <TextBlock Text="{Binding Nombre}"
-                           Grid.Column="1" 
-                           VerticalAlignment="Center"
-                           Style="{StaticResource EstiloTextoTitulo}"/>
-
-            <!-- Botón Salir -->
-            <Button x:Name="BotonSalir"
-                        Grid.Column="2"
-                        HorizontalAlignment="Center"
-                        Background="Transparent"
-                        BorderThickness="0"
-                       Command="{Binding Salir}">
-                <Image Source="/Resources/Iconos/salir.png"
-                           Width="38"
-                           Style="{StaticResource EstiloImagen}"/>
-            </Button>
-
-        </Grid>
-
-        <!-- Buscador -->
-        <Grid Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="4*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-            <!-- Botón Buscar -->
-            <Button x:Name="BotonBuscar"
-                        Grid.Column="0"
-                        HorizontalAlignment="Center"
-                        Background="Transparent"
-                        BorderThickness="0"
-                       >
-                <Image Source="/Resources/Iconos/buscar-usuario.png"
-                           Width="35"
-                           Style="{StaticResource EstiloImagen}"/>
-            </Button>
+        <!-- Sección izquierda: Lista de usuarios y botones CRUD -->
+        <StackPanel Grid.Column="0" Margin="10">
 
             <!-- Buscador -->
-            <TextBox x:Name="BuscarPorNombreID"
-                         Grid.Column="1"
-                         HorizontalAlignment="Center"
-                         Height="40" Width="400" Opacity="0.2"
-                         Style="{StaticResource EstilosTextBox}"/>
+            <Grid VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <!-- Botón Filtrar -->
-            <Button x:Name="BotonFiltrar"
-                        Grid.Column="2"
-                        HorizontalAlignment="Center"
-                        Background="Transparent"
-                        BorderThickness="0"
-                        >
-                <Image Source="/Resources/Iconos/filtrar.png"
-                           Width="30"
-                           Style="{StaticResource EstiloImagen}"/>
-            </Button>
+                <!-- Botón Buscar -->
+                <Button Background="Transparent" BorderThickness="0">
+                    <Image Source="/Resources/Iconos/buscar-usuario.png" Width="35" Style="{StaticResource EstiloImagen}"/>
+                </Button>
 
-        </Grid>
+                <!-- Campo de búsqueda -->
+                <TextBox x:Name="BuscarPorNombreID"  Opacity="0.8"
+                         Style="{StaticResource EstilosTextBox}" Grid.Column="1"/>
 
-        <!-- Botones -->
-        <Grid Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <StackPanel Grid.Row="2" HorizontalAlignment="Center" Orientation="Horizontal">
-                <Button Content="Añadir" Style="{StaticResource EstilosButton}" Width="200" Height="35" Command="{Binding AddUser}"/>
-                <Separator Width="20" Visibility="Hidden"/>
-                <Button Content="Editar" Style="{StaticResource EstilosButton}" Width="200" Height="35" Command="{Binding EditUser}"/>
-                <Separator Width="20" Visibility="Hidden"/>
-                <Button Content="Eliminar" Style="{StaticResource EstilosButton}" Width="200" Height="35" Command="{Binding DeleteUser}"/>
+            </Grid>
+            <!-- Botones CRUD -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto" >
+                <Button Content="Añadir" Width="150" Height="35" Style="{StaticResource EstilosButton}" Command="{Binding AddUser}" Margin="5"/>
+                <Button Content="Editar" Width="150" Height="35" Style="{StaticResource EstilosButton}" Command="{Binding EditUser}" Margin="5" />
+                <Button Content="Eliminar" Width="150" Height="35" Style="{StaticResource EstilosButton}" Command="{Binding DeleteUser}" Margin="5"/>
             </StackPanel>
-        </Grid>
 
-        <!-- Lista Usuarios -->
-        <Grid Grid.Row="3" Width="Auto" Margin="0,10,0,0">
-            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                <StackPanel Grid.Row="2">
-                    <DataGrid x:Name="HistorialUsuario"
+            <!-- Lista de usuarios -->
+            <DataGrid x:Name="HistorialUsuario"
                       AutoGenerateColumns="False"
-                      HorizontalAlignment="Stretch"
-                      VerticalAlignment="Stretch"
-                      ColumnWidth="*"
                       ItemsSource="{Binding Usuarios}"
                       IsReadOnly="True"
                       CanUserAddRows="False"
                       CanUserDeleteRows="False"
-                      Style="{StaticResource EstilosDataGrid}">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="ID" Binding="{Binding IdUsuario}" />
-                            <DataGridTextColumn Header="Nombre" Binding="{Binding NombreCompleto}" />
-                            <DataGridTextColumn Header="Rol" Binding="{Binding Rol}" />
-                            <DataGridTextColumn Header="Historial Fichajes"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
+                      ColumnWidth="*"
+                      Style="{StaticResource EstilosDataGrid}"
+                      Width="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding IdUsuario}" />
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding NombreCompleto}" />
+                    <DataGridTextColumn Header="Rol" Binding="{Binding Rol}" />
+                    <DataGridTextColumn Header="Historial Fichajes"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            
+
+        </StackPanel>
+
+        <!-- Sección derecha: Formulario -->
+        <Border Grid.Column="1" Padding="20" Margin="10" Style="{StaticResource EstilosBordesFormulario}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Campos del formulario -->
+                <TextBlock Text="Username" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Style="{StaticResource EstilosSubtitulos}"/>
+                <TextBox x:Name="UsernameTextBox" Grid.Row="0" Grid.Column="1" Text="{Binding Username}" Margin="5" Style="{StaticResource EstilosTextBox}"/>
+
+                <TextBlock Text="Nombre" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Style="{StaticResource EstilosSubtitulos}"/>
+                <TextBox x:Name="NombreTextBox" Grid.Row="1" Grid.Column="1" Text="{Binding Nombre}" Margin="5" Style="{StaticResource EstilosTextBox}"/>
+
+                <TextBlock Text="Apellidos" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Style="{StaticResource EstilosSubtitulos}"/>
+                <TextBox x:Name="ApellidosTextBox" Grid.Row="2" Grid.Column="1" Text="{Binding Apellidos}" Margin="5" Style="{StaticResource EstilosTextBox}"/>
+
+                <TextBlock Text="Email" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Style="{StaticResource EstilosSubtitulos}"/>
+                <TextBox x:Name="EmailTextBox" Grid.Row="3" Grid.Column="1" Text="{Binding Email}" Margin="5" Style="{StaticResource EstilosTextBox}"/>
+
+                <TextBlock Text="Departamento" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Style="{StaticResource EstilosSubtitulos}"/>
+                <TextBox x:Name="DepartamentoTextBox" Grid.Row="4" Grid.Column="1" Text="{Binding Departamento}" Margin="5" Style="{StaticResource EstilosTextBox}"/>
+
+                <TextBlock Text="Rol" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Style="{StaticResource EstilosSubtitulos}" />
+                <ComboBox x:Name="RolComboBox" Grid.Row="5" Grid.Column="1" SelectedItem="{Binding Rol}" Margin="5">
+                    <ComboBoxItem Content="Usuario"/>
+                    <ComboBoxItem Content="Administrador"/>
+                </ComboBox>
+                <TextBlock Text="Foto" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Style="{StaticResource EstilosSubtitulos}"/>
+                <Button Content="Seleccionar Imagen" Grid.Row="6" Grid.Column="1" Height="30" Style="{StaticResource EstilosButton}"/>
+
+                <!-- Botón Guardar -->
+                <StackPanel Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="10">
+                    <Button Content="Guardar" Width="300" Height="35" Style="{StaticResource EstilosButton}" Command="{Binding AddUser}"/>
                 </StackPanel>
-            </ScrollViewer>
-        </Grid>
+            </Grid>
+        </Border>
     </Grid>
 </Window>

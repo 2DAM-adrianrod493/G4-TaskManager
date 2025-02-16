@@ -65,18 +65,6 @@ namespace G4_EmployeeRegister.Services
             _fichajeList.Remove(fichajeModel);
         }
 
-        // Actualizar Fichaje
-        public void UpdateFichaje(FichajeModel updatedFichaje)
-        {
-            // Buscar por ID en la lista
-            var existing = _fichajeList.FirstOrDefault(f => f.IdFichaje == updatedFichaje.IdFichaje);
-            if (existing != null)
-            {
-                existing.IdUsuario = updatedFichaje.IdUsuario;
-                existing.FechaHora = updatedFichaje.FechaHora;
-                existing.Tipo = updatedFichaje.Tipo;
-                existing.Observaciones = updatedFichaje.Observaciones;
-            }
-        }
+        
     }
 }

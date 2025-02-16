@@ -27,6 +27,7 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+
                 </Grid.RowDefinitions>
 
                 <!-- Columnas -->
@@ -67,12 +68,14 @@
                     <TextBox x:Name="EmailTextBox" Style="{StaticResource EstilosTextBox}" Text="{Binding Email}"/>
                 </StackPanel>
 
-                <!-- Contraseña Usuario -->
-                <StackPanel Grid.Row="4" Grid.Column="0" VerticalAlignment="Center">
-                    <TextBlock Text="Contraseña" Style="{StaticResource EstilosSubtitulos}"/>
+                <!-- Departamento Usuario -->
+                <StackPanel Grid.Row="4" Width="Auto" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0">
+                    <TextBlock Text="Departamento" Style="{StaticResource EstilosSubtitulos}" Width="82"/>
+                    
                 </StackPanel>
+                
                 <StackPanel Grid.Row="4" Grid.Column="1" VerticalAlignment="Center">
-                    <TextBox x:Name="ContraseñaTextBox" Style="{StaticResource EstilosTextBox}" Text="{Binding Contrasenia}"/>
+                    <TextBox x:Name="ContraseñaTextBox" Style="{StaticResource EstilosTextBox}" Text="{Binding Departamento}" Width="355"/>
                 </StackPanel>
 
                 <!-- Rol Usuario -->
@@ -93,7 +96,7 @@
 
                 <!-- Botones -->
                 <StackPanel Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
-                    <Button Content="Guardar" Style="{StaticResource EstilosButton}" Width="400" Height="30"/>
+                    <Button Content="Guardar" Style="{StaticResource EstilosButton}"  Width="400" Height="30" Command="{Binding AddCommand}"/>
                 </StackPanel>
             </Grid>
         </Border>
