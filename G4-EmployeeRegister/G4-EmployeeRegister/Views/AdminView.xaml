@@ -97,9 +97,7 @@
                     <DataGridTemplateColumn Header="Fichajes">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="Ver" Width="65" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource EstilosButton}">
-                                    
-                                </Button>
+                                <Button Content="Ver" Width="65" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource EstilosButton}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Configuration;
+using System.IO;
 using System.Linq;
+using System.Windows.Media.Imaging;
 using G4_EmployeeRegister.Models;
 using Microsoft.Data.SqlClient;
 
@@ -23,8 +25,8 @@ namespace G4_EmployeeRegister.Services
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = @"SELECT IdUsuario, Nombre, Apellidos, Email, Username,
-                            Contrasenia, Rol,
+                string query = @"SELECT IdUsuario, Nombre, Apellidos, Email, Username, 
+                            Contrasenia,Foto, Rol,
                             Departamento FROM Usuarios;
                         ";
                 using (SqlCommand cmdQuery = new SqlCommand(query, connection))
@@ -42,6 +44,27 @@ namespace G4_EmployeeRegister.Services
                             string contrasenia = reader["Contrasenia"].ToString();
                             string rol = reader["Rol"].ToString();
                             string departamento = reader["Departamento"].ToString();
+                            BitmapImage imgProdu = new BitmapImage();
+                            //Manejo de la imagen
+                            if (reader["Imagen"] != null)
+                            {
+                                // Convertir el resultado a un array de bytes
+                                byte[] imagenBytes = (byte[])reader["Imagen"];
+
+                                // Utilizar un MemoryStream para leer los bytes de la imagen
+                                using (MemoryStream ms = new MemoryStream(imagenBytes))
+                                {
+                                    imgProdu.BeginInit();
+                                    imgProdu.CacheOption = BitmapCacheOption.OnLoad; // Cargar la imagen completamente en memoria
+                                    imgProdu.StreamSource = ms; // Asignar el MemoryStream como fuente de la imagen
+                                    imgProdu.EndInit();
+                                }
+
+                            }
+                            else
+                            {
+                                imgProdu = null;
+                            }
 
                             usuario = new UsuarioModel(idUsuario, nombre, apellidos, email, username,
                                 contrasenia, null, rol, departamento);
