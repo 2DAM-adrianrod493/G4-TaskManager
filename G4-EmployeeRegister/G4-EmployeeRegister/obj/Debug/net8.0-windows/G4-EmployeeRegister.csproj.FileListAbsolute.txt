@@ -113,7 +113,6 @@ C:\Users\binin\OneDrive\Documents\2DAM\DEINT\G4-EmployeeRegister\G4-EmployeeRegi
 C:\Users\binin\OneDrive\Documents\2DAM\DEINT\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\obj\Debug\net8.0-windows\G4-EmployeeRegister_MarkupCompile.cache
 C:\Users\binin\OneDrive\Documents\2DAM\DEINT\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\obj\Debug\net8.0-windows\G4-EmployeeRegister_MarkupCompile.lref
 C:\Users\binin\OneDrive\Documents\2DAM\DEINT\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\bin\Debug\net8.0-windows\G4-EmployeeRegister.exe
-C:\Users\binin\OneDrive\Documents\2DAM\DEINT\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\bin\Debug\net8.0-windows\G4-EmployeeRegister.dll.config
 C:\Users\binin\OneDrive\Documents\2DAM\DEINT\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\bin\Debug\net8.0-windows\G4-EmployeeRegister.deps.json
 C:\Users\binin\OneDrive\Documents\2DAM\DEINT\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\bin\Debug\net8.0-windows\G4-EmployeeRegister.runtimeconfig.json
 C:\Users\binin\OneDrive\Documents\2DAM\DEINT\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\bin\Debug\net8.0-windows\G4-EmployeeRegister.dll
@@ -200,3 +199,4 @@ C:\Users\binin\OneDrive\Documents\2DAM\DEINT\G4-EmployeeRegister\G4-EmployeeRegi
 C:\Users\binin\OneDrive\Documents\2DAM\DEINT\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\obj\Debug\net8.0-windows\G4-EmployeeRegister.pdb
 C:\Users\binin\OneDrive\Documents\2DAM\DEINT\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\obj\Debug\net8.0-windows\G4-EmployeeRegister.genruntimeconfig.cache
 C:\Users\binin\OneDrive\Documents\2DAM\DEINT\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\obj\Debug\net8.0-windows\ref\G4-EmployeeRegister.dll
+C:\Users\binin\OneDrive\Documents\2DAM\DEINT\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\bin\Debug\net8.0-windows\G4-EmployeeRegister.dll.config

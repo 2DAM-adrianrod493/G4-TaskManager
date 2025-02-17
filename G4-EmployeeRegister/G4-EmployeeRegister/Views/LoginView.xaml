@@ -53,7 +53,7 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- Usuario -->
-                <TextBlock Grid.Row="1" Text="Usuario / Admin / ID" Style="{StaticResource EstilosSubtitulos}"/>
+                <TextBlock Grid.Row="1" Text="Username" Style="{StaticResource EstilosSubtitulos}"/>
                 <TextBox x:Name="UsuarioTextBox" Grid.Row="2" Text="{Binding Username}"
                          Style="{StaticResource EstilosTextBox}"/>
 

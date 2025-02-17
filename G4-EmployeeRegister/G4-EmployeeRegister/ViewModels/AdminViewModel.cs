@@ -35,7 +35,7 @@ namespace G4_EmployeeRegister.ViewModels
         private string? _departamento;
 
 
-        public string NombreCompleto { get => _nombre + " " + Apellidos;  }
+        public string NombreCompleto { get => _nombreCompleto; set => _nombreCompleto = value; }
         public string Nombre { get => _nombre; set => _nombre = value; }
         public string Apellidos { get => _apellidos; set => _apellidos = value; }
         public string Email { get => _email; set => _email = value; }
@@ -68,7 +68,7 @@ namespace G4_EmployeeRegister.ViewModels
         public AdminViewModel(UsuarioModel usuario)
         {
 
-             NombreCompleto= usuario.Nombre + " " + usuario.Apellidos;
+            NombreCompleto = usuario.Nombre + " " + usuario.Apellidos;
             _usuariosService = new UsuarioService();
             Usuarios = new ObservableCollection<UsuarioModel>();
 
