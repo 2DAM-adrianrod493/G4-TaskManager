@@ -25,6 +25,7 @@ namespace G4_EmployeeRegister.ViewModels
 
         #region PROPIEDADES DE USUARIOS
         // Propiedad
+        private string _nombreCompleto;
         private string _nombre;
         private string _apellidos;
         private string _email;
@@ -34,6 +35,7 @@ namespace G4_EmployeeRegister.ViewModels
         private string? _departamento;
 
 
+        public string NombreCompleto { get => _nombre + " " + Apellidos;  }
         public string Nombre { get => _nombre; set => _nombre = value; }
         public string Apellidos { get => _apellidos; set => _apellidos = value; }
         public string Email { get => _email; set => _email = value; }
@@ -63,8 +65,10 @@ namespace G4_EmployeeRegister.ViewModels
 
 
         #endregion
-        public AdminViewModel()
+        public AdminViewModel(UsuarioModel usuario)
         {
+
+             NombreCompleto= usuario.Nombre + " " + usuario.Apellidos;
             _usuariosService = new UsuarioService();
             Usuarios = new ObservableCollection<UsuarioModel>();
 
@@ -107,7 +111,7 @@ namespace G4_EmployeeRegister.ViewModels
             int id = Usuarios.Count() + 1;
             //Establicer por cada nuevo usuario la contaseña por defecto sea 1234 encryptada
             String Contrasenia = "$2b$12$9Z6CSQpaRPTSKqUQaGj09.ZL7m8GtWjrGfd3M9bcshsh6yurse7NC";
-            
+
 
             if (Usuarios.Any(user => user.Username.Equals(Username)))
             {
@@ -115,7 +119,16 @@ namespace G4_EmployeeRegister.ViewModels
             }
             else
             {
-                UsuarioModel usuario = new UsuarioModel(id, Nombre, Apellidos, Email, Username, Contrasenia, Foto, Rol.GetType().ToString(), Departamento);
+                //Asignar rol sigun opcion elegida.
+                if (Rol.EndsWith("Usuario"))
+                {
+                    Rol = "Usuario";
+                }
+                else
+                {
+                    Rol = "Administrador";
+                }
+                UsuarioModel usuario = new UsuarioModel(id, Nombre, Apellidos, Email, Username, Contrasenia, Foto, Rol, Departamento.ToUpper());
                 _usuariosService.AddUsuario(usuario);
                 Usuarios.Add(usuario);
             }

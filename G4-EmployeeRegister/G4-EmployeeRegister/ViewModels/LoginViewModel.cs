@@ -85,7 +85,7 @@ namespace G4_EmployeeRegister.ViewModels
                 if (usuario.Rol == "Administrador")
                 {
                     // Abrir la vista de administrador
-                    G4_EmployeeRegister.Views.AdminView adminView = new AdminView();
+                    G4_EmployeeRegister.Views.AdminView adminView = new AdminView(usuario);
                     adminView.Show();
                 }
                 else if (usuario.Rol == "Usuario")

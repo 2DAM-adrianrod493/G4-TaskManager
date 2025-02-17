@@ -55,13 +55,7 @@ namespace G4_EmployeeRegister.ViewModels
         #endregion
 
         private void LoadUsers(UsuarioModel usuario)
-        {
-            
-            foreach(FichajeModel f in Fichajes)
-            {
-
-            }
-
+        {       
             //hecho por mi para que se ve que he entendido que hace
             var allFichajes = _fichajeServices.GetAllFichajes(usuario);
             var filteredFichajes = new List<FichajeModel>();

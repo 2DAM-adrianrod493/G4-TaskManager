@@ -43,6 +43,11 @@
                          Style="{StaticResource EstilosTextBox}" Grid.Column="1"/>
 
             </Grid>
+            <!-- Usuario Conectado -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="350" Height="20" >
+                <TextBlock Text="{Binding NombreCompleto}"
+                Style="{StaticResource EstiloTextoTitulo}"/>
+            </StackPanel>
             <!-- Botones CRUD -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto" >
                 <Button Content="Añadir" Width="150" Height="35" Style="{StaticResource EstilosButton}" Command="{Binding AddUser}" Margin="5"/>
@@ -58,17 +63,18 @@
                       CanUserAddRows="False"
                       CanUserDeleteRows="False"
                       ColumnWidth="*"
-                      Style="{StaticResource EstilosDataGrid}"
+                     
                       Width="Auto">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding IdUsuario}" />
                     <DataGridTextColumn Header="Nombre" Binding="{Binding NombreCompleto}" />
                     <DataGridTextColumn Header="Rol" Binding="{Binding Rol}" />
+                    <DataGridTextColumn Header="Departamento" Binding="{Binding Departamento}" />
                     <DataGridTextColumn Header="Historial Fichajes"/>
                 </DataGrid.Columns>
             </DataGrid>
 
-            
+
 
         </StackPanel>
 
@@ -108,7 +114,7 @@
                 <TextBox x:Name="DepartamentoTextBox" Grid.Row="4" Grid.Column="1" Text="{Binding Departamento}" Margin="5" Style="{StaticResource EstilosTextBox}"/>
 
                 <TextBlock Text="Rol" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Style="{StaticResource EstilosSubtitulos}" />
-                <ComboBox x:Name="RolComboBox" Grid.Row="5" Grid.Column="1" SelectedItem="{Binding Rol}" Margin="5">
+                <ComboBox  Name="RolSelecionado" Grid.Row="5" Grid.Column="1" SelectedItem="{Binding Rol}" Margin="5">
                     <ComboBoxItem Content="Usuario"/>
                     <ComboBoxItem Content="Administrador"/>
                 </ComboBox>
