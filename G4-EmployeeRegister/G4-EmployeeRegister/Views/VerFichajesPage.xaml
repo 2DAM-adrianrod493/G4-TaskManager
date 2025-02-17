@@ -14,7 +14,6 @@
         <ImageBrush ImageSource="../Resources/Fondos/fondo.jpg" Stretch="Fill" Opacity="0.5"/>
     </Page.Background>
 
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -27,59 +26,69 @@
                 <ColumnDefinition Width="4*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <!-- Header -->
-                
 
-                <!-- Botón Salir -->
-                <Button x:Name="BotonSalir"
-                Grid.Column="2"
-                HorizontalAlignment="Center"
-                Background="Transparent"
-                BorderThickness="0">
-                    <Image Source="/Resources/Iconos/salir.png"
-                   Width="38"
-                   Style="{StaticResource EstiloImagen}"/>
-                </Button>   
+            <!-- UserControl -->
+            <uc:UsersControlador Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
+            <!-- Salir -->
+            <Button x:Name="BotonSalir"
+                    Grid.Column="2"
+                    HorizontalAlignment="Center"
+                    Background="Transparent"
+                    BorderThickness="0">
+                <Image Source="/Resources/Iconos/salir.png"
+                       Width="38"
+                       Style="{StaticResource EstiloImagen}"/>
+            </Button>
         </Grid>
-        
-        <!-- Nombre Usuario -->
+
+        <!-- USUARIO CONECTADO -->
         <Grid Grid.Row="1">
-            <TextBlock Text="Adrián Rodríguez Rodríguez"
-                        Grid.Column="1" 
-                        Grid.Row="1"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        Style="{StaticResource EstiloTextoTitulo}"/>
+            <StackPanel HorizontalAlignment="Center" Width="350" Height="59" >
+                <TextBlock Text="{Binding NombreCompleto}" Style="{StaticResource EstiloTextoTitulo}"/>
+            </StackPanel>
         </Grid>
-        
-        <!-- Tabla Fichajes -->
-        <StackPanel Grid.Row="2">
+
+        <!-- Lista Fichajes -->
+        <StackPanel Grid.Row="2" Margin="0,20,0,0">
             <Grid>
                 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
                     <StackPanel>
                         <DataGrid x:Name="HistorialFichaje"
-                          AutoGenerateColumns="False"
-                          HorizontalAlignment="Stretch"
-                          VerticalAlignment="Stretch"
-                          ColumnWidth="*"
-                          IsReadOnly="True"
-                          ItemsSource="{Binding Fichajes}"
-                          CanUserAddRows="False"
-                          CanUserDeleteRows="False"
-                          Style="{StaticResource EstilosDataGrid}">
+                                  AutoGenerateColumns="False"
+                                  HorizontalAlignment="Stretch"
+                                  VerticalAlignment="Stretch"
+                                  ColumnWidth="*"
+                                  IsReadOnly="True"
+                                  ItemsSource="{Binding Fichajes}"
+                                  CanUserAddRows="False"
+                                  CanUserDeleteRows="False"
+                                  Style="{StaticResource EstilosDataGrid}">
 
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Foto" Binding="{Binding Foto}" />
+                                
+                                <DataGridTemplateColumn Header="Foto">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Image Source="{Binding Foto}" Width="50" Height="50" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+
+                                <DataGridTextColumn Header="ID" Binding="{Binding IdUsuario}" />
+                                
                                 <DataGridTextColumn Header="FechaHora" Binding="{Binding FechaHora}" />
+
                                 <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" />
+
                                 <DataGridTextColumn Header="Observaciones" Binding="{Binding Observaciones}" />
                             </DataGrid.Columns>
-
                         </DataGrid>
                     </StackPanel>
                 </ScrollViewer>
             </Grid>
         </StackPanel>
+
     </Grid>
 
 </Page>

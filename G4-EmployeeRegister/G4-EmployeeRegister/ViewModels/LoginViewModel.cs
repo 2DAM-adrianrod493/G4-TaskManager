@@ -20,10 +20,8 @@ namespace G4_EmployeeRegister.ViewModels
         private LoginView loginView;
         private readonly LoginService _loginService;
 
-        //La ventana de donde vengo
+        // Ventana de donde venimos
         private readonly LoginView _windowLogin;
-
-
 
 
         public string Username
@@ -75,7 +73,7 @@ namespace G4_EmployeeRegister.ViewModels
         }
         #endregion
       
-        #region MÉTODOS DEL LOGIN
+        #region MÉTODOS
         private void GoToLogin()
         {
             UsuarioModel usuario = _loginService.GetUsuarioLogin(Username, Password);
@@ -84,28 +82,28 @@ namespace G4_EmployeeRegister.ViewModels
             {
                 if (usuario.Rol == "Administrador")
                 {
-                    // Abrir la vista de administrador
+                    // Abrimos AdminView
                     G4_EmployeeRegister.Views.AdminView adminView = new AdminView(usuario);
                     adminView.Show();
                 }
                 else if (usuario.Rol == "Usuario")
                 {
-                    // Abrir la vista de usuario
+                    // Abrimos UserView
                     G4_EmployeeRegister.Views.UserView userView = new UserView(usuario);
                     userView.Show();
                 }
                 else
                 {
-                    ErrorMessage = "Rol desconocido, contacte al administrador.";
-                    return; // No cerrar la ventana si el rol es desconocido
+                    ErrorMessage = "Rol desconocido";
+                    return; // No cerramos si no reconoce el rol
                 }
 
-                // Cerrar la ventana de login si está inicializada
+                // Cerramos el login si está inicializado
                 _windowLogin?.Close();
             }
             else
             {
-                ErrorMessage = "Usuario o contraseña incorrectos.";
+                ErrorMessage = "USUARIO O CONTRASEÑA INCORRECTOS!";
             }
         }
 
@@ -125,7 +123,7 @@ namespace G4_EmployeeRegister.ViewModels
 
 
 
-        #region EVENTOS DE NOTIFICACIÓN
+        #region EVENTO DE NOTIFICACIÓN
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged(string propName)
         {

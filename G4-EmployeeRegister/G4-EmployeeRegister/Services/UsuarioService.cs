@@ -10,12 +10,12 @@ namespace G4_EmployeeRegister.Services
 {
     public class UsuarioService
     {
-        // Creamos Lista Privada
+        // CREAMOS UNA LISTA PRIVADA
         private ObservableCollection<UsuarioModel> _usuarioList { get; set; }
         private string connectionString = ConfigurationManager.ConnectionStrings["Conexion_App"].ConnectionString;
 
 
-        // Obtener Listado de Usuarios ya Definidos
+        // OBTENEMOS LOS USUARIOS
         public ObservableCollection<UsuarioModel> GetAllUsuarios()
         {
             _usuarioList = new ObservableCollection<UsuarioModel>();
@@ -56,7 +56,7 @@ namespace G4_EmployeeRegister.Services
         }
 
 
-        // Agregar usuario
+        // AGREGAR USUARIO
         public void AddUsuario(UsuarioModel usuarioModel)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -79,7 +79,7 @@ namespace G4_EmployeeRegister.Services
             }
         }
 
-        // Eliminar usuario
+        // ELIMINAR USUARIO
         public void RemoveUsuario(UsuarioModel usuarioModel)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -95,7 +95,7 @@ namespace G4_EmployeeRegister.Services
             }
         }
 
-        // Actualizar Usuario
+        // ACTUALIZAR USUARIO
         public void UpdateUsuario(UsuarioModel updatedUsuario)
         {
             // Buscar por ID en la lista

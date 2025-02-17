@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:G4_EmployeeRegister.Views"
       mc:Ignorable="d" 
       xmlns:uc="clr-namespace:G4_EmployeeRegister.UserControls"
-      Title="UserView" Height="600" Width="800"
+      Title="UserView" Height="450" Width="800"
       ResizeMode="NoResize">
 
     <!-- Fondo -->
@@ -19,7 +19,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="6*"/>
+            <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
 
         <!-- Header -->
@@ -32,28 +32,30 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            
+            <!-- UserControl -->
+            <uc:UsersControlador Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" />
 
-            <!-- Botón Salir -->
+            <!-- Salir -->
             <Button x:Name="BotonSalir"
                     Grid.Column="2"
                     HorizontalAlignment="Center"
                     Background="Transparent"
                     BorderThickness="0"
-                    Click="BotonSalir_Click">
+                    Command="{Binding VolverAtrasCommand}">
                 <Image Source="/Resources/Iconos/salir.png"
                        Width="38"
                        Style="{StaticResource EstiloImagen}"/>
             </Button>
-
         </Grid>
+
+        <!-- Usuario Conectado -->
         <TextBlock Text="{Binding NombreCompleto}"
             Grid.Column="1" 
             Grid.Row="1"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Style="{StaticResource EstiloTextoTitulo}"/>
-
+        
         <!-- Botones -->
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
@@ -79,7 +81,7 @@
                     Margin="10,0,15,0"/>
         </Grid>
 
-        <!-- Tabla Fichajes -->
+        <!-- Lista Fichajes -->
         <StackPanel Grid.Row="3" Margin="0,20,0,0">
             <Grid Grid.Row="3" Width="Auto" Margin="0,10,0,0">
                 <ScrollViewer VerticalScrollBarVisibility="Auto"
@@ -97,11 +99,8 @@
                                   Style="{StaticResource EstilosDataGrid}">
 
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="IdFichaje" Binding="{Binding IdFichaje}" />
-                                <DataGridTextColumn Header="IdUsuario" Binding="{Binding IdUsuario}" />
-                                <DataGridTextColumn Header="FechaHora" Binding="{Binding FechaHora}" />
+                                <DataGridTextColumn Header="Fecha" Binding="{Binding FechaHora}" />
                                 <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" />
-                                <DataGridTextColumn Header="Observaciones" Binding="{Binding Observaciones}" />
                             </DataGrid.Columns>
 
                         </DataGrid>

@@ -16,16 +16,14 @@
 
     <Grid VerticalAlignment="Center">
         <Grid.RowDefinitions>
-            <!-- Cabecera con UserControl -->
             <RowDefinition Height="Auto"/>
-            <!-- Formulario -->
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Cabecera con UserControl -->
+        <!-- UserControl -->
         <uc:UsersControlador Grid.Row="0" HorizontalAlignment="Center"/>
 
-        <!-- Formulario de login -->
+        <!-- Formulario -->
         <Border Grid.Row="1" 
                 Style="{StaticResource EstilosBordesFormulario}" 
                 HorizontalAlignment="Center" 
@@ -34,7 +32,6 @@
                 Height="300" 
                 Margin="0,20,0,0">
             <Grid>
-                <!-- Filas -->
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto"/>
@@ -47,7 +44,6 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <!-- Columnas -->
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
@@ -66,7 +62,7 @@
                 <!-- Botón Iniciar Sesión -->
                 <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto">
 
-                    <Button Content="Log in" Style="{StaticResource EstilosButton}" Width="140" Command="{Binding LoginCommand}" />
+                    <Button Content="Entrar" Style="{StaticResource EstilosButton}" Width="140" Command="{Binding LoginCommand}" />
                 </StackPanel>
             </Grid>
         </Border>

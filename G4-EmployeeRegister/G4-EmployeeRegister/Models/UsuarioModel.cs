@@ -7,7 +7,7 @@ namespace G4_EmployeeRegister.Models
 {
     public class UsuarioModel : INotifyPropertyChanged
     {
-        // Parámetros
+        // PROPIEDADES
         private int _idUsuario;
         private string _nombre;
         private string _apellidos;
@@ -19,7 +19,7 @@ namespace G4_EmployeeRegister.Models
         private string? _departamento;
         private FichajeModel _fichaje;
 
-        // Constructor
+        // CONSTRUCTOR
         public UsuarioModel(int idUsuario, string nombre,string apellidos, 
             string email, string username, string contrasenia, BitmapImage foto,
             string rol, string departamento)
@@ -35,6 +35,7 @@ namespace G4_EmployeeRegister.Models
             Departamento = departamento;
         }
 
+        #region GETTERS Y SETTERS
         public int IdUsuario
         {
             get => _idUsuario;
@@ -155,9 +156,9 @@ namespace G4_EmployeeRegister.Models
                 }
             }
         }
+        #endregion
 
-
-        // Evento para Notificar Cambios en las Propiedades.
+        // NOTIFICACIÓN DE PROPIEDADES
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
         {

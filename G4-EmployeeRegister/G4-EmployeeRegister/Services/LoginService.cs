@@ -12,7 +12,7 @@ namespace G4_EmployeeRegister.Services
 {
     internal class LoginService
     {
-        //Creo mi cadena de conexión a partir de la configurada en App.config
+        // CREAMOS LA CADENA DE CONEXIÓN A PARTIR DE APP.CONFIG
         private string connectionString = ConfigurationManager.ConnectionStrings["Conexion_App"].ConnectionString;
         public UsuarioModel GetUsuarioLogin(string nombreUsuario, string passIntro)
         {
@@ -23,8 +23,8 @@ namespace G4_EmployeeRegister.Services
                 {
                     conexion.Open();
                     string query = @"SELECT u.IdUsuario, u.Nombre, u.Apellidos, u.Email, u.Username, u.Contrasenia, u.Foto, u.Rol, u.Departamento 
-                             FROM Usuarios u
-                             WHERE Username = @userName";
+                                     FROM Usuarios u
+                                     WHERE Username = @userName";
                     using (SqlCommand cmd = new SqlCommand(query, conexion))
                     {
                         cmd.Parameters.AddWithValue("@userName", nombreUsuario);

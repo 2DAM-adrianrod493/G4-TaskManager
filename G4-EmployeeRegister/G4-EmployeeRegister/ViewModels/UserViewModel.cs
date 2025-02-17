@@ -1,84 +1,80 @@
-﻿using G4_EmployeeRegister.Models;
-using G4_EmployeeRegister.Services;
-using System;
-using System.Collections.Generic;
+﻿using System.Windows.Input;
 using System.Collections.ObjectModel;
+using System.Windows;
+using G4_EmployeeRegister.Models;
+using G4_EmployeeRegister.Services;
+using G4_EmployeeRegister.ViewModels;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media.Imaging;
 
 namespace G4_EmployeeRegister.ViewModels
 {
-    class UserViewModel : INotifyPropertyChanged
+    public class UserViewModel : INotifyPropertyChanged
     {
-        private readonly Services.FichajeService _fichajeServices;
+        private readonly FichajeService _fichajeService;
+        private UsuarioModel _usuario;
+
         public ObservableCollection<FichajeModel> Fichajes { get; set; }
 
+        public ICommand IniciarJornadaCommand { get; set; }
+        public ICommand FinalizarJornadaCommand { get; set; }
+
+        #region CONSTRUCTOR
         public UserViewModel(UsuarioModel usuario)
         {
-            _fichajeServices = new FichajeService();
-            Fichajes = new ObservableCollection<FichajeModel>();
-            LoadUsers(usuario);
-            
+            _usuario = usuario;
+            _fichajeService = new FichajeService();
+            Fichajes = new ObservableCollection<FichajeModel>(_fichajeService.GetAllFichajes(usuario));
+
+            // INICIALIZAMOS COMANDOS
+            IniciarJornadaCommand = new RelayCommand(param => IniciarJornada());
+            FinalizarJornadaCommand = new RelayCommand(param => FinalizarJornada());
         }
-
-        #region PROPIEDADES DE USUARIOS
-        // Propiedad
-        private int _idUsuario;
-        private string _nombre;
-        private string _apellidos;
-        private string _email;
-        private string _username;
-        private string _contrasenia;
-        private BitmapImage _foto;
-        private string _rol;
-        private string? _departamento;
-        private FichajeModel _fichaje;
-
-        public int IdUsuario { get => _idUsuario; set => _idUsuario = value; }
-        public string Nombre { get => _nombre; set => _nombre = value; }
-        public string NombreCompleto { get => _nombre + " " + Apellidos; set => _nombre = value; }
-
-        public string Apellidos { get => _apellidos; set => _apellidos = value; }
-        public string Email { get => _email; set => _email = value; }
-        public string Username { get => _username; set => _username = value; }
-        public string Contrasenia { get => _contrasenia; set => _contrasenia = value; }
-        public BitmapImage Foto { get => _foto; set => _foto = value; }
-        public string Rol { get => _rol; set => _rol = value; }
-        public string? Departamento { get => _departamento; set => _departamento = value; }
-        public FichajeModel Fichaje { get => _fichaje; set => _fichaje = value; }
-
-
-
         #endregion
 
-        private void LoadUsers(UsuarioModel usuario)
-        {       
-            //hecho por mi para que se ve que he entendido que hace
-            var allFichajes = _fichajeServices.GetAllFichajes(usuario);
-            var filteredFichajes = new List<FichajeModel>();
-
-            foreach (var f in allFichajes)
-            {
-                if (f.IdUsuario == usuario.IdUsuario)
-                {
-                    filteredFichajes.Add(f);
-                }
-            }
-
-            Fichajes = new ObservableCollection<FichajeModel>(filteredFichajes);
-            Apellidos = usuario.Apellidos;
-            NombreCompleto = usuario.Nombre;
-
+        #region MÉTODOS
+        private void IniciarJornada()
+        {
+            RegistrarFichaje("Entrada");
         }
 
-        #region Métodos de Notificación (INotifyPropertyChanged)
+        private void FinalizarJornada()
+        {
+            RegistrarFichaje("Salida");
+        }
+        #endregion
 
+        #region MÉTODOS
+        private void RegistrarFichaje(string tipo)
+        {
+            // Vemos si el último fue de entrada o salida
+            if (Fichajes.Count > 0 && Fichajes.Last().Tipo == tipo)
+            {
+                // Avisamos que no puede registrarse una salida o entrada dos veces seguidas
+                MessageBox.Show($"{tipo.ToUpper()} ya registrada. Registra otra acción.","ERROR",
+                    MessageBoxButton.OK);
+                return;
+            }
+
+            // Creamos el fichaje con la fecha y el tipo
+            var nuevoFichaje = new FichajeModel(0, _usuario.IdUsuario, DateTime.Now, tipo, "");
+
+            _fichajeService.AddFichaje(nuevoFichaje);
+
+            // Actualizamos lista
+            Fichajes.Add(nuevoFichaje);
+            // Notificamos que la lista ha cambiado
+            OnPropertyChanged(nameof(Fichajes));
+
+            MessageBox.Show($"{tipo.ToUpper()} registrada CORRECTAMENTE", "FICHAJE",
+                MessageBoxButton.OK);
+        }
+        #endregion
+
+        #region NOTIFICACIÓN
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged(string propName)
         {
+            // Notificamos que una propiedad ha cambiado, para poder actualizar la lista
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
         }
         #endregion

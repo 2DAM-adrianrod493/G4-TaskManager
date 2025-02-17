@@ -10,11 +10,11 @@ namespace G4_EmployeeRegister.Services
 {
     public class FichajeService
     {
-        // Creamos Lista Privada
+        // CREAMOS UNA LISTA PRIVADA
         private ObservableCollection<FichajeModel> _fichajeList { get; set; }
         private string connectionString = ConfigurationManager.ConnectionStrings["Conexion_App"].ConnectionString;
 
-        // Obtener Listado de Fichajes
+        // OBTENEMOS LOS FICHAJES
         public ObservableCollection<FichajeModel> GetAllFichajes(UsuarioModel usuario)
         {
 
@@ -24,9 +24,10 @@ namespace G4_EmployeeRegister.Services
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
 
+
                 connection.Open();
 
-                // Consulta Query
+                // CONSULTA QUERY
                 string query = @"SELECT f.IdFichaje, f.IdUsuario, f.FechaHora, f.Tipo, f.Observaciones 
                                 FROM Fichajes f join Usuarios u on f.IdUsuario = u.IdUsuario 
                                 Where u.IdUsuario = "+usuario.IdUsuario+";";
@@ -53,18 +54,28 @@ namespace G4_EmployeeRegister.Services
             return _fichajeList;
         }
 
-        // Agregar Fichaje
+
+        // AGREGAR FICHAJE
         public void AddFichaje(FichajeModel fichajeModel)
         {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = @"INSERT INTO Fichajes (IdUsuario, FechaHora, Tipo, Observaciones)
+                                VALUES (@IdUsuario, @FechaHora, @Tipo, @Observaciones);";
+
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@IdUsuario", fichajeModel.IdUsuario);
+                    cmd.Parameters.AddWithValue("@FechaHora", fichajeModel.FechaHora);
+                    cmd.Parameters.AddWithValue("@Tipo", fichajeModel.Tipo);
+                    cmd.Parameters.AddWithValue("@Observaciones", fichajeModel.Observaciones);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
             _fichajeList.Add(fichajeModel);
         }
-
-        // Eliminar Fichaje
-        public void RemoveFichaje(FichajeModel fichajeModel)
-        {
-            _fichajeList.Remove(fichajeModel);
-        }
-
-        
     }
 }
