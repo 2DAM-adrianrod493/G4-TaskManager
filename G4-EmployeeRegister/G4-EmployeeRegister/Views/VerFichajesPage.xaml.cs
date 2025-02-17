@@ -1,4 +1,5 @@
-﻿using System;
+﻿using G4_EmployeeRegister.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,10 @@ namespace G4_EmployeeRegister.Views
     /// </summary>
     public partial class VerFichajesPage : Page
     {
-        public VerFichajesPage()
+        public VerFichajesPage(UsuarioModel usuario)
         {
             InitializeComponent();
+            
         }
     }
 }

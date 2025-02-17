@@ -10,14 +10,8 @@ namespace G4_EmployeeRegister.Views
         {
             InitializeComponent();
             this.DataContext = new ViewModels.AdminViewModel(usuario);
+            
         }
-
-        //private void BotonSalir_Click(object sender, RoutedEventArgs e)
-        //{
-        //    this.Close();
-        //    var loginView = new LoginView();
-        //    loginView.Show();
-        //}
 
     }
 }

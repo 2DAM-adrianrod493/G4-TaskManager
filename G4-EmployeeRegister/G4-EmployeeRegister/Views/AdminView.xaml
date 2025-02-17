@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:G4_EmployeeRegister.Views"
         mc:Ignorable="d"
-        Title="AdminView" Height="500" Width="900"
+        Title="AdminView" Height="500" Width="1000"
         ResizeMode="NoResize"
         >
 
@@ -16,7 +16,7 @@
 
     <Grid >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
@@ -65,22 +65,30 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto" Margin="0,15,0,15" >
                 <Button Content="Añadir" Width="150" Height="35" Style="{StaticResource EstilosButton}" Command="{Binding AddUser}" Margin="5"/>
                 <Button Content="Editar" Width="150" Height="35" Style="{StaticResource EstilosButton}" Command="{Binding EditUser}" Margin="5" />
-                <Button Content="Eliminar" Width="150" Height="35" Style="{StaticResource EstilosButton}" Command="{Binding DeleteUser}" Margin="5"/>
+                <Button Content="Eliminar" Width="150" Height="35" Style="{StaticResource EstilosButton}" Command="{Binding DeleteUser}"  Margin="5"/>
             </StackPanel>
+
 
             <!-- Lista Usuarios -->
             <DataGrid x:Name="HistorialUsuario"
                       AutoGenerateColumns="False"
+                      
+                      ScrollViewer.CanContentScroll="True"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      
                       HorizontalAlignment="Stretch"
                       VerticalAlignment="Stretch"
                       ColumnWidth="*"
                       IsReadOnly="True"
                       ItemsSource="{Binding Usuarios}"
+                      SelectedItem="{Binding UsuarioSeleccionado}"
                       CanUserAddRows="False"
-                      CanUserDeleteRows="False"
-                      Style="{StaticResource EstilosDataGrid}">
+                      CanUserDeleteRows="False" 
+                      >
+
                 <DataGrid.Columns>
-                    
+
                     <DataGridTextColumn Header="ID" Binding="{Binding IdUsuario}" />
                     <DataGridTextColumn Header="Nombre" Binding="{Binding NombreCompleto}" />
                     <DataGridTextColumn Header="Rol" Binding="{Binding Rol}" />
@@ -89,7 +97,9 @@
                     <DataGridTemplateColumn Header="Fichajes">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="Ver" Width="65" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource EstilosButton}"></Button>
+                                <Button Content="Ver" Width="65" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource EstilosButton}">
+                                    
+                                </Button>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
@@ -101,7 +111,7 @@
         </StackPanel>
 
         <!-- Formulario -->
-        <Border Grid.Column="1" Padding="20" Margin="10" Style="{StaticResource EstilosBordesFormulario}">
+        <Border Grid.Column="1"  Margin="10" Style="{StaticResource EstilosBordesFormulario}">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -146,14 +156,13 @@
                         Style="{StaticResource EstilosButton}"
                         Command="{Binding SeleccionarImagenCommand}"/>
 
-                <!-- Guardar Botón -->
-                <StackPanel Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="10">
-                    <Button Content="Guardar" Width="182" Height="35" Style="{StaticResource EstilosButton}" Command="{Binding AddUser}"/>
-                </StackPanel>
+                
                 
                 
                 
             </Grid>
         </Border>
     </Grid>
+    
+    
 </Window>

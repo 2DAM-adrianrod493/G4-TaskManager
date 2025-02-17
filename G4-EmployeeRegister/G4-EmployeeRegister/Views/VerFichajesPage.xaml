@@ -13,6 +13,7 @@
     <Page.Background>
         <ImageBrush ImageSource="../Resources/Fondos/fondo.jpg" Stretch="Fill" Opacity="0.5"/>
     </Page.Background>
+    
 
     <Grid>
         <Grid.RowDefinitions>

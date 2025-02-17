@@ -1,5 +1,6 @@
 ﻿using G4_EmployeeRegister.Models;
 using G4_EmployeeRegister.Services;
+using G4_EmployeeRegister.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -39,6 +40,21 @@ namespace G4_EmployeeRegister.ViewModels
         public string? Departamento { get => _departamento; set => _departamento = value; }
         #endregion
 
+        #region Propiedad Usuario seleccionado
+        private UsuarioModel _usuarioSeleccionado;
+        public UsuarioModel UsuarioSeleccionado
+        {
+            get {
+                return _usuarioSeleccionado; 
+            }
+            set { 
+                _usuarioSeleccionado = value;
+                OnPropertyChanged(nameof(UsuarioSeleccionado));
+            }
+        }
+
+        #endregion
+
         // CARGAMOS USUARIOS
         private void LoadUsers()
         {
@@ -50,6 +66,7 @@ namespace G4_EmployeeRegister.ViewModels
         public RelayCommand AddUser { get; }
         public RelayCommand EditUser { get; }
         public RelayCommand DeleteUser { get; }
+        public RelayCommand MostrarFichajes { get; }
         #endregion
 
         public AdminViewModel(UsuarioModel usuario)
@@ -68,23 +85,38 @@ namespace G4_EmployeeRegister.ViewModels
             EditUser = new RelayCommand(_ => EditUsuario(),
                 _ => (Usuarios.Count() != 0));
 
-            DeleteUser = new RelayCommand(paramUsuario => DeleteUsuario(paramUsuario),
+            DeleteUser = new RelayCommand(_ => DeleteUsuario(),
                 _ => true);
+            MostrarFichajes = new RelayCommand(_=> VerLosFichajes(), _=> true);
 
             // Cargamos los usuarios
             LoadUsers();
         }
 
-        // ELIMINAR USUARIO
-        private void DeleteUsuario(object usuario)
+        public void VerLosFichajes()
         {
-            UsuarioModel usuarioEliminar = (UsuarioModel)usuario;
-            var confirmacion = MessageBox.Show("¿Quieres eliminar el usuario " + usuarioEliminar.NombreCompleto + " ?",
+            if (UsuarioSeleccionado != null)
+            {
+                Views.VentanFichajes ventanaFichajes = new Views.VentanFichajes(UsuarioSeleccionado);
+                ventanaFichajes.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un usuario para ver los fichajes.", "Atención", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        // ELIMINAR USUARIO
+        private void DeleteUsuario()
+        {
+          
+            var confirmacion = MessageBox.Show("¿Quieres eliminar el usuario " + UsuarioSeleccionado.Username + " ?",
                 "ELIMINAR", MessageBoxButton.OKCancel);
 
             if (confirmacion == MessageBoxResult.OK)
             {
-                _usuariosService.RemoveUsuario(usuarioEliminar);
+                _usuariosService.RemoveUsuario(UsuarioSeleccionado);
+                Usuarios.Remove(UsuarioSeleccionado);
             }
         }
 
@@ -173,6 +205,8 @@ namespace G4_EmployeeRegister.ViewModels
                 OnPropertyChanged(nameof(EditPage));
             }
         }
+
+        
 
         #endregion
 

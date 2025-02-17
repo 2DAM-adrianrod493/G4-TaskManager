@@ -13,13 +13,13 @@
     <Compile Update="Views\AdminView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\EditPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Views\LoginView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\UserView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\VentanFichajes.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\VerFichajesPage.xaml.cs">
@@ -36,13 +36,13 @@
     <Page Update="Views\AdminView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\EditPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Views\LoginView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\UserView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\VentanFichajes.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\VerFichajesPage.xaml">

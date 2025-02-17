@@ -15,8 +15,8 @@ namespace G4_EmployeeRegister.ViewModels
 
         public ObservableCollection<FichajeModel> Fichajes { get; set; }
 
-        public ICommand IniciarJornadaCommand { get; set; }
-        public ICommand FinalizarJornadaCommand { get; set; }
+        public RelayCommand IniciarJornadaCommand { get; set; }
+        public RelayCommand FinalizarJornadaCommand { get; set; }
 
         #region CONSTRUCTOR
         public UserViewModel(UsuarioModel usuario)
@@ -26,11 +26,12 @@ namespace G4_EmployeeRegister.ViewModels
             Fichajes = new ObservableCollection<FichajeModel>(_fichajeService.GetAllFichajes(usuario));
 
             // INICIALIZAMOS COMANDOS
-            IniciarJornadaCommand = new RelayCommand(param => IniciarJornada());
-            FinalizarJornadaCommand = new RelayCommand(param => FinalizarJornada());
+            IniciarJornadaCommand = new RelayCommand(param => IniciarJornada(),_=>true);
+            FinalizarJornadaCommand = new RelayCommand(param => FinalizarJornada(), _ => true);
         }
         #endregion
 
+        public string NombreCompleto { get => _usuario.Nombre + " " + _usuario.Apellidos; }
         #region MÉTODOS
         private void IniciarJornada()
         {

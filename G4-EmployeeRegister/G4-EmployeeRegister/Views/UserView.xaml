@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:G4_EmployeeRegister.Views"
       mc:Ignorable="d" 
       xmlns:uc="clr-namespace:G4_EmployeeRegister.UserControls"
-      Title="UserView" Height="450" Width="800"
+      Title="UserView" Height="500" Width="800"
       ResizeMode="NoResize">
 
     <!-- Fondo -->
@@ -82,7 +82,7 @@
         </Grid>
 
         <!-- Lista Fichajes -->
-        <StackPanel Grid.Row="3" Margin="0,20,0,0">
+        <StackPanel Grid.Row="3" Margin="10">
             <Grid Grid.Row="3" Width="Auto" Margin="0,10,0,0">
                 <ScrollViewer VerticalScrollBarVisibility="Auto"
                   HorizontalScrollBarVisibility="Disabled">
