@@ -1,7 +1,10 @@
 ﻿using G4_EmployeeRegister.Models;
 using G4_EmployeeRegister.Services;
+using G4_EmployeeRegister.Views;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace G4_EmployeeRegister.ViewModels
 {
@@ -28,23 +31,51 @@ namespace G4_EmployeeRegister.ViewModels
         {
             _usuario = usuario;
             _fichajeService = new FichajeService();
+
             // Cargamos los fichajes del usuario a la propiedad
             Fichajes = new ObservableCollection<FichajeModel>();
             loadFichajes();
+            VolverAtrasCommand = new RelayCommand(_ => VolverAtras(), _ => true);
+
         }
 
         private void loadFichajes()
         {
-            
+
             Fichajes = new ObservableCollection<FichajeModel>(_fichajeService.GetAllFichajes(_usuario));
         }
+        #region CommandoVolverAtras
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        // Evento que notifica cuando una propiedad cambia
-        protected void OnPropertyChanged(string propertyName)
+        public RelayCommand VolverAtrasCommand { get; }
+        #endregion
+        public void VolverAtras()
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            AdminView adminView = new AdminView(_usuario);
+            adminView.Show();
+            Application.Current.Windows[0].Close();
+
         }
+
+        #region Página de Edición
+        private Page _paginaFichaje;
+        public Page PaginaAdmin
+        {
+            get => _paginaFichaje;
+            set
+            {
+                _paginaFichaje = value;
+                OnPropertyChanged(nameof(PaginaAdmin));
+            }
+        }
+        #endregion
+
+
+        #region EVENTO DE NOTIFICACIÓN
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
+        }
+        #endregion
     }
 }

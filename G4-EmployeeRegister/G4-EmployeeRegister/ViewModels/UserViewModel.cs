@@ -5,6 +5,7 @@ using G4_EmployeeRegister.Models;
 using G4_EmployeeRegister.Services;
 using G4_EmployeeRegister.ViewModels;
 using System.ComponentModel;
+using G4_EmployeeRegister.Views;
 
 namespace G4_EmployeeRegister.ViewModels
 {
@@ -17,6 +18,7 @@ namespace G4_EmployeeRegister.ViewModels
 
         public RelayCommand IniciarJornadaCommand { get; set; }
         public RelayCommand FinalizarJornadaCommand { get; set; }
+        public RelayCommand VolverALogin { get; }
 
         #region CONSTRUCTOR
         public UserViewModel(UsuarioModel usuario)
@@ -28,6 +30,9 @@ namespace G4_EmployeeRegister.ViewModels
             // INICIALIZAMOS COMANDOS
             IniciarJornadaCommand = new RelayCommand(param => IniciarJornada(),_=>true);
             FinalizarJornadaCommand = new RelayCommand(param => FinalizarJornada(), _ => true);
+
+            //volver al login
+            VolverALogin = new RelayCommand(_ => VolverLoginVentana(), _ => true);
         }
         #endregion
 
@@ -44,6 +49,12 @@ namespace G4_EmployeeRegister.ViewModels
         }
         #endregion
 
+        public void VolverLoginVentana()
+        {
+            LoginView loginView = new LoginView();
+            loginView.Show();
+            Application.Current.Windows[0].Close();
+        }
         #region MÉTODOS
         private void RegistrarFichaje(string tipo)
         {

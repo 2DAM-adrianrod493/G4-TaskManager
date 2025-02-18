@@ -127,7 +127,8 @@
         </Setter>
     </Style>
 
-    <!-- DataGrid --><!--
+    <!-- DataGrid -->
+    
     <Style TargetType="DataGrid" x:Key="EstilosDataGrid">
         <Setter Property="FontSize" Value="16"/>
         <Setter Property="FontWeight" Value="Bold"/>
@@ -139,7 +140,9 @@
         <Setter Property="RowHeight" Value="40"/>
     </Style>
 
-    --><!-- ColumnHeader --><!--
+    
+    <!-- ColumnHeader -->
+    
     <Style TargetType="DataGridColumnHeader">
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="Background" Value="#44376C"/>
@@ -148,14 +151,16 @@
         <Setter Property="Height" Value="30"/>
     </Style>
 
-    --><!-- DataGridCell --><!--
+    
+    <!-- DataGridCell -->
+
     <Style TargetType="DataGridCell">
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="Background" Value="White"/>
         <Setter Property="Foreground" Value="#44376C"/>
         <Setter Property="BorderBrush" Value="#44376C"/>
         <Setter Property="BorderThickness" Value="1"/>
-    </Style>-->
+    </Style>
 
     <!-- ComboBox -->
     <Style TargetType="ComboBox" x:Key="EstilosComboBox">

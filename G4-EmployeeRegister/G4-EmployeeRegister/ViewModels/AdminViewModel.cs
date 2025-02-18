@@ -1,6 +1,7 @@
 ﻿using G4_EmployeeRegister.Models;
 using G4_EmployeeRegister.Services;
 using G4_EmployeeRegister.Views;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,12 @@ namespace G4_EmployeeRegister.ViewModels
 {
     class AdminViewModel : INotifyPropertyChanged
     {
+        // Servicios
         private readonly Services.UsuarioService _usuariosService;
 
-        public event PropertyChangedEventHandler? PropertyChanged;
+        
 
+        // ObservableCollection de usuarios
         public ObservableCollection<UsuarioModel> Usuarios { get; set; }
 
         #region PROPIEDADES DE USUARIOS
@@ -31,7 +34,8 @@ namespace G4_EmployeeRegister.ViewModels
         private BitmapImage _foto;
         private string _rol;
         private string? _departamento;
-
+        byte[] usuarioImg;
+        private bool imagenSubida = false;
         public string NombreCompleto { get => _nombreCompleto; set => _nombreCompleto = value; }
         public string Nombre { get => _nombre; set => _nombre = value; }
         public string Apellidos { get => _apellidos; set => _apellidos = value; }
@@ -58,11 +62,11 @@ namespace G4_EmployeeRegister.ViewModels
         }
         #endregion
 
+        #region Constructor y Cargar Usuarios
         // CARGAMOS USUARIOS
         private void LoadUsers()
         {
             Usuarios = _usuariosService.GetAllUsuarios();
-            
         }
 
         #region COMANDOS
@@ -72,19 +76,20 @@ namespace G4_EmployeeRegister.ViewModels
         public RelayCommand DeleteUser { get; }
         public RelayCommand MostrarFichajes { get; }
         public RelayCommand SeleccionarImagenCommand { get; }
+        public RelayCommand VolverALogin {  get; }
         #endregion
 
         public AdminViewModel(UsuarioModel usuario)
         {
             // Inicializamos los valores del usuario actual
-            NombreCompleto = usuario.Nombre + " " + usuario.Apellidos;
+            NombreCompleto ="Usuario Connectado: "+  usuario.Nombre + " " + usuario.Apellidos;
             _usuariosService = new UsuarioService();
             Usuarios = new ObservableCollection<UsuarioModel>();
 
             // Acciones Comandos
             AddUser = new RelayCommand(
                 _ => AddUsuario(),
-                _ => (Usuarios.Count() != 0)
+                _ => PuedeAniadir()
             );
 
             EditUser = new RelayCommand(_ => EditUsuario(),
@@ -94,14 +99,35 @@ namespace G4_EmployeeRegister.ViewModels
                 _ => true);
             MostrarFichajes = new RelayCommand(paramUsuario => VerLosFichajes(paramUsuario), _ => true);
             SeleccionarImagenCommand = new RelayCommand(_ => CargaImagen(), _ => true);
-
+            VolverALogin = new RelayCommand(_=> VolverLoginVentana(),_=> true);
             // Cargamos los usuarios
             LoadUsers();
         }
 
-        byte[] usuarioImg;
-        private bool imagenSabida = false;
+        public bool PuedeAniadir()
+        {
+            if (string.IsNullOrEmpty(NombreCompleto) 
+                || string.IsNullOrEmpty(Apellidos)
+                || string.IsNullOrEmpty(Email) 
+                || string.IsNullOrEmpty(Departamento)
+                || string.IsNullOrEmpty(Rol)
+                || Foto==null){
+                return false;
 
+            }
+
+            return true;
+        }
+        public void VolverLoginVentana()
+        {
+            LoginView loginView = new LoginView();
+            loginView.Show();
+            Application.Current.Windows[0].Close();
+        }
+        #endregion
+
+
+        #region Cargar Imagen
         // Cargar la imagen seleccionada por el usuario
         public void CargaImagen()
         {
@@ -122,7 +148,7 @@ namespace G4_EmployeeRegister.ViewModels
                     Foto = new BitmapImage(new Uri(archivoSeleccionado));
 
                     // Marcar que una imagen ha sido cargada
-                    imagenSabida = true;
+                    imagenSubida = true;
 
                     // Mensaje de confirmación
                     MessageBox.Show("Imagen cargada correctamente!", "Imagen", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -133,8 +159,9 @@ namespace G4_EmployeeRegister.ViewModels
                 MessageBox.Show($"Error al cargar la imagen: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+        #endregion
 
-
+        #region Ver los Fichajes
         public void VerLosFichajes(object paramUser)
         {
             UsuarioModel usuario = (UsuarioModel)paramUser;
@@ -149,7 +176,9 @@ namespace G4_EmployeeRegister.ViewModels
                 MessageBox.Show("Seleccione un usuario para ver los fichajes.", "Atención", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+        #endregion
 
+        #region ELIMINAR USUARIO
         // ELIMINAR USUARIO
         private void DeleteUsuario()
         {
@@ -162,13 +191,17 @@ namespace G4_EmployeeRegister.ViewModels
                 Usuarios.Remove(UsuarioSeleccionado);
             }
         }
+        #endregion
 
+        #region EDITAR USUARIO
         // EDITAR USUARIO
         private void EditUsuario()
         {
             // Lógica para editar el usuario si es necesario
         }
+        #endregion
 
+        #region AÑADIR USUARIO
         // AÑADIR USUARIO
         public void AddUsuario()
         {
@@ -195,14 +228,7 @@ namespace G4_EmployeeRegister.ViewModels
                 Usuarios.Add(usuario);
             }
         }
-
-        //// VOLVER ATRÁS
-        //public void VolverAtras()
-        //{
-        //    EditPage = null;
-        //    EditFrameVisibility = Visibility.Hidden;
-        //    ProductFrameVisibility = Visibility.Visible;
-        //}
+        #endregion
 
         #region CONTROL DE VISIBILIDAD
         private Visibility _paginaFichajeVisibilty = Visibility.Hidden;
@@ -215,6 +241,9 @@ namespace G4_EmployeeRegister.ViewModels
                 OnPropertyChanged(nameof(PaginaFichajeVisibilty));
             }
         }
+        
+
+
 
         private Visibility _listadoVisual = Visibility.Visible;
         public Visibility ListadoVisual
@@ -242,6 +271,8 @@ namespace G4_EmployeeRegister.ViewModels
         #endregion
 
         #region EVENTO DE NOTIFICACIÓN
+        // Evento de PropertyChanged
+        public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged(string propName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
