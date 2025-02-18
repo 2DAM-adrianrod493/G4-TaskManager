@@ -19,12 +19,6 @@
     <Compile Update="Views\UserView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\VentanFichajes.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Views\VerFichajesPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="UserControls\UsersControlador.xaml">
@@ -40,12 +34,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\UserView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\VentanFichajes.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\VerFichajesPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

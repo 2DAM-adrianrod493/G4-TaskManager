@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\binin\OneDrive\Documents\2DAM\DEINT\G4-EmployeeRegister\G4-EmployeeRegister\G4-EmployeeRegister\App.xaml
-7-267402173
+6547821935
 
-20-1577313981
+20458060988
 224512450786
-Resources\StyleResources.xaml;UserControls\UsersControlador.xaml;Views\AdminView.xaml;Views\LoginView.xaml;Views\UserView.xaml;Views\VentanFichajes.xaml;Views\VerFichajesPage.xaml;
+Resources\StyleResources.xaml;UserControls\UsersControlador.xaml;Views\AdminView.xaml;Views\LoginView.xaml;Views\UserView.xaml;Views\VerFichajesPage.xaml;
 
-True
+False
 

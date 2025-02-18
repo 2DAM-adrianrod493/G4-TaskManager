@@ -9,19 +9,23 @@
         ResizeMode="NoResize"
         >
 
+    
     <!-- Fondo -->
     <Window.Background>
         <ImageBrush ImageSource="../Resources/Fondos/fondo.jpg" Stretch="Fill" Opacity="0.5"/>
     </Window.Background>
 
     <Grid >
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+        <Frame Content="{Binding PaginaFichaje}" Grid.ColumnSpan="2" Visibility="{Binding PaginaFichajeVisibilty}" NavigationUIVisibility="Hidden"/>
 
         <!-- Izq -->
-        <StackPanel Grid.Column="0" Margin="10">
+        
+        <StackPanel Grid.Column="0" Margin="10" Visibility="{Binding ListadoVisual}">
 
             <!-- USUARIO CONECTADO -->
             <Grid HorizontalAlignment="Center" Width="350" Height="59" >
@@ -89,7 +93,13 @@
 
                 <DataGrid.Columns>
 
-                    <DataGridTextColumn Header="ID" Binding="{Binding IdUsuario}" />
+                    <DataGridTemplateColumn Header="Imagen" Width="75">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Foto}" Height="50" Margin="5"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                     <DataGridTextColumn Header="Nombre" Binding="{Binding NombreCompleto}" />
                     <DataGridTextColumn Header="Rol" Binding="{Binding Rol}" />
                     <DataGridTextColumn Header="Departamento" Binding="{Binding Departamento}" />
@@ -97,7 +107,9 @@
                     <DataGridTemplateColumn Header="Fichajes">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="Ver" Width="65" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource EstilosButton}"/>
+                                <Button Content="Ver" CommandParameter="{Binding}" 
+                                        Command="{Binding DataContext.MostrarFichajes, RelativeSource={RelativeSource AncestorType=DataGrid}}" 
+                                        Width="65" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource EstilosButton}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
@@ -109,7 +121,7 @@
         </StackPanel>
 
         <!-- Formulario -->
-        <Border Grid.Column="1"  Margin="10" Style="{StaticResource EstilosBordesFormulario}">
+        <Border Grid.Column="1"  Margin="10" Style="{StaticResource EstilosBordesFormulario}" Visibility="{Binding ListadoVisual}">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>

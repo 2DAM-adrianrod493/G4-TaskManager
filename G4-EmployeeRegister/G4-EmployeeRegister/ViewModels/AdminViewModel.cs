@@ -1,10 +1,12 @@
 ﻿using G4_EmployeeRegister.Models;
 using G4_EmployeeRegister.Services;
 using G4_EmployeeRegister.Views;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -44,21 +46,23 @@ namespace G4_EmployeeRegister.ViewModels
         private UsuarioModel _usuarioSeleccionado;
         public UsuarioModel UsuarioSeleccionado
         {
-            get {
-                return _usuarioSeleccionado; 
+            get
+            {
+                return _usuarioSeleccionado;
             }
-            set { 
+            set
+            {
                 _usuarioSeleccionado = value;
                 OnPropertyChanged(nameof(UsuarioSeleccionado));
             }
         }
-
         #endregion
 
         // CARGAMOS USUARIOS
         private void LoadUsers()
         {
             Usuarios = _usuariosService.GetAllUsuarios();
+            
         }
 
         #region COMANDOS
@@ -67,6 +71,7 @@ namespace G4_EmployeeRegister.ViewModels
         public RelayCommand EditUser { get; }
         public RelayCommand DeleteUser { get; }
         public RelayCommand MostrarFichajes { get; }
+        public RelayCommand SeleccionarImagenCommand { get; }
         #endregion
 
         public AdminViewModel(UsuarioModel usuario)
@@ -87,18 +92,57 @@ namespace G4_EmployeeRegister.ViewModels
 
             DeleteUser = new RelayCommand(_ => DeleteUsuario(),
                 _ => true);
-            MostrarFichajes = new RelayCommand(_=> VerLosFichajes(), _=> true);
+            MostrarFichajes = new RelayCommand(paramUsuario => VerLosFichajes(paramUsuario), _ => true);
+            SeleccionarImagenCommand = new RelayCommand(_ => CargaImagen(), _ => true);
 
             // Cargamos los usuarios
             LoadUsers();
         }
 
-        public void VerLosFichajes()
+        byte[] usuarioImg;
+        private bool imagenSabida = false;
+
+        // Cargar la imagen seleccionada por el usuario
+        public void CargaImagen()
         {
-            if (UsuarioSeleccionado != null)
+            // Crear un OpenFileDialog para seleccionar una imagen
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Imágenes (*.png;*.jpg;*.jpeg;*.bmp)|*.png;*.jpg;*.jpeg;*.bmp";
+
+            try
             {
-                Views.VentanFichajes ventanaFichajes = new Views.VentanFichajes(UsuarioSeleccionado);
-                ventanaFichajes.ShowDialog();
+                if (openFileDialog.ShowDialog() == true)
+                {
+                    string archivoSeleccionado = openFileDialog.FileName;
+
+                    // Aquí guardamos la imagen seleccionada en el arreglo de bytes
+                    usuarioImg = File.ReadAllBytes(archivoSeleccionado);
+
+                    // Creamos un BitmapImage para mostrar la imagen en la vista
+                    Foto = new BitmapImage(new Uri(archivoSeleccionado));
+
+                    // Marcar que una imagen ha sido cargada
+                    imagenSabida = true;
+
+                    // Mensaje de confirmación
+                    MessageBox.Show("Imagen cargada correctamente!", "Imagen", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar la imagen: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+
+        public void VerLosFichajes(object paramUser)
+        {
+            UsuarioModel usuario = (UsuarioModel)paramUser;
+            if (usuario != null)
+            {
+                PaginaFichaje = new Views.VerFichajesPage(usuario);
+                PaginaFichajeVisibilty = Visibility.Visible;
+                ListadoVisual = Visibility.Hidden;
             }
             else
             {
@@ -109,7 +153,6 @@ namespace G4_EmployeeRegister.ViewModels
         // ELIMINAR USUARIO
         private void DeleteUsuario()
         {
-          
             var confirmacion = MessageBox.Show("¿Quieres eliminar el usuario " + UsuarioSeleccionado.Username + " ?",
                 "ELIMINAR", MessageBoxButton.OKCancel);
 
@@ -123,14 +166,13 @@ namespace G4_EmployeeRegister.ViewModels
         // EDITAR USUARIO
         private void EditUsuario()
         {
-        
+            // Lógica para editar el usuario si es necesario
         }
 
         // AÑADIR USUARIO
         public void AddUsuario()
         {
             int id = Usuarios.Count() + 1;
-            // CONTRASEÑA POR DEFECTO (1234)
             String Contrasenia = "$2b$12$9Z6CSQpaRPTSKqUQaGj09.ZL7m8GtWjrGfd3M9bcshsh6yurse7NC";
 
             if (Usuarios.Any(user => user.Username.Equals(Username)))
@@ -139,7 +181,6 @@ namespace G4_EmployeeRegister.ViewModels
             }
             else
             {
-                // Asignamos el rol
                 if (Rol.EndsWith("Usuario"))
                 {
                     Rol = "Usuario";
@@ -149,69 +190,58 @@ namespace G4_EmployeeRegister.ViewModels
                     Rol = "Administrador";
                 }
 
-                // Creamos el usuario y lo añadimos al servicio y a la lista
-                UsuarioModel usuario = new UsuarioModel(id, Nombre, Apellidos, Email, Username, Contrasenia, Foto, Rol, Departamento.ToUpper());
+                UsuarioModel usuario = new UsuarioModel(id, Nombre, Apellidos, Email, Username, Contrasenia, Foto, Rol, Departamento?.ToUpper());
                 _usuariosService.AddUsuario(usuario);
                 Usuarios.Add(usuario);
             }
         }
 
-        // VOLVER ATRÁS
-        public void VolverAtras()
-        {
-            EditPage = null;
-            EditFrameVisibility = Visibility.Hidden;
-            ProductFrameVisibility = Visibility.Visible;
-        }
+        //// VOLVER ATRÁS
+        //public void VolverAtras()
+        //{
+        //    EditPage = null;
+        //    EditFrameVisibility = Visibility.Hidden;
+        //    ProductFrameVisibility = Visibility.Visible;
+        //}
 
         #region CONTROL DE VISIBILIDAD
-
-        // Propiedad para controlar la visibilidad del frame de edición
-        private Visibility _editFrameVisibility = Visibility.Hidden;
-        public Visibility EditFrameVisibility
+        private Visibility _paginaFichajeVisibilty = Visibility.Hidden;
+        public Visibility PaginaFichajeVisibilty
         {
-            get => _editFrameVisibility;
+            get => _paginaFichajeVisibilty;
             set
             {
-                _editFrameVisibility = value;
-                OnPropertyChanged(nameof(EditFrameVisibility));
+                _paginaFichajeVisibilty = value;
+                OnPropertyChanged(nameof(PaginaFichajeVisibilty));
             }
         }
 
-        // Propiedad para controlar la visibilidad del frame de productos
-        private Visibility _editPageFrameVisibility = Visibility.Visible;
-        public Visibility ProductFrameVisibility
+        private Visibility _listadoVisual = Visibility.Visible;
+        public Visibility ListadoVisual
         {
-            get => _editPageFrameVisibility;
+            get => _listadoVisual;
             set
             {
-                _editPageFrameVisibility = value;
-                OnPropertyChanged(nameof(ProductFrameVisibility));
+                _listadoVisual = value;
+                OnPropertyChanged(nameof(ListadoVisual));
             }
         }
-
         #endregion
 
         #region Página de Edición
-
-        // Propiedad para la página de edición de producto
-        private Page _editPage;
-        public Page EditPage
+        private Page _paginaFichaje;
+        public Page PaginaFichaje
         {
-            get => _editPage;
+            get => _paginaFichaje;
             set
             {
-                _editPage = value;
-                OnPropertyChanged(nameof(EditPage));
+                _paginaFichaje = value;
+                OnPropertyChanged(nameof(PaginaFichaje));
             }
         }
-
-        
-
         #endregion
 
         #region EVENTO DE NOTIFICACIÓN
-        // Método para notificar cambios de propiedad
         protected void OnPropertyChanged(string propName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));

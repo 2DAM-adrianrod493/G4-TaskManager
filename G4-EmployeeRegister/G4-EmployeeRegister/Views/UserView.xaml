@@ -49,13 +49,18 @@
         </Grid>
 
         <!-- Usuario Conectado -->
-        <TextBlock Text="{Binding NombreCompleto}"
+
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Text="{Binding NombreCompleto}"
             Grid.Column="1" 
             Grid.Row="1"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Style="{StaticResource EstiloTextoTitulo}"/>
-        
+            <Image Source="{Binding Foto}"/>
+        </StackPanel>
+
+
         <!-- Botones -->
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
@@ -96,7 +101,7 @@
                                   ItemsSource="{Binding Fichajes}"
                                   CanUserAddRows="False"
                                   CanUserDeleteRows="False"
-                                  Style="{StaticResource EstilosDataGrid}">
+                                  >
 
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="Fecha" Binding="{Binding FechaHora}" />

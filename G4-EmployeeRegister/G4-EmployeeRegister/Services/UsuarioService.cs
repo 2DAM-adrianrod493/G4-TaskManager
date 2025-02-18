@@ -44,30 +44,33 @@ namespace G4_EmployeeRegister.Services
                             string contrasenia = reader["Contrasenia"].ToString();
                             string rol = reader["Rol"].ToString();
                             string departamento = reader["Departamento"].ToString();
-                            BitmapImage imgProdu = new BitmapImage();
-                            //Manejo de la imagen
-                            if (reader["Imagen"] != null)
+                            
+                            // Manejo de la imagen
+                            BitmapImage imagUser = null; // Inicializa la imagen como null
+
+                            if (reader["Foto"] != DBNull.Value) // Verifica si no es NULL
                             {
                                 // Convertir el resultado a un array de bytes
-                                byte[] imagenBytes = (byte[])reader["Imagen"];
+                                byte[] imagenBytes = (byte[])reader["Foto"];
 
                                 // Utilizar un MemoryStream para leer los bytes de la imagen
                                 using (MemoryStream ms = new MemoryStream(imagenBytes))
                                 {
-                                    imgProdu.BeginInit();
-                                    imgProdu.CacheOption = BitmapCacheOption.OnLoad; // Cargar la imagen completamente en memoria
-                                    imgProdu.StreamSource = ms; // Asignar el MemoryStream como fuente de la imagen
-                                    imgProdu.EndInit();
+                                    imagUser = new BitmapImage();
+                                    imagUser.BeginInit();
+                                    imagUser.CacheOption = BitmapCacheOption.OnLoad; // Cargar la imagen completamente en memoria
+                                    imagUser.StreamSource = ms; // Asignar el MemoryStream como fuente de la imagen
+                                    imagUser.EndInit();
                                 }
-
                             }
+
                             else
                             {
-                                imgProdu = null;
+                                imagUser = null;
                             }
 
                             usuario = new UsuarioModel(idUsuario, nombre, apellidos, email, username,
-                                contrasenia, null, rol, departamento);
+                                contrasenia, imagUser, rol, departamento);
                             _usuarioList.Add(usuario);
                         }
 
@@ -85,8 +88,8 @@ namespace G4_EmployeeRegister.Services
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = @"INSERT INTO Usuarios (Nombre, Apellidos, Email, Username, Contrasenia, Rol, Departamento) 
-                                 VALUES (@Nombre, @Apellidos, @Email, @Username, @Contrasenia, @Rol, @Departamento);";
+                string query = @"INSERT INTO Usuarios (Nombre, Apellidos, Email, Username, Contrasenia, Foto, Rol, Departamento) 
+                         VALUES (@Nombre, @Apellidos, @Email, @Username, @Contrasenia, @Foto, @Rol, @Departamento);";
 
                 using (SqlCommand cmdQuery = new SqlCommand(query, connection))
                 {
@@ -97,10 +100,33 @@ namespace G4_EmployeeRegister.Services
                     cmdQuery.Parameters.AddWithValue("@Contrasenia", usuarioModel.Contrasenia);
                     cmdQuery.Parameters.AddWithValue("@Rol", usuarioModel.Rol);
                     cmdQuery.Parameters.AddWithValue("@Departamento", usuarioModel.Departamento);
+
+                    // Manejo de la imagen
+                    if (usuarioModel.Foto != null)
+                    {
+                        // Convertir la imagen a un array de bytes
+                        byte[] imagenBytes;
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            BitmapEncoder encoder = new PngBitmapEncoder();
+                            encoder.Frames.Add(BitmapFrame.Create(usuarioModel.Foto));
+                            encoder.Save(ms);
+                            imagenBytes = ms.ToArray();
+                        }
+
+                        cmdQuery.Parameters.AddWithValue("@Foto", imagenBytes);
+                    }
+                    else
+                    {
+                        // Si no hay imagen, insertar NULL
+                        cmdQuery.Parameters.AddWithValue("@Foto", DBNull.Value);
+                    }
+
                     cmdQuery.ExecuteNonQuery();
                 }
             }
         }
+
 
         // ELIMINAR USUARIO
         public void RemoveUsuario(UsuarioModel usuarioModel)

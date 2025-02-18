@@ -54,6 +54,7 @@ namespace G4_EmployeeRegister.Services
             return _fichajeList;
         }
 
+        
 
         // AGREGAR FICHAJE
         public void AddFichaje(FichajeModel fichajeModel)
