@@ -177,13 +177,13 @@
         <Setter Property="Height" Value="30"/>
     </Style>
 
-    <!-- Celdas DataGrid -->
+    <!-- Celdas DataGrid --><!--
     <Style TargetType="DataGridCell">
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="Background" Value="White"/>
         <Setter Property="Foreground" Value="#44376C"/>
         <Setter Property="BorderBrush" Value="#44376C"/>
         <Setter Property="BorderThickness" Value="1"/>
-    </Style>
+    </Style>-->
 
 </ResourceDictionary>

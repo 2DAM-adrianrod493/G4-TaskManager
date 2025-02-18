@@ -1,7 +1,10 @@
 ﻿using G4_EmployeeRegister.Models;
 using G4_EmployeeRegister.Services;
+using G4_EmployeeRegister.Views;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace G4_EmployeeRegister.ViewModels
 {
@@ -30,6 +33,7 @@ namespace G4_EmployeeRegister.ViewModels
             _fichajeService = new FichajeService();
             // Cargamos los fichajes del usuario a la propiedad
             Fichajes = new ObservableCollection<FichajeModel>();
+            VolverAtrasCommand = new RelayCommand(_ => VolverAtras(), _ => true);
             loadFichajes();
         }
 
@@ -38,6 +42,31 @@ namespace G4_EmployeeRegister.ViewModels
             
             Fichajes = new ObservableCollection<FichajeModel>(_fichajeService.GetAllFichajes(_usuario));
         }
+
+        #region CommandoVolverAtras
+
+        public RelayCommand VolverAtrasCommand { get; }
+        #endregion
+        public void VolverAtras()
+        {
+            AdminView adminView = new AdminView(_usuario);
+            adminView.Show();
+            Application.Current.Windows[0].Close();
+
+        }
+
+        #region Página de Edición
+        private Page _paginaFichaje;
+        public Page PaginaAdmin
+        {
+            get => _paginaFichaje;
+            set
+            {
+                _paginaFichaje = value;
+                OnPropertyChanged(nameof(PaginaAdmin));
+            }
+        }
+        #endregion
 
         public event PropertyChangedEventHandler PropertyChanged;
 

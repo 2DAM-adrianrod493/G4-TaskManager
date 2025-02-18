@@ -53,27 +53,8 @@ namespace G4_EmployeeRegister.Services
                                     string rol = reader["Rol"].ToString();
                                     string departamento = reader["Departamento"].ToString();
                                     BitmapImage foto = new BitmapImage();
-                                    
-                                    // Manejo de la imagen
-                                    /*
-                                    if (reader["foto"] != null)
-                                    {
-                                        // Convertir el resultado a un array de bytes
-                                        byte[] imagenBytes = (byte[])reader["foto"];
-                                        // Utilizar un MemoryStream para leer los bytes de la imagen
-                                        using (MemoryStream ms = new MemoryStream(imagenBytes))
-                                        {
-                                            foto.BeginInit();
-                                            foto.CacheOption = BitmapCacheOption.OnLoad; // Cargar la imagen completamente en memoria
-                                            foto.StreamSource = ms; // Asignar el MemoryStream como fuente de la imagen
-                                            foto.EndInit();
-                                        }
-                                    }
-                                    else
-                                    {
-                                        foto = null;
-                                    }
-                                    */
+
+
 
                                     // Se inicializa FichajeModel en null por ahora
                                     usuario = new UsuarioModel(idUsuario, nombre, apellidos, email, username, contrasenia, null, rol, departamento);

@@ -36,7 +36,8 @@
                     Grid.Column="1"
                     HorizontalAlignment="Center"
                     Background="Transparent"
-                    BorderThickness="0">
+                    BorderThickness="0"
+                    Command="{Binding VolverAtrasCommand}">
                 <Image Source="/Resources/Iconos/salir.png"
                        Width="38"
                        Style="{StaticResource EstiloImagen}"/>

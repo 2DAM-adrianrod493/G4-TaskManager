@@ -22,7 +22,7 @@
                Visibility="{Binding PaginaFichajeVisibilty}" NavigationUIVisibility="Hidden"/>
 
         <!-- Izquierda -->
-         <Grid Grid.Column="0" Margin="10" Visibility="{Binding ListadoVisual}">
+        <Grid Grid.Column="0" Margin="10" Visibility="{Binding ListadoVisual}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -36,13 +36,13 @@
                     <ColumnDefinition Width="6*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                
+
                 <TextBlock Text="{Binding NombreCompleto}" Style="{StaticResource EstiloTextoTitulo}"/>
-                
+
                 <!-- Botón Salir -->
                 <Button x:Name="BotonSalir" Grid.Column="1" HorizontalAlignment="Center"
                         Background="Transparent" BorderThickness="0" 
-                        Command="{Binding VolverAtrasCommand}">
+                        Command="{Binding VolverALogin}">
                     <Image Source="/Resources/Iconos/salir.png" Width="38" Style="{StaticResource EstiloImagen}"/>
                 </Button>
             </Grid>
@@ -56,7 +56,9 @@
                 <Button Background="Transparent" BorderThickness="0">
                     <Image Source="/Resources/Iconos/buscar-usuario.png" Width="35" Style="{StaticResource EstiloImagen}"/>
                 </Button>
-                <TextBox x:Name="BuscarPorNombreID" Opacity="0.8" Margin="10,0,10,0"
+                <TextBox x:Name="BuscarPorUsername" 
+                         Text="{Binding Buscador}" 
+                         Opacity="0.8" Margin="10,0,10,0"
                          Style="{StaticResource EstilosTextBox}" Grid.Column="1"/>
             </Grid>
 
@@ -81,7 +83,7 @@
                       ColumnWidth="*"
                       IsReadOnly="True"
                       ItemsSource="{Binding Usuarios}"
-                      SelectedItem="{Binding UsuarioSeleccionado,Mode=TwoWay}"
+                      SelectedItem="{Binding UsuarioSeleccionado}"
                       CanUserAddRows="False"
                       CanUserDeleteRows="False">
                 <DataGrid.Columns>
