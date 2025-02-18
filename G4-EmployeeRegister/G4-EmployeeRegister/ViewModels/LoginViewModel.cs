@@ -23,7 +23,6 @@ namespace G4_EmployeeRegister.ViewModels
         // Ventana de donde venimos
         private readonly LoginView _windowLogin;
 
-
         public string Username
         {
             get { return _username; }
@@ -53,7 +52,6 @@ namespace G4_EmployeeRegister.ViewModels
                 OnPropertyChanged(nameof(ErrorMessage));
             }
         }
-
 
         #region COMANDO LOGIN
         public RelayCommand LoginCommand { get; }
@@ -107,7 +105,6 @@ namespace G4_EmployeeRegister.ViewModels
             }
         }
 
-
         private bool checkLogin()
         {
             bool check = false;
@@ -119,9 +116,6 @@ namespace G4_EmployeeRegister.ViewModels
         }
 
         #endregion
-
-
-
 
         #region EVENTO DE NOTIFICACIÓN
         public event PropertyChangedEventHandler? PropertyChanged;

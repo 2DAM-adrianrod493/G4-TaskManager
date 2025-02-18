@@ -42,7 +42,7 @@ namespace G4_EmployeeRegister.ViewModels
         public string? Departamento { get => _departamento; set => _departamento = value; }
         #endregion
 
-        #region Propiedad Usuario seleccionado
+        #region PROPIEDAD USUARIO SELECCIONADO
         private UsuarioModel _usuarioSeleccionado;
         public UsuarioModel UsuarioSeleccionado
         {
@@ -54,6 +54,7 @@ namespace G4_EmployeeRegister.ViewModels
             {
                 _usuarioSeleccionado = value;
                 OnPropertyChanged(nameof(UsuarioSeleccionado));
+
             }
         }
         #endregion
@@ -62,7 +63,6 @@ namespace G4_EmployeeRegister.ViewModels
         private void LoadUsers()
         {
             Usuarios = _usuariosService.GetAllUsuarios();
-            
         }
 
         #region COMANDOS
@@ -72,8 +72,10 @@ namespace G4_EmployeeRegister.ViewModels
         public RelayCommand DeleteUser { get; }
         public RelayCommand MostrarFichajes { get; }
         public RelayCommand SeleccionarImagenCommand { get; }
+        public RelayCommand VolverAtrasCommand { get; }
         #endregion
 
+        // CONSTRUCTOR
         public AdminViewModel(UsuarioModel usuario)
         {
             // Inicializamos los valores del usuario actual
@@ -92,20 +94,36 @@ namespace G4_EmployeeRegister.ViewModels
 
             DeleteUser = new RelayCommand(_ => DeleteUsuario(),
                 _ => true);
+            
             MostrarFichajes = new RelayCommand(paramUsuario => VerLosFichajes(paramUsuario), _ => true);
+            
             SeleccionarImagenCommand = new RelayCommand(_ => CargaImagen(), _ => true);
+
+            VolverAtrasCommand = new RelayCommand(_ => VolverAlLogin(), _ => true);
 
             // Cargamos los usuarios
             LoadUsers();
         }
 
+        // MÉTODO VOLVER ATRÁS
+        private void VolverAlLogin()
+        {
+            // Cerramos AdminView
+            var currentWindow = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.IsActive);
+            currentWindow?.Close();
+
+            // Creamos una nueva instancia de LoginView y lo mostramos
+            LoginView loginView = new LoginView();
+            loginView.Show();
+        }
+
         byte[] usuarioImg;
         private bool imagenSabida = false;
 
-        // Cargar la imagen seleccionada por el usuario
+        // Cargamos la imagen seleccionada
         public void CargaImagen()
         {
-            // Crear un OpenFileDialog para seleccionar una imagen
+            // Creamos un OpenFileDialog para seleccionar una imagen
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Imágenes (*.png;*.jpg;*.jpeg;*.bmp)|*.png;*.jpg;*.jpeg;*.bmp";
 
@@ -115,26 +133,25 @@ namespace G4_EmployeeRegister.ViewModels
                 {
                     string archivoSeleccionado = openFileDialog.FileName;
 
-                    // Aquí guardamos la imagen seleccionada en el arreglo de bytes
+                    // Guardamos la imagen en un array de bytes
                     usuarioImg = File.ReadAllBytes(archivoSeleccionado);
 
-                    // Creamos un BitmapImage para mostrar la imagen en la vista
+                    // Creamos un BitmapImage para mostrar la imagen
                     Foto = new BitmapImage(new Uri(archivoSeleccionado));
 
-                    // Marcar que una imagen ha sido cargada
+                    // Marcamos que la imagen fue cargada
                     imagenSabida = true;
 
-                    // Mensaje de confirmación
-                    MessageBox.Show("Imagen cargada correctamente!", "Imagen", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Imagen Cargada Correctamente!", "IMAGEN", MessageBoxButton.OK);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al cargar la imagen: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Error al Cargar la Imagen: {ex.Message}", "ERROR", MessageBoxButton.OK);
             }
         }
 
-
+        // MÉTODO Ver Fichajes de un Usuario
         public void VerLosFichajes(object paramUser)
         {
             UsuarioModel usuario = (UsuarioModel)paramUser;
@@ -146,11 +163,11 @@ namespace G4_EmployeeRegister.ViewModels
             }
             else
             {
-                MessageBox.Show("Seleccione un usuario para ver los fichajes.", "Atención", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Seleccione un Usuario", "AVISO", MessageBoxButton.OK);
             }
         }
 
-        // ELIMINAR USUARIO
+        // MÉTODO Eliminar Usuario
         private void DeleteUsuario()
         {
             var confirmacion = MessageBox.Show("¿Quieres eliminar el usuario " + UsuarioSeleccionado.Username + " ?",
@@ -163,13 +180,29 @@ namespace G4_EmployeeRegister.ViewModels
             }
         }
 
-        // EDITAR USUARIO
+        // MÉTODO Editar Usuario
         private void EditUsuario()
         {
-            // Lógica para editar el usuario si es necesario
+            if (UsuarioSeleccionado != null)
+            {
+                // Actualizamos los datos con los del formulario
+                UsuarioSeleccionado.Nombre = Nombre;
+                UsuarioSeleccionado.Apellidos = Apellidos;
+                UsuarioSeleccionado.Email = Email;
+                UsuarioSeleccionado.Username = Username;
+                UsuarioSeleccionado.Rol = Rol;
+                UsuarioSeleccionado.Departamento = Departamento;
+
+                // Guardamos los datos en la base de datos
+                _usuariosService.UpdateUsuario(UsuarioSeleccionado);
+
+                // Notifiacamos los cambios
+                OnPropertyChanged(nameof(Usuarios));
+            }
         }
 
-        // AÑADIR USUARIO
+
+        // MÉTODO Añadir Usuario
         public void AddUsuario()
         {
             int id = Usuarios.Count() + 1;
@@ -195,14 +228,6 @@ namespace G4_EmployeeRegister.ViewModels
                 Usuarios.Add(usuario);
             }
         }
-
-        //// VOLVER ATRÁS
-        //public void VolverAtras()
-        //{
-        //    EditPage = null;
-        //    EditFrameVisibility = Visibility.Hidden;
-        //    ProductFrameVisibility = Visibility.Visible;
-        //}
 
         #region CONTROL DE VISIBILIDAD
         private Visibility _paginaFichajeVisibilty = Visibility.Hidden;

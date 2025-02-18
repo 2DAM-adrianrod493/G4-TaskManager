@@ -41,7 +41,6 @@ namespace G4_EmployeeRegister.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        // Evento que notifica cuando una propiedad cambia
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

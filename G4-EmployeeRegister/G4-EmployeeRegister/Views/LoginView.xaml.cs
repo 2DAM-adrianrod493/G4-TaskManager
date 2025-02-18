@@ -16,8 +16,8 @@ namespace G4_EmployeeRegister.Views
 
         }
 
-        // PasswordBox no nos deja bindear directamente
-        // Usaremos PasswordChanged para actualizar la contraseña en el viewmodel
+        // PasswordBox no podemos bindearlo directamente
+        // Usaremos PasswordChanged para actualizar la contraseña en el ViewModel
         private void PB_PasswordChanged(object sender, RoutedEventArgs e)
         {
             _loginViewModel.Password = ((PasswordBox)sender).Password;

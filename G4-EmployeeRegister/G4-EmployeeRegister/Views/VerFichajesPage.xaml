@@ -4,8 +4,8 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:G4_EmployeeRegister.Views"
-      mc:Ignorable="d" 
       xmlns:uc="clr-namespace:G4_EmployeeRegister.UserControls"
+      mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="VerFichajesPage">
 
@@ -13,27 +13,27 @@
     <Page.Background>
         <ImageBrush ImageSource="../Resources/Fondos/fondo.jpg" Stretch="Fill" Opacity="0.5"/>
     </Page.Background>
-    
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
 
-        <Grid>
+        <!-- Header -->
+        <Grid Grid.Row="0" Margin="10" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="4*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <!-- UserControl -->
-            <uc:UsersControlador Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <uc:UsersControlador HorizontalAlignment="Left" VerticalAlignment="Center" />
 
-            <!-- Salir -->
+            <!-- Botón Salir -->
             <Button x:Name="BotonSalir"
-                    Grid.Column="2"
+                    Grid.Column="1"
                     HorizontalAlignment="Center"
                     Background="Transparent"
                     BorderThickness="0">
@@ -44,44 +44,33 @@
         </Grid>
 
         <!-- USUARIO CONECTADO -->
-        <Grid Grid.Row="1">
-            <StackPanel HorizontalAlignment="Center" Width="350" Height="59" >
-                <TextBlock Text="{Binding NombreCompleto}" Style="{StaticResource EstiloTextoTitulo}"/>
+        <Grid Grid.Row="1" Margin="10">
+            <StackPanel HorizontalAlignment="Center" Width="350" Height="59">
+                <TextBlock Text="{Binding NombreCompleto}" 
+                           Style="{StaticResource EstiloTextoTitulo}"/>
             </StackPanel>
         </Grid>
 
         <!-- Lista Fichajes -->
-        <StackPanel Grid.Row="2" Margin="0,20,0,0">
-            <Grid>
-                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                    <StackPanel>
-                        <DataGrid x:Name="HistorialFichaje"
-                                  AutoGenerateColumns="False"
-                                  HorizontalAlignment="Stretch"
-                                  VerticalAlignment="Stretch"
-                                  ColumnWidth="*"
-                                  IsReadOnly="True"
-                                  ItemsSource="{Binding Fichajes}"
-                                  CanUserAddRows="False"
-                                  CanUserDeleteRows="False"
-                                  >
-
-                            <DataGrid.Columns>
-
-                                <DataGridTextColumn Header="ID" Binding="{Binding IdUsuario}" />
-
-                                <DataGridTextColumn Header="FechaHora" Binding="{Binding FechaHora}" />
-
-                                <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" />
-
-                                <DataGridTextColumn Header="Observaciones" Binding="{Binding Observaciones}" />
-                            </DataGrid.Columns>
-                        </DataGrid>
-                    </StackPanel>
-                </ScrollViewer>
-            </Grid>
-        </StackPanel>
-
+        <Border Grid.Row="2" Margin="10" BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
+            <DataGrid x:Name="HistorialFichaje"
+                      AutoGenerateColumns="False"
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch"
+                      ColumnWidth="*"
+                      IsReadOnly="True"
+                      ItemsSource="{Binding Fichajes}"
+                      CanUserAddRows="False"
+                      CanUserDeleteRows="False"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding IdUsuario}" />
+                    <DataGridTextColumn Header="FechaHora" Binding="{Binding FechaHora}" />
+                    <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" />
+                    <DataGridTextColumn Header="Observaciones" Binding="{Binding Observaciones}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
     </Grid>
-
 </Page>

@@ -5,14 +5,15 @@ namespace G4_EmployeeRegister.Models
 {
     public class FichajeModel : INotifyPropertyChanged
     {
-        // PROPIEDADES
+        // Propiedades
         private int _idFichaje;
         private int _idUsuario;
         private DateTime _fechaHora;
         private string _tipo;
         private string _observaciones;
 
-        // CONSTRUCTOR
+        #region CONSTRUCTOR
+        // Inicializamos Valores
         public FichajeModel(int idFichaje, int idUsuario, DateTime fechaHora, string tipo, string observaciones)
         {
             IdFichaje = idFichaje;
@@ -21,6 +22,7 @@ namespace G4_EmployeeRegister.Models
             Tipo = tipo;
             Observaciones = observaciones;
         }
+        #endregion
 
         #region GETTERS Y SETTERS
         public int IdFichaje
@@ -48,7 +50,6 @@ namespace G4_EmployeeRegister.Models
                 }
             }
         }
-
         public DateTime FechaHora
         {
             get => _fechaHora;
@@ -74,7 +75,6 @@ namespace G4_EmployeeRegister.Models
                 }
             }
         }
-
         public string Observaciones
         {
             get => _observaciones;
@@ -89,11 +89,14 @@ namespace G4_EmployeeRegister.Models
         }
         #endregion
 
-        // NOTIFICACIÓN DE PROPIEDADES
+        #region EVENTO NOTIFICACIÓN
+        // Evento para cuando cambia el valor de una propiedad
         public event PropertyChangedEventHandler? PropertyChanged;
+
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+        #endregion
     }
 }

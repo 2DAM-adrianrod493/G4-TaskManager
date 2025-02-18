@@ -26,6 +26,7 @@ namespace G4_EmployeeRegister.Views
             InitializeComponent();
             this.DataContext = new ViewModels.VerFichajesViewModel(usuario);
             
+
         }
     }
 }

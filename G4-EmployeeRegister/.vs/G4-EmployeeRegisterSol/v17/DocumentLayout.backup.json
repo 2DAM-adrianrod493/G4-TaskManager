@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\adria\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\adria\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\viewmodels\\verfichajesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\viewmodels\\verfichajesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\adria\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\adria\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\views\\adminview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\views\\adminview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|c:\\users\\adria\\source\\repos\\g4-employeeregister\\g4-employeeregister\\g4-employeeregister\\services\\fichajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6EE87F6-06AD-4D65-A820-DD1135735D74}|G4-EmployeeRegister\\G4-EmployeeRegister.csproj|solutionrelative:g4-employeeregister\\services\\fichajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 178,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,14 +39,59 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "VerFichajesViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\adria\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\ViewModels\\VerFichajesViewModel.cs",
-              "RelativeDocumentMoniker": "G4-EmployeeRegister\\ViewModels\\VerFichajesViewModel.cs",
-              "ToolTip": "C:\\Users\\adria\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\ViewModels\\VerFichajesViewModel.cs",
-              "RelativeToolTip": "G4-EmployeeRegister\\ViewModels\\VerFichajesViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "UserView.xaml",
+              "DocumentMoniker": "C:\\Users\\adria\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\UserView.xaml",
+              "RelativeDocumentMoniker": "G4-EmployeeRegister\\Views\\UserView.xaml",
+              "ToolTip": "C:\\Users\\adria\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\UserView.xaml",
+              "RelativeToolTip": "G4-EmployeeRegister\\Views\\UserView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-18T06:06:26.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminView.xaml",
+              "DocumentMoniker": "C:\\Users\\adria\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\AdminView.xaml",
+              "RelativeDocumentMoniker": "G4-EmployeeRegister\\Views\\AdminView.xaml",
+              "ToolTip": "C:\\Users\\adria\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Views\\AdminView.xaml",
+              "RelativeToolTip": "G4-EmployeeRegister\\Views\\AdminView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-18T05:50:49.887Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "a86ea099-bcf3-456f-9694-d3cdf46b11a4",
+        "Display": 0,
+        "X": 746,
+        "Y": 366,
+        "Width": 901,
+        "Height": 904,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FichajeService.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Services\\FichajeService.cs",
+              "RelativeDocumentMoniker": "G4-EmployeeRegister\\Services\\FichajeService.cs",
+              "ToolTip": "C:\\Users\\adria\\source\\repos\\G4-EmployeeRegister\\G4-EmployeeRegister\\G4-EmployeeRegister\\Services\\FichajeService.cs",
+              "RelativeToolTip": "G4-EmployeeRegister\\Services\\FichajeService.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowFgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T01:09:09.763Z",
+              "WhenOpened": "2025-02-18T05:29:09.363Z",
               "EditorCaption": ""
             }
           ]

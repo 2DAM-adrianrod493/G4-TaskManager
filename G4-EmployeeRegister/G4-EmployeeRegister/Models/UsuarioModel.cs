@@ -7,7 +7,7 @@ namespace G4_EmployeeRegister.Models
 {
     public class UsuarioModel : INotifyPropertyChanged
     {
-        // PROPIEDADES
+        // Propiedades
         private int _idUsuario;
         private string _nombre;
         private string _apellidos;
@@ -19,8 +19,9 @@ namespace G4_EmployeeRegister.Models
         private string? _departamento;
         private FichajeModel _fichaje;
 
-        // CONSTRUCTOR
-        public UsuarioModel(int idUsuario, string nombre,string apellidos, 
+        #region CONSTRUCTOR
+        // Inicializamos Valores
+        public UsuarioModel(int idUsuario, string nombre, string apellidos,
             string email, string username, string contrasenia, BitmapImage foto,
             string rol, string departamento)
         {
@@ -34,6 +35,7 @@ namespace G4_EmployeeRegister.Models
             Rol = rol;
             Departamento = departamento;
         }
+        #endregion
 
         #region GETTERS Y SETTERS
         public int IdUsuario
@@ -48,9 +50,11 @@ namespace G4_EmployeeRegister.Models
                 }
             }
         }
+
+        // Obtener Nombre Completo
         public string NombreCompleto
         {
-            get => Nombre+" "+ Apellidos;
+            get => Nombre + " " + Apellidos;
         }
 
         public string Nombre
@@ -158,11 +162,14 @@ namespace G4_EmployeeRegister.Models
         }
         #endregion
 
-        // NOTIFICACIÓN DE PROPIEDADES
+        #region NOTIFICACIÓN DE PROPIEDADES
+        // Evento para cuando cambia el valor de una propiedad
         public event PropertyChangedEventHandler? PropertyChanged;
+
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+        #endregion
     }
 }

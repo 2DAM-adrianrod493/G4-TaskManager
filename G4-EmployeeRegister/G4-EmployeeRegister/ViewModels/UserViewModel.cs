@@ -25,14 +25,15 @@ namespace G4_EmployeeRegister.ViewModels
             _fichajeService = new FichajeService();
             Fichajes = new ObservableCollection<FichajeModel>(_fichajeService.GetAllFichajes(usuario));
 
-            // INICIALIZAMOS COMANDOS
+            // Inicializamos los Comandos
             IniciarJornadaCommand = new RelayCommand(param => IniciarJornada(),_=>true);
             FinalizarJornadaCommand = new RelayCommand(param => FinalizarJornada(), _ => true);
         }
         #endregion
 
         public string NombreCompleto { get => _usuario.Nombre + " " + _usuario.Apellidos; }
-        #region MÉTODOS
+        
+        #region MÉTODOS Iniciar y Finalizar Fichaje
         private void IniciarJornada()
         {
             RegistrarFichaje("Entrada");
@@ -50,7 +51,7 @@ namespace G4_EmployeeRegister.ViewModels
             // Vemos si el último fue de entrada o salida
             if (Fichajes.Count > 0 && Fichajes.Last().Tipo == tipo)
             {
-                // Avisamos que no puede registrarse una salida o entrada dos veces seguidas
+                // Avisamos de que no puede registrarse una salida o entrada dos veces seguidas
                 MessageBox.Show($"{tipo.ToUpper()} ya registrada. Registra otra acción.","ERROR",
                     MessageBoxButton.OK);
                 return;
@@ -61,7 +62,7 @@ namespace G4_EmployeeRegister.ViewModels
 
             _fichajeService.AddFichaje(nuevoFichaje);
 
-            // Actualizamos lista
+            // Actualizamos la lista
             Fichajes.Add(nuevoFichaje);
             // Notificamos que la lista ha cambiado
             OnPropertyChanged(nameof(Fichajes));
