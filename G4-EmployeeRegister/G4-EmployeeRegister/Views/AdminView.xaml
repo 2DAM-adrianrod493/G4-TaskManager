@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:G4_EmployeeRegister.Views"
         mc:Ignorable="d"
         Title="AdminView" Height="500" Width="1000"
+        Icon="/Resources/Iconos/logo.ico"
         ResizeMode="NoResize">
 
     <!-- Fondo -->
@@ -65,7 +66,8 @@
                 <Button Content="Añadir" Width="150" Height="35" Style="{StaticResource EstilosButton}"
                         Command="{Binding AddUser}" Margin="5"/>
                 <Button Content="Editar" Width="150" Height="35" Style="{StaticResource EstilosButton}"
-                        Command="{Binding EditUser}" Margin="5"/>
+                        Command="{Binding EditUser}"
+                        Margin="5"/>
                 <Button Content="Eliminar" Width="150" Height="35" Style="{StaticResource EstilosButton}"
                         Command="{Binding DeleteUser}" Margin="5"/>
             </StackPanel>
@@ -80,9 +82,9 @@
                       VerticalAlignment="Stretch"
                       ColumnWidth="*"
                       IsReadOnly="True"
-                      Style="{Binding EstilosDataGrid}"
+                     
                       ItemsSource="{Binding Usuarios}"
-                      SelectedItem="{Binding UsuarioSeleccionado}"
+                      SelectedItem="{Binding UsuarioSelecionado}"
                       CanUserAddRows="False"
                       CanUserDeleteRows="False">
                 <DataGrid.Columns>
@@ -169,9 +171,6 @@
                             VerticalAlignment="Center" Height="30" Style="{StaticResource EstilosButton}"
                             Command="{Binding SeleccionarImagenCommand}"/>
 
-                    <Button Content="Guardar" Grid.Row="7" Grid.ColumnSpan="2"
-                            Width="Auto" Height="40" Style="{StaticResource EstilosButton}"
-                            Command="{Binding AddUser}" Margin="5"/>
                 </Grid>
             </ScrollViewer>
         </Border>

@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace G4_EmployeeRegister.ViewModels
 {
@@ -80,30 +81,26 @@ namespace G4_EmployeeRegister.ViewModels
 
             if (usuario != null)
             {
-                if (usuario.Rol == "Administrador")
+                if (usuario.Rol.Equals("Administrador"))
                 {
                     // Abrimos AdminView
                     G4_EmployeeRegister.Views.AdminView adminView = new AdminView(usuario);
                     adminView.Show();
                 }
-                else if (usuario.Rol == "Usuario")
+                else if (usuario.Rol.Equals("Usuario"))
                 {
                     // Abrimos UserView
                     G4_EmployeeRegister.Views.UserView userView = new UserView(usuario);
                     userView.Show();
                 }
-                else
-                {
-                    ErrorMessage = "Rol desconocido";
-                    return; // No cerramos si no reconoce el rol
-                }
+                
 
                 // Cerramos el login si está inicializado
                 _windowLogin?.Close();
             }
             else
             {
-                ErrorMessage = "USUARIO O CONTRASEÑA INCORRECTOS!";
+                MessageBox.Show("USUARIO O CONTRASEÑA INCORRECTOS!");
             }
         }
 

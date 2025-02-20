@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:G4_EmployeeRegister.Views"
         xmlns:uc="clr-namespace:G4_EmployeeRegister.UserControls"
         mc:Ignorable="d"
-        Title="LoginView" Height="450" Width="800"
+        Title="LoginView" Height="450" Width="800"  
+        Icon="/Resources/Iconos/logo.ico"
         ResizeMode="NoResize">
 
     <!-- Fondo -->

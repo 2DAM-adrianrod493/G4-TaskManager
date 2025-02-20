@@ -30,10 +30,12 @@ namespace G4_EmployeeRegister.Services
                 // CONSULTA QUERY
                 string query = @"SELECT f.IdFichaje, f.IdUsuario, f.FechaHora, f.Tipo, f.Observaciones 
                                 FROM Fichajes f join Usuarios u on f.IdUsuario = u.IdUsuario 
-                                Where u.IdUsuario = "+usuario.IdUsuario+";";
+                                Where u.IdUsuario = @IdUsuario;";
 
                 using (SqlCommand cmdQuery = new SqlCommand(query, connection))
                 {
+                    cmdQuery.Parameters.AddWithValue("@IdUsuario", usuario.IdUsuario);
+
                     using (SqlDataReader reader = cmdQuery.ExecuteReader())
                     {
                         while (reader.Read())

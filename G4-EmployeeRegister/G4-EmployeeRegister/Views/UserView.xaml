@@ -7,6 +7,7 @@
       mc:Ignorable="d" 
       xmlns:uc="clr-namespace:G4_EmployeeRegister.UserControls"
       Title="UserView" Height="500" Width="800"
+        Icon="/Resources/Iconos/logo.ico"
       ResizeMode="NoResize">
 
     <!-- Fondo -->
@@ -32,8 +33,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- UserControl -->
-            <uc:UsersControlador Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            
 
             <!-- Salir -->
             <Button x:Name="BotonSalir"

@@ -17,7 +17,7 @@ namespace G4_EmployeeRegister.Models
         private BitmapImage _foto;
         private string _rol;
         private string? _departamento;
-        private FichajeModel _fichaje;
+       
 
         // CONSTRUCTOR
         public UsuarioModel(int idUsuario, string nombre,string apellidos, 

@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Configuration;
 using System.IO;
 using System.Linq;
+using System.Windows;
 using System.Windows.Media.Imaging;
 using G4_EmployeeRegister.Models;
 using Microsoft.Data.SqlClient;
@@ -27,7 +28,7 @@ namespace G4_EmployeeRegister.Services
                 connection.Open();
                 string query = @"SELECT IdUsuario, Nombre, Apellidos, Email, Username, 
                             Contrasenia,Foto, Rol,
-                            Departamento FROM Usuarios;
+                            Departamento FROM Usuarios Where Rol='Usuario';
                         ";
                 using (SqlCommand cmdQuery = new SqlCommand(query, connection))
                 {
@@ -147,19 +148,65 @@ namespace G4_EmployeeRegister.Services
         // ACTUALIZAR USUARIO
         public void UpdateUsuario(UsuarioModel updatedUsuario)
         {
-            // Buscar por ID en la lista
-            //var existing = _usuarioList.FirstOrDefault(u => u.IdUsuario == updatedUsuario.IdUsuario);
-            //if (existing != null)
-            //{
-            //    existing.Nombre = updatedUsuario.Nombre;
-            //    existing.Apellidos = updatedUsuario.Apellidos;
-            //    existing.Email = updatedUsuario.Email;
-            //    existing.Username = updatedUsuario.Username;
-            //    existing.Contrasenia = updatedUsuario.Contrasenia;
-            //    existing.Foto = updatedUsuario.Foto;
-            //    existing.Rol = updatedUsuario.Rol;
-            //    existing.Departamento = updatedUsuario.Departamento;
-            //}
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Verifica si el usuario existe antes de actualizar
+                string checkQuery = "SELECT COUNT(*) FROM Usuarios WHERE IdUsuario = @IdUsuario";
+                using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
+                {
+                    checkCmd.Parameters.AddWithValue("@IdUsuario", updatedUsuario.IdUsuario);
+                    int count = (int)checkCmd.ExecuteScalar();
+
+                    if (count == 0)
+                    {
+                        MessageBox.Show("Usuario no encontrado.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
+                    }
+                }
+
+                // Si el usuario existe, procede con la actualización
+                string updateQuery = @"UPDATE Usuarios SET 
+                                Nombre = @Nombre, Apellidos = @Apellidos, Email = @Email, 
+                                Username = @Username, Contrasenia = @Contrasenia, 
+                                Foto = @Foto, Rol = @Rol, Departamento = @Departamento
+                                WHERE IdUsuario = @IdUsuario";
+
+                using (SqlCommand updateCmd = new SqlCommand(updateQuery, connection))
+                {
+                    updateCmd.Parameters.AddWithValue("@IdUsuario", updatedUsuario.IdUsuario);
+                    updateCmd.Parameters.AddWithValue("@Nombre", updatedUsuario.Nombre);
+                    updateCmd.Parameters.AddWithValue("@Apellidos", updatedUsuario.Apellidos);
+                    updateCmd.Parameters.AddWithValue("@Email", updatedUsuario.Email);
+                    updateCmd.Parameters.AddWithValue("@Username", updatedUsuario.Username);
+                    updateCmd.Parameters.AddWithValue("@Contrasenia", updatedUsuario.Contrasenia);
+                    updateCmd.Parameters.AddWithValue("@Rol", updatedUsuario.Rol);
+                    updateCmd.Parameters.AddWithValue("@Departamento", updatedUsuario.Departamento);
+
+                    // Manejo de imagen
+                    if (updatedUsuario.Foto != null)
+                    {
+                        byte[] imagenBytes;
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            BitmapEncoder encoder = new PngBitmapEncoder();
+                            encoder.Frames.Add(BitmapFrame.Create(updatedUsuario.Foto));
+                            encoder.Save(ms);
+                            imagenBytes = ms.ToArray();
+                        }
+                        updateCmd.Parameters.AddWithValue("@Foto", imagenBytes);
+                    }
+                    else
+                    {
+                        updateCmd.Parameters.AddWithValue("@Foto", DBNull.Value);
+                    }
+
+                    updateCmd.ExecuteNonQuery();
+                    MessageBox.Show("Usuario actualizado correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
         }
+
     }
 }

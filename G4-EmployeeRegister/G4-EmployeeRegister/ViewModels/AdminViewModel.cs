@@ -36,19 +36,90 @@ namespace G4_EmployeeRegister.ViewModels
         private string? _departamento;
         byte[] usuarioImg;
         private bool imagenSubida = false;
-        public string NombreCompleto { get => _nombreCompleto; set => _nombreCompleto = value; }
-        public string Nombre { get => _nombre; set => _nombre = value; }
-        public string Apellidos { get => _apellidos; set => _apellidos = value; }
-        public string Email { get => _email; set => _email = value; }
-        public string Username { get => _username; set => _username = value; }
-        public BitmapImage Foto { get => _foto; set => _foto = value; }
-        public string Rol { get => _rol; set => _rol = value; }
-        public string? Departamento { get => _departamento; set => _departamento = value; }
+       public string NombreCompleto
+    {
+        get => _nombreCompleto;
+        set
+        {
+            _nombreCompleto = value;
+            OnPropertyChanged(nameof(NombreCompleto));
+        }
+    }
+
+    public string Nombre
+    {
+        get => _nombre;
+        set
+        {
+            _nombre = value;
+            OnPropertyChanged(nameof(Nombre));
+        }
+    }
+
+    public string Apellidos
+    {
+        get => _apellidos;
+        set
+        {
+            _apellidos = value;
+            OnPropertyChanged(nameof(Apellidos));
+        }
+    }
+
+    public string Email
+    {
+        get => _email;
+        set
+        {
+            _email = value;
+            OnPropertyChanged(nameof(Email));
+        }
+    }
+
+    public string Username
+    {
+        get => _username;
+        set
+        {
+            _username = value;
+            OnPropertyChanged(nameof(Username));
+        }
+    }
+
+    public BitmapImage Foto
+    {
+        get => _foto;
+        set
+        {
+            _foto = value;
+            OnPropertyChanged(nameof(Foto));
+        }
+    }
+
+    public string Rol
+    {
+        get => _rol;
+        set
+        {
+            _rol = value;
+            OnPropertyChanged(nameof(Rol));
+        }
+    }
+
+    public string? Departamento
+    {
+        get => _departamento;
+        set
+        {
+            _departamento = value;
+            OnPropertyChanged(nameof(Departamento));
+        }
+    }
         #endregion
 
         #region Propiedad Usuario seleccionado
         private UsuarioModel _usuarioSeleccionado;
-        public UsuarioModel UsuarioSeleccionado
+        public UsuarioModel UsuarioSelecionado
         {
             get
             {
@@ -57,12 +128,24 @@ namespace G4_EmployeeRegister.ViewModels
             set
             {
                 _usuarioSeleccionado = value;
-                OnPropertyChanged(nameof(UsuarioSeleccionado));
+                OnPropertyChanged(nameof(UsuarioSelecionado));
+                // Cargar los datos en el formulario
+                if(_usuarioSeleccionado != null)
+                {
+                    Nombre = _usuarioSeleccionado.Nombre;
+                    Apellidos = _usuarioSeleccionado.Apellidos;
+                    Username = _usuarioSeleccionado.Username;
+                    Email = _usuarioSeleccionado.Email;
+                    Departamento = _usuarioSeleccionado.Departamento;
+                    Rol = _usuarioSeleccionado.Rol;
+                    Foto = _usuarioSeleccionado.Foto;
+                }
+                
             }
         }
         #endregion
 
-        #region Constructor y Cargar Usuarios
+        #region Cargar Usuarios
         // CARGAMOS USUARIOS
         private void LoadUsers()
         {
@@ -92,15 +175,15 @@ namespace G4_EmployeeRegister.ViewModels
                 _ => PuedeAniadir()
             );
 
-            EditUser = new RelayCommand(_ => EditUsuario(),
-                _ => (Usuarios.Count() != 0));
+            EditUser = new RelayCommand(_ => EditUsuario(), _ => true);
 
-            DeleteUser = new RelayCommand(_ => DeleteUsuario(),
-                _ => true);
+            DeleteUser = new RelayCommand(_ => DeleteUsuario(),_ => true);
             MostrarFichajes = new RelayCommand(paramUsuario => VerLosFichajes(paramUsuario), _ => true);
             SeleccionarImagenCommand = new RelayCommand(_ => CargaImagen(), _ => true);
             VolverALogin = new RelayCommand(_=> VolverLoginVentana(),_=> true);
+          
             // Cargamos los usuarios
+            
             LoadUsers();
         }
 
@@ -124,6 +207,8 @@ namespace G4_EmployeeRegister.ViewModels
             loginView.Show();
             Application.Current.Windows[0].Close();
         }
+        
+
         #endregion
 
 
@@ -182,23 +267,65 @@ namespace G4_EmployeeRegister.ViewModels
         // ELIMINAR USUARIO
         private void DeleteUsuario()
         {
-            var confirmacion = MessageBox.Show("¿Quieres eliminar el usuario " + UsuarioSeleccionado.Username + " ?",
+            var confirmacion = MessageBox.Show("¿Quieres eliminar el usuario " + UsuarioSelecionado.Username + " ?",
                 "ELIMINAR", MessageBoxButton.OKCancel);
 
             if (confirmacion == MessageBoxResult.OK)
             {
-                _usuariosService.RemoveUsuario(UsuarioSeleccionado);
-                Usuarios.Remove(UsuarioSeleccionado);
+                _usuariosService.RemoveUsuario(UsuarioSelecionado);
+                Usuarios.Remove(UsuarioSelecionado);
             }
         }
         #endregion
 
         #region EDITAR USUARIO
-        // EDITAR USUARIO
         private void EditUsuario()
         {
-            // Lógica para editar el usuario si es necesario
+            // Validamos que el usuario no sea nulo
+            if (UsuarioSelecionado == null)
+            {
+                MessageBox.Show("Error al cargar los datos del usuario.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Actualizamos los datos del usuario con los nuevos valores
+            UsuarioSelecionado.Nombre = Nombre;
+            UsuarioSelecionado.Apellidos = Apellidos;
+            UsuarioSelecionado.Email = Email;
+            UsuarioSelecionado.Username = Username;
+            UsuarioSelecionado.Departamento = Departamento;
+            if (Rol.EndsWith("Usuario"))
+            {
+                UsuarioSelecionado.Rol = "Usuario";
+            }
+            else
+            {
+                UsuarioSelecionado.Rol = "Administrador";
+            }
+            
+
+            if (imagenSubida)  // Si se ha cargado una nueva imagen
+            {
+                UsuarioSelecionado.Foto = Foto;
+            }
+
+            try
+            {
+                // Llamamos al servicio para actualizar el usuario en la base de datos
+                _usuariosService.UpdateUsuario(UsuarioSelecionado);
+
+                // Refrescamos la lista de usuarios en la UI
+                LoadUsers();
+
+                MessageBox.Show("Usuario actualizado correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                LoadUsers();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al actualizar el usuario: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
+
         #endregion
 
         #region AÑADIR USUARIO
